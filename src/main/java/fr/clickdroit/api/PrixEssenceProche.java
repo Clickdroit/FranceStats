@@ -10,12 +10,22 @@ import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.*;
 import java.util.stream.Collectors;
-import org.json.*;
+import java.util.zip.ZipInputStream;
+import java.util.zip.ZipEntry;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 public class PrixEssenceProche {
 
     private static final String CONFIG_FILE = "station_config.properties";
     private static final String HISTORY_FILE = "prix_historique.json";
+    private static final String XML_URL = "https://donnees.roulez-eco.fr/opendata/instantane";
+    private static final String CACHE_FILE = "prix_carburants_cache.xml";
     private static boolean USE_ROUTING_API = true;
     private static double[] userPosition = null;
     private static List<Station> allStations = new ArrayList<>();
@@ -25,18 +35,18 @@ public class PrixEssenceProche {
         String codePostal;
         String adresse;
         String departement;
-        Map<String, Double> prix; // Stockage de tous les carburants
+        Map<String, Double> prix;
         double latitude;
         double longitude;
         double distanceKm;
 
         Station(String ville, String cp, double lat, double lon, String adresse) {
-            this.ville = ville;
-            this.codePostal = cp;
+            this.ville = ville != null ? ville : "Ville inconnue";
+            this.codePostal = cp != null ? cp : "00000";
             this.latitude = lat;
             this.longitude = lon;
             this.adresse = adresse != null && !adresse.trim().isEmpty() ? adresse : "Adresse non disponible";
-            this.departement = cp.length() >= 2 ? cp.substring(0, 2) : "??";
+            this.departement = this.codePostal.length() >= 2 ? this.codePostal.substring(0, 2) : "??";
             this.prix = new HashMap<>();
         }
 
@@ -89,7 +99,6 @@ public class PrixEssenceProche {
                 this.minimum = prixList.stream().mapToDouble(Double::doubleValue).min().orElse(0);
                 this.maximum = prixList.stream().mapToDouble(Double::doubleValue).max().orElse(0);
 
-                // Trouver les villes avec prix min/max
                 this.villeMin = stations.stream()
                         .filter(s -> Objects.equals(s.getPrix(carburant), minimum))
                         .findFirst()
@@ -123,13 +132,11 @@ public class PrixEssenceProche {
         try {
             System.out.println("🚗 === ANALYSEUR PRIX CARBURANTS === ⛽");
 
-            // Chargement initial des données
             if (!chargerDonnees()) {
                 System.err.println("Impossible de charger les données. Fin du programme.");
                 return;
             }
 
-            // Menu principal
             Scanner scanner = new Scanner(System.in);
             boolean continuer = true;
 
@@ -150,6 +157,7 @@ public class PrixEssenceProche {
             }
 
         } catch (Exception e) {
+            System.err.println("❌ Erreur inattendue : " + e.getMessage());
             e.printStackTrace();
         }
     }
@@ -161,9 +169,11 @@ public class PrixEssenceProche {
         System.out.println("3. 🗺️ Recherche par département/région");
         System.out.println("4. ⚙️ Configurer ma position");
         System.out.println("5. 🌡️ Météo du jour");
-        System.out.println("6. 📈 Historique des prix (à venir)");
+        System.out.println("6. 📈 Historique des prix");
         System.out.println("7. 🔧 Paramètres");
-        System.out.println("8. ❌ Quitter");
+        System.out.println("8. 🚇 Infos transports");
+        System.out.println("9. 🔄 Actualiser les données");
+        System.out.println("0. ❌ Quitter");
     }
 
     private static boolean traiterChoixMenu(int choix, Scanner scanner) {
@@ -183,19 +193,27 @@ public class PrixEssenceProche {
             case 5:
                 afficherMeteo(scanner);
                 break;
-            case 6: // Historique des prix
+            case 6:
                 HistoriquePrix.sauvegarderPrixDuJour(allStations);
-                HistoriquePrix.afficherEvolutionPrix(choisirCarburant(scanner), 7);
+                String carburant = choisirCarburant(scanner);
+                if (carburant != null) {
+                    HistoriquePrix.afficherEvolutionPrix(carburant, 7);
+                }
                 break;
             case 7:
                 configurerParametres(scanner);
                 break;
             case 8:
-                System.out.println("👋 À bientôt !");
-                return false;
-            case 9: // Transports
                 TransportInfo.afficherPerturbationsTransports();
                 break;
+            case 9:
+                System.out.println("🔄 Actualisation des données...");
+                forceDownloadData();
+                chargerDonnees();
+                break;
+            case 0:
+                System.out.println("👋 À bientôt !");
+                return false;
             default:
                 System.out.println("❌ Choix invalide.");
         }
@@ -206,19 +224,16 @@ public class PrixEssenceProche {
         if (userPosition == null) {
             System.out.println("❌ Position non configurée. Configurez d'abord votre position.");
             configurerPosition(scanner);
-            return;
+            if (userPosition == null) return;
         }
 
-        // Choisir le carburant
         String carburant = choisirCarburant(scanner);
         if (carburant == null) return;
 
-        // Choisir le rayon
         System.out.print("Rayon de recherche en km (défaut: 20) : ");
         String rayonStr = scanner.nextLine().trim();
-        double rayon = rayonStr.isEmpty() ? 20.0 : Double.parseDouble(rayonStr);
+        final double rayon = rayonStr.isEmpty() ? 20.0 : parseRayonAvecDefaut(rayonStr, 20.0);
 
-        // Filtrer et trier les stations
         List<Station> stationsAvecCarburant = allStations.stream()
                 .filter(s -> s.getPrix(carburant) != null)
                 .filter(s -> s.distanceKm <= rayon)
@@ -253,7 +268,6 @@ public class PrixEssenceProche {
         StatistiquesNationales stats = new StatistiquesNationales(carburant, allStations);
         System.out.println("\n" + stats);
 
-        // Afficher quelques exemples des stations les moins chères
         List<Station> stationsPasCher = allStations.stream()
                 .filter(s -> s.getPrix(carburant) != null)
                 .filter(s -> s.getPrix(carburant).equals(stats.minimum))
@@ -297,7 +311,6 @@ public class PrixEssenceProche {
         System.out.printf("  Prix maximum : %.3f €/L (à %s)%n", statsDept.maximum, statsDept.villeMax);
         System.out.printf("  Nombre de stations : %d%n", statsDept.nombreStations);
 
-        // Top 5 les moins chères du département
         List<Station> top5Dept = stationsDept.stream()
                 .sorted(Comparator.comparingDouble(s -> s.getPrix(carburant)))
                 .limit(5)
@@ -314,7 +327,6 @@ public class PrixEssenceProche {
     private static void configurerPosition(Scanner scanner) {
         userPosition = getUserLocationWithConfig(scanner);
         if (userPosition != null) {
-            // Recalculer les distances pour toutes les stations
             System.out.println("🔄 Recalcul des distances...");
             calculerDistancesToutesStations();
             System.out.println("✅ Position configurée et distances calculées !");
@@ -327,15 +339,21 @@ public class PrixEssenceProche {
         if (ville.isEmpty()) ville = "Paris";
 
         try {
+            // Utilisation d'Open-Meteo (gratuit, pas de clé API requise)
             String url = "https://api.open-meteo.com/v1/forecast?latitude=48.8566&longitude=2.3522&current_weather=true&timezone=Europe%2FParis";
 
-            // Pour simplifier, on utilise les coordonnées de Paris
-            // Dans une version complète, on geocoderait la ville
-
-            HttpURLConnection con = (HttpURLConnection) new URL(url).openConnection();
+            URL weatherUrl = new URL(url);
+            HttpURLConnection con = (HttpURLConnection) weatherUrl.openConnection();
             con.setRequestMethod("GET");
-            con.setConnectTimeout(5000);
-            con.setReadTimeout(5000);
+            con.setConnectTimeout(10000);
+            con.setReadTimeout(10000);
+            con.setRequestProperty("User-Agent", "PrixEssenceApp/1.0");
+
+            int responseCode = con.getResponseCode();
+            if (responseCode != 200) {
+                System.err.println("❌ Erreur météo : Code " + responseCode);
+                return;
+            }
 
             try (BufferedReader br = new BufferedReader(new InputStreamReader(con.getInputStream(), StandardCharsets.UTF_8))) {
                 StringBuilder sb = new StringBuilder();
@@ -393,6 +411,8 @@ public class PrixEssenceProche {
 
         System.out.println("\n⛽ Carburants disponibles :");
         List<String> carburantsList = new ArrayList<>(carburantsDisponibles);
+        Collections.sort(carburantsList); // Tri alphabétique
+
         for (int i = 0; i < carburantsList.size(); i++) {
             System.out.printf("%d. %s%n", i + 1, carburantsList.get(i));
         }
@@ -404,23 +424,108 @@ public class PrixEssenceProche {
                 return carburantsList.get(choix);
             }
         } catch (NumberFormatException e) {
-            // Pas grave, on retourne null
+            // Continue vers l'erreur
         }
 
         System.out.println("❌ Choix invalide.");
         return null;
     }
 
+    // ========== TÉLÉCHARGEMENT DES DONNÉES ==========
+
     private static boolean chargerDonnees() {
         try {
             System.out.println("📂 Chargement des données des stations...");
 
-            File xmlFile = new File("C:\\Users\\maxim\\Desktop\\PrixCarburants_instantane.xml");
-            if (!xmlFile.exists()) {
-                System.err.println("❌ Fichier XML non trouvé : " + xmlFile.getAbsolutePath());
+            File xmlFile = new File(CACHE_FILE);
+
+            // Vérifier si le fichier cache existe et n'est pas trop ancien (plus de 6 heures)
+            boolean needDownload = !xmlFile.exists() ||
+                    (System.currentTimeMillis() - xmlFile.lastModified()) > 6 * 60 * 60 * 1000;
+
+            if (needDownload || !isValidXMLFile(xmlFile)) {
+                System.out.println("🌐 Téléchargement des données depuis internet...");
+                if (!downloadDataFromInternet()) {
+                    System.err.println("❌ Échec du téléchargement. Tentative avec fichier cache...");
+                    if (!xmlFile.exists() || !isValidXMLFile(xmlFile)) {
+                        System.err.println("❌ Aucun fichier XML valide disponible.");
+                        return false;
+                    }
+                }
+            } else {
+                System.out.println("📁 Utilisation du cache local (récent)");
+            }
+
+            return parseXMLFile(xmlFile);
+
+        } catch (Exception e) {
+            System.err.println("❌ Erreur lors du chargement : " + e.getMessage());
+            return false;
+        }
+    }
+
+    private static boolean downloadDataFromInternet() {
+        try {
+            URL url = new URL(XML_URL);
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+            connection.setRequestMethod("GET");
+            connection.setConnectTimeout(30000);
+            connection.setReadTimeout(60000);
+            connection.setRequestProperty("User-Agent", "PrixEssenceApp/1.0");
+            connection.setRequestProperty("Accept", "*/*");
+            connection.setInstanceFollowRedirects(true);
+
+            int responseCode = connection.getResponseCode();
+            if (responseCode != 200) {
+                System.err.println("❌ Erreur HTTP : " + responseCode);
                 return false;
             }
 
+            // Télécharger et extraire le ZIP
+            try (ZipInputStream zipIn = new ZipInputStream(connection.getInputStream());
+                 FileOutputStream out = new FileOutputStream(CACHE_FILE)) {
+
+                ZipEntry entry = zipIn.getNextEntry();
+                if (entry != null && entry.getName().endsWith(".xml")) {
+                    System.out.println("📦 Extraction du fichier : " + entry.getName());
+
+                    byte[] buffer = new byte[8192];
+                    int bytesRead;
+                    long totalBytes = 0;
+
+                    while ((bytesRead = zipIn.read(buffer)) != -1) {
+                        out.write(buffer, 0, bytesRead);
+                        totalBytes += bytesRead;
+
+                        if (totalBytes % (1024 * 1024) == 0) { // Chaque MB
+                            System.out.printf("\r📥 Extraction... %.1f MB", totalBytes / 1024.0 / 1024.0);
+                        }
+                    }
+                    System.out.println("\n✅ Extraction terminée !");
+                    zipIn.closeEntry();
+                    return true;
+                } else {
+                    System.err.println("❌ Aucun fichier XML trouvé dans l'archive");
+                    return false;
+                }
+            }
+
+        } catch (Exception e) {
+            System.err.println("❌ Erreur téléchargement : " + e.getMessage());
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    private static void forceDownloadData() {
+        File cacheFile = new File(CACHE_FILE);
+        if (cacheFile.exists()) {
+            cacheFile.delete();
+        }
+    }
+
+    private static boolean parseXMLFile(File xmlFile) {
+        try {
             DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
             DocumentBuilder builder = factory.newDocumentBuilder();
             Document doc = builder.parse(xmlFile);
@@ -430,7 +535,13 @@ public class PrixEssenceProche {
             allStations.clear();
             int stationsIgnorees = 0;
 
+            System.out.println("🔄 Analyse du fichier XML...");
+
             for (int i = 0; i < stations.getLength(); i++) {
+                if (i % 1000 == 0) {
+                    System.out.printf("\r⚙️  Traitement... %d/%d stations", i, stations.getLength());
+                }
+
                 Element stationElement = (Element) stations.item(i);
 
                 try {
@@ -438,33 +549,45 @@ public class PrixEssenceProche {
                     String ville = stationElement.getAttribute("ville");
                     String adresse = stationElement.getAttribute("adresse");
 
-                    double lat = Double.parseDouble(stationElement.getAttribute("latitude")) / 100000.0;
-                    double lon = Double.parseDouble(stationElement.getAttribute("longitude")) / 100000.0;
+                    String latStr = stationElement.getAttribute("latitude");
+                    String lonStr = stationElement.getAttribute("longitude");
 
-                    // Vérification coordonnées françaises
-                    if (lat < 41.0 || lat > 52.0 || lon < -5.0 || lon > 10.0) {
+                    if (latStr.isEmpty() || lonStr.isEmpty()) {
+                        stationsIgnorees++;
+                        continue;
+                    }
+
+                    double lat = Double.parseDouble(latStr) / 100000.0;
+                    double lon = Double.parseDouble(lonStr) / 100000.0;
+
+                    // Vérification coordonnées françaises (incluant DOM-TOM)
+                    if (lat < -22.0 || lat > 52.0 || lon < -63.0 || lon > 56.0) {
                         stationsIgnorees++;
                         continue;
                     }
 
                     Station station = new Station(ville, cp, lat, lon, adresse);
 
-                    // Récupérer tous les prix de carburants
                     NodeList prixList = stationElement.getElementsByTagName("prix");
                     for (int j = 0; j < prixList.getLength(); j++) {
                         Element prix = (Element) prixList.item(j);
                         String carburant = prix.getAttribute("nom");
                         String valeur = prix.getAttribute("valeur");
 
-                        try {
-                            double prixValue = Double.parseDouble(valeur.replace(',', '.'));
-                            station.ajouterPrix(carburant, prixValue);
-                        } catch (NumberFormatException ignored) {}
+                        if (!valeur.isEmpty()) {
+                            try {
+                                double prixValue = Double.parseDouble(valeur.replace(',', '.'));
+                                if (prixValue > 0 && prixValue < 10) { // Filtrage prix aberrants
+                                    station.ajouterPrix(carburant, prixValue);
+                                }
+                            } catch (NumberFormatException ignored) {}
+                        }
                     }
 
-                    // N'ajouter que les stations qui ont au moins un prix
                     if (!station.prix.isEmpty()) {
                         allStations.add(station);
+                    } else {
+                        stationsIgnorees++;
                     }
 
                 } catch (NumberFormatException e) {
@@ -472,7 +595,7 @@ public class PrixEssenceProche {
                 }
             }
 
-            System.out.printf("✅ %d stations chargées (%d ignorées)%n", allStations.size(), stationsIgnorees);
+            System.out.printf("\n✅ %d stations chargées (%d ignorées)%n", allStations.size(), stationsIgnorees);
 
             // Charger la position sauvegardée
             double[] savedPosition = loadSavedLocation();
@@ -484,7 +607,7 @@ public class PrixEssenceProche {
             return true;
 
         } catch (Exception e) {
-            System.err.println("❌ Erreur lors du chargement : " + e.getMessage());
+            System.err.println("❌ Erreur lors du parsing XML : " + e.getMessage());
             return false;
         }
     }
@@ -492,13 +615,36 @@ public class PrixEssenceProche {
     private static void calculerDistancesToutesStations() {
         if (userPosition == null) return;
 
-        for (Station station : allStations) {
+        System.out.println("🧮 Calcul des distances...");
+        for (int i = 0; i < allStations.size(); i++) {
+            Station station = allStations.get(i);
             station.distanceKm = getSmartDistance(userPosition[0], userPosition[1],
                     station.latitude, station.longitude);
+
+            if (i % 1000 == 0) {
+                System.out.printf("\r⚙️  Calcul... %d/%d", i, allStations.size());
+            }
+        }
+        System.out.println("\n✅ Distances calculées !");
+    }
+
+    // ==================== MÉTHODES UTILITAIRES ====================
+
+    private static double parseRayonAvecDefaut(String rayonStr, double defaut) {
+        try {
+            double rayon = Double.parseDouble(rayonStr);
+            if (rayon <= 0) {
+                System.out.println("⚠️ Le rayon doit être positif, utilisation de la valeur par défaut");
+                return defaut;
+            }
+            return rayon;
+        } catch (NumberFormatException e) {
+            System.out.println("⚠️ Valeur invalide, utilisation du rayon par défaut (" + defaut + " km)");
+            return defaut;
         }
     }
 
-    // ==================== MÉTHODES GÉOLOCALISATION (reprises du code précédent) ====================
+    // ==================== MÉTHODES GÉOLOCALISATION ====================
 
     private static double[] getUserLocationWithConfig(Scanner scanner) {
         double[] savedLocation = loadSavedLocation();
@@ -545,9 +691,6 @@ public class PrixEssenceProche {
         }
     }
 
-    // ... (Toutes les autres méthodes du code précédent restent identiques)
-    // Je les omets ici pour la lisibilité, mais elles sont nécessaires dans le code complet
-
     private static double[] saisirCoordonnees(Scanner scanner) {
         System.out.println("\n=== SAISIE COORDONNÉES GPS ===");
         System.out.println("Vous pouvez trouver vos coordonnées sur Google Maps :");
@@ -560,54 +703,147 @@ public class PrixEssenceProche {
             double lat = Double.parseDouble(scanner.nextLine().trim().replace(',', '.'));
             System.out.print("Longitude (ex: 2.3522) : ");
             double lon = Double.parseDouble(scanner.nextLine().trim().replace(',', '.'));
+
+            // Validation des coordonnées
+            if (lat < -90 || lat > 90 || lon < -180 || lon > 180) {
+                System.out.println("❌ Coordonnées invalides. Latitude: -90 à 90, Longitude: -180 à 180");
+                return saisirCoordonnees(scanner);
+            }
+
             return new double[]{lat, lon};
         } catch (NumberFormatException e) {
-            System.out.println("Format invalide.");
+            System.out.println("❌ Format invalide. Utilisez des nombres décimaux.");
             return saisirCoordonnees(scanner);
         }
     }
 
     private static double[] geocoderAdresse(Scanner scanner) {
-        // Implémentation simplifiée - utiliser celle du code précédent
-        System.out.print("Entrez votre ville : ");
-        String ville = scanner.nextLine().trim();
-        // Pour l'exemple, retourner Paris si vide
-        if (ville.isEmpty()) return new double[]{48.8566, 2.3522};
+        System.out.print("Entrez votre ville ou adresse : ");
+        String adresse = scanner.nextLine().trim();
 
-        // Ici, implémenter le geocoding complet du code précédent
-        return new double[]{48.8566, 2.3522}; // Paris par défaut
+        if (adresse.isEmpty()) {
+            System.out.println("⚠️ Aucune adresse saisie, utilisation de Paris par défaut");
+            return new double[]{48.8566, 2.3522};
+        }
+
+        try {
+            // Utilisation de l'API Nominatim d'OpenStreetMap (gratuite)
+            String encodedAddress = URLEncoder.encode(adresse, StandardCharsets.UTF_8);
+            String url = "https://nominatim.openstreetmap.org/search?q=" + encodedAddress +
+                    "&format=json&countrycodes=fr&limit=1";
+
+            HttpURLConnection connection = (HttpURLConnection) new URL(url).openConnection();
+            connection.setRequestMethod("GET");
+            connection.setConnectTimeout(10000);
+            connection.setReadTimeout(10000);
+            connection.setRequestProperty("User-Agent", "PrixEssenceApp/1.0 (contact@example.com)");
+
+            if (connection.getResponseCode() == 200) {
+                try (BufferedReader reader = new BufferedReader(
+                        new InputStreamReader(connection.getInputStream(), StandardCharsets.UTF_8))) {
+
+                    StringBuilder response = new StringBuilder();
+                    String line;
+                    while ((line = reader.readLine()) != null) {
+                        response.append(line);
+                    }
+
+                    JSONArray results = new JSONArray(response.toString());
+                    if (results.length() > 0) {
+                        JSONObject result = results.getJSONObject(0);
+                        double lat = result.getDouble("lat");
+                        double lon = result.getDouble("lon");
+                        String displayName = result.getString("display_name");
+
+                        System.out.printf("✅ Adresse trouvée : %s%n", displayName);
+                        return new double[]{lat, lon};
+                    }
+                }
+            }
+        } catch (Exception e) {
+            System.err.println("❌ Erreur géocodage : " + e.getMessage());
+        }
+
+        System.out.println("❌ Impossible de trouver cette adresse. Utilisation de Paris par défaut.");
+        return new double[]{48.8566, 2.3522};
     }
 
     private static double[] getUserLocationFromIP() {
-        // Implémentation du code précédent
-        return new double[]{48.8566, 2.3522}; // Paris par défaut pour l'exemple
+        try {
+            System.out.println("🌐 Tentative de géolocalisation par IP...");
+
+            // Utilisation de l'API ipapi.co (gratuite)
+            String url = "http://ipapi.co/json/";
+            HttpURLConnection connection = (HttpURLConnection) new URL(url).openConnection();
+            connection.setRequestMethod("GET");
+            connection.setConnectTimeout(10000);
+            connection.setReadTimeout(10000);
+            connection.setRequestProperty("User-Agent", "PrixEssenceApp/1.0");
+
+            if (connection.getResponseCode() == 200) {
+                try (BufferedReader reader = new BufferedReader(
+                        new InputStreamReader(connection.getInputStream(), StandardCharsets.UTF_8))) {
+
+                    StringBuilder response = new StringBuilder();
+                    String line;
+                    while ((line = reader.readLine()) != null) {
+                        response.append(line);
+                    }
+
+                    JSONObject json = new JSONObject(response.toString());
+                    double lat = json.getDouble("latitude");
+                    double lon = json.getDouble("longitude");
+                    String city = json.optString("city", "Ville inconnue");
+                    String country = json.optString("country_name", "");
+
+                    if ("France".equals(country)) {
+                        System.out.printf("✅ Position détectée : %s (%.4f, %.4f)%n", city, lat, lon);
+                        return new double[]{lat, lon};
+                    } else {
+                        System.out.printf("⚠️ Position détectée hors France : %s, %s%n", city, country);
+                    }
+                }
+            }
+        } catch (Exception e) {
+            System.err.println("❌ Erreur géolocalisation IP : " + e.getMessage());
+        }
+
+        System.out.println("📍 Utilisation de Paris par défaut");
+        return new double[]{48.8566, 2.3522};
     }
 
     private static double[] loadSavedLocation() {
         File configFile = new File(CONFIG_FILE);
         if (!configFile.exists()) return null;
 
-        try {
+        try (FileInputStream fis = new FileInputStream(configFile)) {
             Properties props = new Properties();
-            props.load(new FileInputStream(configFile));
-            double lat = Double.parseDouble(props.getProperty("latitude"));
-            double lon = Double.parseDouble(props.getProperty("longitude"));
-            return new double[]{lat, lon};
+            props.load(fis);
+
+            String latStr = props.getProperty("latitude");
+            String lonStr = props.getProperty("longitude");
+
+            if (latStr != null && lonStr != null) {
+                double lat = Double.parseDouble(latStr);
+                double lon = Double.parseDouble(lonStr);
+                return new double[]{lat, lon};
+            }
         } catch (Exception e) {
-            return null;
+            System.err.println("⚠️ Erreur lecture config : " + e.getMessage());
         }
+        return null;
     }
 
     private static void saveLocation(double[] location) {
-        try {
+        try (FileOutputStream fos = new FileOutputStream(CONFIG_FILE)) {
             Properties props = new Properties();
             props.setProperty("latitude", String.valueOf(location[0]));
             props.setProperty("longitude", String.valueOf(location[1]));
             props.setProperty("saved_date", new Date().toString());
-            props.store(new FileOutputStream(CONFIG_FILE), "Configuration Station Essence");
+            props.store(fos, "Configuration Station Essence");
             System.out.println("✅ Position sauvegardée !");
         } catch (Exception e) {
-            System.err.println("Erreur sauvegarde : " + e.getMessage());
+            System.err.println("❌ Erreur sauvegarde : " + e.getMessage());
         }
     }
 
@@ -616,7 +852,8 @@ public class PrixEssenceProche {
             return distanceKm(lat1, lon1, lat2, lon2) * 1.3;
         }
 
-        // Implémentation simplifiée - utiliser celle du code précédent
+        // Pour une implémentation complète, utiliser une API de routing comme OSRM
+        // Ici, on utilise l'approximation par défaut
         return distanceKm(lat1, lon1, lat2, lon2) * 1.3;
     }
 
@@ -634,9 +871,10 @@ public class PrixEssenceProche {
         double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
         return R * c;
     }
-    // Ajouter ces classes à ton code principal
 
-    class HistoriquePrix {
+    // ==================== CLASSES INTERNES ====================
+
+    static class HistoriquePrix {
         private static final String HISTORIQUE_FILE = "historique_prix.json";
 
         static class EntreeHistorique {
@@ -655,7 +893,6 @@ public class PrixEssenceProche {
             }
         }
 
-        // Sauvegarder les prix du jour
         public static void sauvegarderPrixDuJour(List<Station> stations) {
             try {
                 List<EntreeHistorique> historique = chargerHistorique();
@@ -677,6 +914,17 @@ public class PrixEssenceProche {
                     }
                 }
 
+                // Nettoyer l'historique (garder seulement les 30 derniers jours)
+                LocalDate cutoffDate = LocalDate.now().minusDays(30);
+                historique.removeIf(e -> {
+                    try {
+                        LocalDate entryDate = LocalDate.parse(e.date);
+                        return entryDate.isBefore(cutoffDate);
+                    } catch (Exception ex) {
+                        return true; // Supprimer les entrées avec dates invalides
+                    }
+                });
+
                 // Sauvegarder en JSON
                 JSONArray jsonArray = new JSONArray();
                 for (EntreeHistorique entree : historique) {
@@ -689,7 +937,7 @@ public class PrixEssenceProche {
                     jsonArray.put(obj);
                 }
 
-                try (FileWriter file = new FileWriter(HISTORIQUE_FILE)) {
+                try (FileWriter file = new FileWriter(HISTORIQUE_FILE, StandardCharsets.UTF_8)) {
                     file.write(jsonArray.toString(2));
                 }
 
@@ -700,7 +948,6 @@ public class PrixEssenceProche {
             }
         }
 
-        // Charger l'historique existant
         private static List<EntreeHistorique> chargerHistorique() {
             List<EntreeHistorique> historique = new ArrayList<>();
             File file = new File(HISTORIQUE_FILE);
@@ -708,7 +955,7 @@ public class PrixEssenceProche {
             if (!file.exists()) return historique;
 
             try {
-                String content = new String(Files.readAllBytes(file.toPath()));
+                String content = new String(Files.readAllBytes(file.toPath()), StandardCharsets.UTF_8);
                 JSONArray jsonArray = new JSONArray(content);
 
                 for (int i = 0; i < jsonArray.length(); i++) {
@@ -722,17 +969,15 @@ public class PrixEssenceProche {
                     ));
                 }
             } catch (Exception e) {
-                System.err.println("Erreur lecture historique : " + e.getMessage());
+                System.err.println("⚠️ Erreur lecture historique : " + e.getMessage());
             }
 
             return historique;
         }
 
-        // Analyser l'évolution des prix
         public static void afficherEvolutionPrix(String carburant, int nbJours) {
             List<EntreeHistorique> historique = chargerHistorique();
 
-            // Filtrer par carburant et derniers X jours
             LocalDate dateDebut = LocalDate.now().minusDays(nbJours);
 
             Map<String, List<EntreeHistorique>> prixParJour = historique.stream()
@@ -747,9 +992,13 @@ public class PrixEssenceProche {
                     })
                     .collect(Collectors.groupingBy(e -> e.date));
 
+            if (prixParJour.isEmpty()) {
+                System.out.println("❌ Aucune donnée historique trouvée pour " + carburant);
+                return;
+            }
+
             System.out.printf("\n📈 ÉVOLUTION %s SUR %d JOURS 📈%n", carburant, nbJours);
 
-            // Calculer moyenne par jour
             prixParJour.entrySet().stream()
                     .sorted(Map.Entry.comparingByKey())
                     .forEach(entry -> {
@@ -775,81 +1024,137 @@ public class PrixEssenceProche {
                                 date, moyenne, min, max, prixJour.size());
                     });
         }
-
-        // Détecter les stations avec les plus fortes variations
-        public static void detecterVariationsPrix(String carburant) {
-            List<EntreeHistorique> historique = chargerHistorique();
-
-            // Grouper par station
-            Map<String, List<EntreeHistorique>> prixParStation = historique.stream()
-                    .filter(e -> e.carburant.equals(carburant))
-                    .collect(Collectors.groupingBy(e -> e.codePostalStation + "_" + e.nomStation));
-
-            System.out.printf("\n🔍 VARIATIONS DE PRIX %s PAR STATION 🔍%n", carburant);
-
-            prixParStation.entrySet().stream()
-                    .filter(entry -> entry.getValue().size() > 1) // Au moins 2 points de données
-                    .forEach(entry -> {
-                        List<EntreeHistorique> prixStation = entry.getValue();
-                        prixStation.sort(Comparator.comparing(e -> e.date));
-
-                        double prixMin = prixStation.stream().mapToDouble(e -> e.prix).min().orElse(0);
-                        double prixMax = prixStation.stream().mapToDouble(e -> e.prix).max().orElse(0);
-                        double variation = prixMax - prixMin;
-
-                        if (variation > 0.05) { // Variation de plus de 5 centimes
-                            EntreeHistorique station = prixStation.get(0);
-                            System.out.printf("⚠️  %s (%s) : Variation %.3f €/L (%.3f → %.3f)%n",
-                                    station.nomStation, station.codePostalStation, variation, prixMin, prixMax);
-                        }
-                    });
-        }
     }
-    // Module pour intégrer les infos transports (à ajouter à ton projet)
+    public class TransportInfo {
 
-    class TransportInfo {
-
-        // Récupérer les perturbations RATP/SNCF
         public static void afficherPerturbationsTransports() {
             System.out.println("\n🚇 === INFOS TRANSPORTS === 🚆");
 
-            try {
-                // API SNCF Connect (gratuite avec inscription)
-                // Pour l'exemple, on simule des données
-                String[] lignes = {"RER A", "RER B", "RER C", "RER D", "Métro 1", "Métro 4", "Métro 6", "Métro 9"};
-                String[] status = {"Normal", "Perturbé", "Normal", "Très perturbé", "Normal", "Perturbé", "Normal", "Normal"};
+            recupererPerturbationsRATP();
 
-                System.out.println("📊 État du trafic :");
-                for (int i = 0; i < lignes.length; i++) {
-                    String emoji = getStatusEmoji(status[i]);
-                    System.out.printf("  %s %s : %s%n", emoji, lignes[i], status[i]);
+            System.out.println("\n💡 Pour plus d'infos en temps réel :");
+            System.out.println("  🌐 SNCF Connect : https://www.sncf-connect.com/");
+            System.out.println("  📱 App Citymapper ou RATP");
+            System.out.println("  📞 3635 (SNCF) ou 3424 (RATP)");
+        }
+
+        private static void recupererPerturbationsRATP() {
+            try {
+                String[] modes = {"rers", "metros"}; // Ajoute "tramways", "bus" si besoin
+
+                for (String mode : modes) {
+                    String url = "https://api-ratp.pierre-grimaud.fr/v4/traffic/" + mode;
+                    HttpURLConnection conn = (HttpURLConnection) new URL(url).openConnection();
+                    conn.setRequestMethod("GET");
+                    conn.setConnectTimeout(10000);
+                    conn.setReadTimeout(10000);
+                    conn.setRequestProperty("User-Agent", "JavaApp");
+
+                    if (conn.getResponseCode() == 200) {
+                        BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+                        StringBuilder response = new StringBuilder();
+                        String line;
+                        while ((line = reader.readLine()) != null) {
+                            response.append(line);
+                        }
+
+                        JSONObject json = new JSONObject(response.toString());
+                        JSONArray lines = json.getJSONObject("result").getJSONArray("lines");
+
+                        System.out.println("\n📍 État du trafic " + mode.toUpperCase());
+
+                        for (int i = 0; i < lines.length(); i++) {
+                            JSONObject ligne = lines.getJSONObject(i);
+                            String nom = ligne.getString("line");
+                            String etat = ligne.getString("slug");
+                            String message = ligne.getString("title");
+
+                            String emoji = getStatusEmoji(etat);
+                            System.out.printf("  %s %s : %s%n", emoji, nom.toUpperCase(), message);
+                        }
+                    } else {
+                        System.out.println("⚠️ Erreur API RATP (" + mode + ") : " + conn.getResponseCode());
+                    }
+                }
+            } catch (Exception e) {
+                System.out.println("❌ Erreur API RATP : " + e.getMessage());
+            }
+        }
+
+        private static void afficherPerturbationsJSON(JSONObject json) {
+            try {
+                JSONArray disruptions = json.getJSONArray("disruptions");
+
+                System.out.println("🚆 PERTURBATIONS SNCF EN TEMPS RÉEL :");
+
+                if (disruptions.length() == 0) {
+                    System.out.println("✅ Aucune perturbation majeure signalée");
+                    return;
                 }
 
-                System.out.println("\n💡 Conseil : Vérifiez l'app Citymapper pour les itinéraires en temps réel !");
+                for (int i = 0; i < Math.min(disruptions.length(), 10); i++) {
+                    JSONObject disruption = disruptions.getJSONObject(i);
 
+                    String severity = disruption.optString("severity", "unknown").toLowerCase();
+                    String cause = disruption.optString("cause", "Non spécifiée");
+
+                    JSONArray impactedObjects = disruption.optJSONArray("impacted_objects");
+                    if (impactedObjects != null && impactedObjects.length() > 0) {
+                        JSONObject impact = impactedObjects.getJSONObject(0);
+                        JSONObject line = impact.optJSONObject("pt_object");
+
+                        if (line != null) {
+                            String lineName = line.optString("name", "Ligne inconnue");
+                            String emoji = getSeverityEmoji(severity);
+
+                            System.out.printf("  %s %s : %s (%s)%n", emoji, lineName, cause, severity);
+                        }
+                    }
+                }
             } catch (Exception e) {
-                System.err.println("❌ Erreur récupération infos transport : " + e.getMessage());
+                System.out.println("⚠️ Erreur parsing perturbations : " + e.getMessage());
+                afficherDonneesSimulees();
             }
         }
 
-        private static String getStatusEmoji(String status) {
-            switch (status.toLowerCase()) {
-                case "normal": return "✅";
-                case "perturbé": return "⚠️";
-                case "très perturbé": return "❌";
-                case "interrompu": return "🚫";
-                default: return "❓";
+        private static void afficherDonneesSimulees() {
+            System.out.println("📊 État du trafic (données simulées) :");
+            String[] lignes = {"RER A", "RER B", "RER C", "RER D", "Métro 1", "Métro 4", "Métro 14"};
+            String[] status = {"Normal", "Perturbé", "Normal", "Ralenti", "Normal", "Normal", "Normal"};
+
+            for (int i = 0; i < lignes.length; i++) {
+                String emoji = getStatusEmoji(status[i]);
+                System.out.printf("  %s %s : %s%n", emoji, lignes[i], status[i]);
             }
         }
 
-        // Calculer le coût carburant vs transport en commun
+        private static String getSeverityEmoji(String severity) {
+            return switch (severity) {
+                case "information" -> "ℹ️";
+                case "warning" -> "⚠️";
+                case "blocking" -> "🚫";
+                case "reduced_service" -> "🟡";
+                case "significant_delays" -> "🔴";
+                case "detour" -> "🔄";
+                default -> "❓";
+            };
+        }
+
+        public static String getStatusEmoji(String status) {
+            return switch (status.toLowerCase()) {
+                case "normal" -> "✅";
+                case "perturbé" -> "⚠️";
+                case "très perturbé" -> "❌";
+                case "ralenti", "retard" -> "🟡";
+                case "interrompu" -> "🚫";
+                default -> "❓";
+            };
+        }
+
         public static void comparerCoutTransport(double distanceKm, double prixCarburant, double consommation) {
             System.out.println("\n💰 === COMPARAISON COÛTS === 💰");
 
-            // Calcul coût carburant
             double coutCarburant = (distanceKm / 100) * consommation * prixCarburant;
-
-            // Coûts transports publics (approximatifs pour Paris)
             double prixTicketMetro = 2.15;
             double prixNavigoMois = 84.10;
             double prixNavigoJour = prixNavigoMois / 30;
@@ -861,11 +1166,10 @@ public class PrixEssenceProche {
             System.out.printf("  TOTAL estimé : %.2f €%n", coutCarburant * 1.5);
 
             System.out.println("\n🚇 Transports en commun :");
-            System.out.printf("  Ticket à l'unité : %.2f €%n", prixTicketMetro * 2); // A/R
+            System.out.printf("  Ticket à l'unité : %.2f € (A/R)%n", prixTicketMetro * 2);
             System.out.printf("  Navigo jour : %.2f €%n", prixNavigoJour);
             System.out.printf("  Navigo mois : %.2f € (si trajet quotidien)%n", prixNavigoMois);
 
-            // Conseil
             if (coutCarburant * 1.5 > prixTicketMetro * 2) {
                 System.out.println("\n💡 Les transports en commun semblent plus économiques !");
             } else {
@@ -873,17 +1177,14 @@ public class PrixEssenceProche {
             }
         }
     }
-    // Améliorations visuelles pour ton interface CLI
 
-    class InterfaceCLI {
+    static class InterfaceCLI {
 
-        // Afficher un graphique ASCII des prix
         public static void afficherGraphiquePrix(List<Station> stations, String carburant) {
             if (stations.isEmpty()) return;
 
             System.out.printf("\n📊 GRAPHIQUE PRIX %s 📊%n", carburant);
 
-            // Trier par prix croissant et prendre les 10 premiers
             List<Station> top10 = stations.stream()
                     .filter(s -> s.getPrix(carburant) != null)
                     .sorted(Comparator.comparingDouble(s -> s.getPrix(carburant)))
@@ -903,13 +1204,8 @@ public class PrixEssenceProche {
                 Station s = top10.get(i);
                 double prix = s.getPrix(carburant);
 
-                // Calculer la longueur de la barre (proportionnelle)
                 int longueurBarre = ecart > 0 ? (int) ((prix - prixMin) / ecart * 40) + 5 : 5;
-
-                // Créer la barre visuelle
                 String barre = "█".repeat(Math.max(1, longueurBarre));
-
-                // Couleur selon la position (vert = moins cher, rouge = plus cher)
                 String couleur = i < 3 ? "🟢" : i < 7 ? "🟡" : "🔴";
 
                 System.out.printf("%s %2d. %-20s %s %.3f €/L%n",
@@ -920,79 +1216,6 @@ public class PrixEssenceProche {
             System.out.println();
         }
 
-        // Afficher une carte ASCII approximative
-        public static void afficherCarteStations(List<Station> stations, double[] userPos) {
-            if (stations.isEmpty() || userPos == null) return;
-
-            System.out.println("\n🗺️  CARTE APPROXIMATIVE DES STATIONS 🗺️");
-            System.out.println("(Vous êtes au centre [●])");
-            System.out.println();
-
-            // Grille 21x11 (largeur x hauteur)
-            char[][] carte = new char[11][21];
-            for (int i = 0; i < 11; i++) {
-                Arrays.fill(carte[i], ' ');
-            }
-
-            // Position utilisateur au centre
-            carte[5][10] = '●';
-
-            // Placer les stations (maximum 10 premières)
-            List<Station> stationsProches = stations.stream()
-                    .filter(s -> s.distanceKm > 0 && s.distanceKm <= 50) // Dans les 50km
-                    .sorted(Comparator.comparingDouble(s -> s.distanceKm))
-                    .limit(10)
-                    .collect(Collectors.toList());
-
-            for (int i = 0; i < stationsProches.size() && i < 9; i++) {
-                Station s = stationsProches.get(i);
-
-                // Calculer position relative approximative
-                double deltaLat = s.latitude - userPos[0];
-                double deltaLon = s.longitude - userPos[1];
-
-                // Convertir en coordonnées grille (approximatif)
-                int x = Math.max(0, Math.min(20, 10 + (int) (deltaLon * 200))); // Facteur arbitraire
-                int y = Math.max(0, Math.min(10, 5 - (int) (deltaLat * 200)));   // Inversé pour l'affichage
-
-                // Éviter de superposer sur l'utilisateur
-                if (x == 10 && y == 5) {
-                    x = (deltaLon >= 0) ? 11 : 9;
-                }
-
-                carte[y][x] = (char) ('1' + i); // Numéro de la station
-            }
-
-            // Afficher la carte
-            System.out.println("    " + "⬆️ NORD");
-            for (int i = 0; i < 11; i++) {
-                System.out.print("    ");
-                for (int j = 0; j < 21; j++) {
-                    char c = carte[i][j];
-                    if (c == '●') {
-                        System.out.print("🏠"); // Vous
-                    } else if (c >= '1' && c <= '9') {
-                        System.out.print("⛽"); // Station
-                    } else {
-                        System.out.print("·");
-                    }
-                }
-                System.out.println();
-            }
-            System.out.println("    " + "⬇️ SUD");
-
-            // Légende
-            System.out.println("\n📍 Légende :");
-            System.out.println("  🏠 Votre position");
-            System.out.println("  ⛽ Stations-service");
-
-            for (int i = 0; i < Math.min(stationsProches.size(), 9); i++) {
-                Station s = stationsProches.get(i);
-                System.out.printf("  %d. %s (%.1f km)%n", i + 1, s.ville, s.distanceKm);
-            }
-        }
-
-        // Afficher un tableau formaté
         public static void afficherTableauComparaison(List<Station> stations, String carburant) {
             if (stations.isEmpty()) return;
 
@@ -1021,72 +1244,6 @@ public class PrixEssenceProche {
             System.out.println("└────┴─────────────────────┴───────────┴──────────┴─────────────┘");
         }
 
-        // Afficher les alertes et notifications
-        public static void afficherAlertes(List<Station> stations, String carburant) {
-            System.out.println("\n🚨 === ALERTES PRIX === 🚨");
-
-            // Calculer la moyenne
-            double moyenne = stations.stream()
-                    .filter(s -> s.getPrix(carburant) != null)
-                    .mapToDouble(s -> s.getPrix(carburant))
-                    .average()
-                    .orElse(0);
-
-            // Stations exceptionnellement bon marché (> 5 centimes sous la moyenne)
-            List<Station> bonnesAffaires = stations.stream()
-                    .filter(s -> s.getPrix(carburant) != null)
-                    .filter(s -> s.getPrix(carburant) < moyenne - 0.05)
-                    .filter(s -> s.distanceKm <= 30) // Dans les 30km
-                    .sorted(Comparator.comparingDouble(s -> s.getPrix(carburant)))
-                    .limit(3)
-                    .collect(Collectors.toList());
-
-            if (!bonnesAffaires.isEmpty()) {
-                System.out.println("💰 BONNES AFFAIRES (>5cts sous la moyenne) :");
-                for (Station s : bonnesAffaires) {
-                    double economie = moyenne - s.getPrix(carburant);
-                    System.out.printf("  • %s (%s) : %.3f €/L (économie: %.3f €/L, %.1f km)%n",
-                            s.ville, s.codePostal, s.getPrix(carburant), economie, s.distanceKm);
-                }
-            } else {
-                System.out.println("ℹ️  Aucune bonne affaire particulière détectée.");
-            }
-
-            // Stations très chères à éviter
-            List<Station> stationsChere = stations.stream()
-                    .filter(s -> s.getPrix(carburant) != null)
-                    .filter(s -> s.getPrix(carburant) > moyenne + 0.08)
-                    .filter(s -> s.distanceKm <= 30)
-                    .sorted(Comparator.comparingDouble((Station s) -> s.getPrix(carburant)).reversed())
-                    .limit(2)
-                    .collect(Collectors.toList());
-
-            if (!stationsChere.isEmpty()) {
-                System.out.println("\n⚠️  STATIONS À ÉVITER (très au-dessus de la moyenne) :");
-                for (Station s : stationsChere) {
-                    double surcoût = s.getPrix(carburant) - moyenne;
-                    System.out.printf("  • %s (%s) : %.3f €/L (surcoût: +%.3f €/L)%n",
-                            s.ville, s.codePostal, s.getPrix(carburant), surcoût);
-                }
-            }
-        }
-
-        // Barre de progression pour les opérations longues
-        public static void afficherBarreProgression(int actuel, int total, String operation) {
-            int pourcentage = (int) ((double) actuel / total * 100);
-            int barres = pourcentage / 2; // Barre de 50 caractères max
-
-            String barre = "█".repeat(barres) + "░".repeat(50 - barres);
-
-            System.out.printf("\r%s [%s] %d%% (%d/%d)",
-                    operation, barre, pourcentage, actuel, total);
-
-            if (actuel == total) {
-                System.out.println(" ✅");
-            }
-        }
-
-        // Utilitaire pour tronquer les chaînes
         private static String truncateString(String str, int maxLength) {
             if (str.length() <= maxLength) {
                 return str;
@@ -1094,15 +1251,29 @@ public class PrixEssenceProche {
             return str.substring(0, maxLength - 3) + "...";
         }
 
-        // Affichage de bienvenue stylisé
         public static void afficherBienvenue() {
             System.out.println("╔══════════════════════════════════════════════════════════════╗");
             System.out.println("║                  🚗 ANALYSEUR CARBURANTS ⛽                  ║");
             System.out.println("║                                                              ║");
-            System.out.println("║  Trouvez les meilleures stations-service près de chez vou s  ║");
+            System.out.println("║  Trouvez les meilleures stations-service près de chez vous   ║");
             System.out.println("║         Analysez les prix • Économisez de l'argent           ║");
+            System.out.println("║                                                              ║");
+            System.out.println("║  📊 Données en temps réel depuis data.gouv.fr                ║");
             System.out.println("╚══════════════════════════════════════════════════════════════╝");
             System.out.println();
+        }
+    }
+
+    private static boolean isValidXMLFile(File file) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(file, StandardCharsets.UTF_8))) {
+            String firstLine = reader.readLine();
+            if (firstLine == null) return false;
+
+            // Vérifier que ça commence par <?xml ou <pdv_liste
+            firstLine = firstLine.trim();
+            return firstLine.startsWith("<?xml") || firstLine.startsWith("<pdv_liste");
+        } catch (Exception e) {
+            return false;
         }
     }
 }

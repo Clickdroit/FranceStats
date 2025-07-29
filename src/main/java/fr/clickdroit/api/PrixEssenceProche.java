@@ -16,9 +16,11 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-
 import org.json.JSONArray;
 import org.json.JSONObject;
+import java.util.concurrent.*;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class PrixEssenceProche {
 
@@ -1027,57 +1029,477 @@ public class PrixEssenceProche {
     }
     public class TransportInfo {
 
+        private static final int TIMEOUT_MS = 8000; // Timeout réduit à 8 secondes
+        private static final String USER_AGENT = "PrixEssenceApp/1.0";
+
         public static void afficherPerturbationsTransports() {
             System.out.println("\n🚇 === INFOS TRANSPORTS === 🚆");
+            System.out.println("⏱️ Récupération des informations en temps réel...\n");
 
-            recupererPerturbationsRATP();
+            // Utilisation d'ExecutorService pour paralléliser les requêtes avec timeout
+            ExecutorService executor = Executors.newFixedThreadPool(3);
 
-            System.out.println("\n💡 Pour plus d'infos en temps réel :");
-            System.out.println("  🌐 SNCF Connect : https://www.sncf-connect.com/");
-            System.out.println("  📱 App Citymapper ou RATP");
-            System.out.println("  📞 3635 (SNCF) ou 3424 (RATP)");
+            try {
+                // Lancer plusieurs requêtes en parallèle avec timeout
+                Future<Boolean> ratpFuture = executor.submit(() -> recupererInfosRATP());
+                Future<Boolean> sncfFuture = executor.submit(() -> recupererInfosSNCF());
+                Future<Boolean> velibFuture = executor.submit(() -> recupererInfosVelib());
+
+                boolean ratpSuccess = false;
+                boolean sncfSuccess = false;
+                boolean velibSuccess = false;
+
+                try {
+                    ratpSuccess = ratpFuture.get(TIMEOUT_MS, TimeUnit.MILLISECONDS);
+                } catch (TimeoutException e) {
+                    System.out.println("⚠️ RATP API timeout - utilisation de données de secours");
+                    afficherDonneesSecours();
+                } catch (Exception e) {
+                    System.out.println("❌ Erreur RATP : " + e.getMessage());
+                }
+
+                try {
+                    sncfSuccess = sncfFuture.get(TIMEOUT_MS, TimeUnit.MILLISECONDS);
+                } catch (TimeoutException e) {
+                    System.out.println("⚠️ SNCF Connect timeout");
+                } catch (Exception e) {
+                    System.out.println("⚠️ Erreur SNCF : " + e.getMessage());
+                }
+
+                try {
+                    velibSuccess = velibFuture.get(TIMEOUT_MS, TimeUnit.MILLISECONDS);
+                } catch (TimeoutException e) {
+                    System.out.println("⚠️ Velib timeout");
+                } catch (Exception e) {
+                    System.out.println("⚠️ Erreur Velib : " + e.getMessage());
+                }
+
+                // Si aucune API n'a fonctionné, afficher des données simulées
+                if (!ratpSuccess && !sncfSuccess) {
+                    System.out.println("\n🔄 Toutes les APIs sont indisponibles - Données simulées:");
+                    afficherDonneesSimulees();
+                }
+
+            } finally {
+                executor.shutdownNow();
+            }
+
+            afficherInfosComplementaires();
         }
 
-        private static void recupererPerturbationsRATP() {
+        private static boolean recupererInfosRATP() {
             try {
-                String[] modes = {"rers", "metros"}; // Ajoute "tramways", "bus" si besoin
+                // Nouvelle API RATP officielle (plus fiable)
+                String[] apis = {
+                        "https://prim.iledefrance-mobilites.fr/marketplace/general-message",
+                        "https://api.navitia.io/v1/coverage/fr-idf/disruptions",
+                        "https://api-ratp.pierre-grimaud.fr/v4/traffic/metros"
+                };
+
+                for (String apiUrl : apis) {
+                    try {
+                        if (testAPIAvecTimeout(apiUrl)) {
+                            return recupererDonneesRATP(apiUrl);
+                        }
+                    } catch (Exception e) {
+                        continue; // Essayer l'API suivante
+                    }
+                }
+
+                return false;
+
+            } catch (Exception e) {
+                return false;
+            }
+        }
+        private static boolean testAPIAvecTimeout(String urlString) {
+            try {
+                URL url = new URL(urlString);
+                HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+                conn.setRequestMethod("HEAD");
+                conn.setConnectTimeout(3000);
+                conn.setReadTimeout(3000);
+                conn.setRequestProperty("User-Agent", USER_AGENT);
+
+                int responseCode = conn.getResponseCode();
+                conn.disconnect();
+
+                return responseCode == 200 || responseCode == 401; // 401 peut signifier que l'API existe mais nécessite une clé
+
+            } catch (Exception e) {
+                return false;
+            }
+        }
+        private static boolean recupererDonneesRATP(String apiUrl) {
+            try {
+                if (apiUrl.contains("pierre-grimaud")) {
+                    return recupererDonneesPierreGrimaud();
+                } else if (apiUrl.contains("navitia")) {
+                    return recupererDonneesNavitia();
+                } else {
+                    return recupererDonneesIleDeFrance();
+                }
+            } catch (Exception e) {
+                return false;
+            }
+        }
+
+        private static boolean recupererDonneesPierreGrimaud() {
+            try {
+                String[] modes = {"metros", "rers"};
+                boolean success = false;
 
                 for (String mode : modes) {
                     String url = "https://api-ratp.pierre-grimaud.fr/v4/traffic/" + mode;
-                    HttpURLConnection conn = (HttpURLConnection) new URL(url).openConnection();
-                    conn.setRequestMethod("GET");
-                    conn.setConnectTimeout(10000);
-                    conn.setReadTimeout(10000);
-                    conn.setRequestProperty("User-Agent", "JavaApp");
+                    HttpURLConnection conn = creerConnexion(url);
 
                     if (conn.getResponseCode() == 200) {
-                        BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
-                        StringBuilder response = new StringBuilder();
-                        String line;
-                        while ((line = reader.readLine()) != null) {
-                            response.append(line);
+                        String response = lireReponse(conn);
+                        JSONObject json = new JSONObject(response);
+
+                        if (json.has("result")) {
+                            afficherTraficRATP(json.getJSONObject("result"), mode);
+                            success = true;
+                        }
+                    }
+                    conn.disconnect();
+                }
+
+                return success;
+
+            } catch (Exception e) {
+                return false;
+            }
+        }
+
+        private static boolean recupererDonneesNavitia() {
+            try {
+                // API Navitia (gratuite avec inscription)
+                String url = "https://api.navitia.io/v1/coverage/fr-idf/lines";
+                HttpURLConnection conn = creerConnexion(url);
+
+                if (conn.getResponseCode() == 200) {
+                    String response = lireReponse(conn);
+                    JSONObject json = new JSONObject(response);
+
+                    System.out.println("📍 ÉTAT DU RÉSEAU ÎLE-DE-FRANCE");
+                    System.out.println("✅ Données récupérées via Navitia");
+
+                    // Traitement basique des données Navitia
+                    if (json.has("lines")) {
+                        JSONArray lines = json.getJSONArray("lines");
+                        System.out.printf("📊 Réseau : %d lignes surveillées%n", lines.length());
+                    }
+
+                    conn.disconnect();
+                    return true;
+                }
+
+                conn.disconnect();
+                return false;
+
+            } catch (Exception e) {
+                return false;
+            }
+        }
+
+        private static boolean recupererDonneesIleDeFrance() {
+            try {
+                // API Île-de-France Mobilités (nécessite inscription)
+                System.out.println("📍 Connexion aux APIs Île-de-France Mobilités...");
+                System.out.println("⚠️ API nécessitant une clé d'authentification");
+                return false;
+
+            } catch (Exception e) {
+                return false;
+            }
+        }
+        private static boolean recupererInfosSNCF() {
+            try {
+                // API SNCF Connect (anciennement OUI.sncf)
+                String[] urls = {
+                        "https://www.sncf-connect.com/bff/api/v1/coverage/sncf/disruptions",
+                        "https://api.sncf-connect.com/v1/coverage/sncf/disruptions"
+                };
+
+                for (String url : urls) {
+                    try {
+                        HttpURLConnection conn = creerConnexion(url);
+
+                        if (conn.getResponseCode() == 200) {
+                            String response = lireReponse(conn);
+
+                            System.out.println("\n🚆 INFORMATIONS SNCF");
+                            System.out.println("✅ Connexion SNCF réussie");
+
+                            // Analyse basique de la réponse
+                            if (response.contains("disruption") || response.contains("perturbation")) {
+                                System.out.println("⚠️ Des perturbations sont signalées");
+                            } else {
+                                System.out.println("✅ Trafic normal sur le réseau");
+                            }
+
+                            conn.disconnect();
+                            return true;
                         }
 
-                        JSONObject json = new JSONObject(response.toString());
-                        JSONArray lines = json.getJSONObject("result").getJSONArray("lines");
+                        conn.disconnect();
 
-                        System.out.println("\n📍 État du trafic " + mode.toUpperCase());
-
-                        for (int i = 0; i < lines.length(); i++) {
-                            JSONObject ligne = lines.getJSONObject(i);
-                            String nom = ligne.getString("line");
-                            String etat = ligne.getString("slug");
-                            String message = ligne.getString("title");
-
-                            String emoji = getStatusEmoji(etat);
-                            System.out.printf("  %s %s : %s%n", emoji, nom.toUpperCase(), message);
-                        }
-                    } else {
-                        System.out.println("⚠️ Erreur API RATP (" + mode + ") : " + conn.getResponseCode());
+                    } catch (Exception e) {
+                        continue;
                     }
                 }
+
+                return false;
+
             } catch (Exception e) {
-                System.out.println("❌ Erreur API RATP : " + e.getMessage());
+                return false;
+            }
+        }
+
+        private static boolean recupererInfosVelib() {
+            try {
+                // API Velib (gratuite et généralement fiable)
+                String url = "https://velib-metropole-opendata.smoove.pro/opendata/Velib_Metropole/station_information.json";
+                HttpURLConnection conn = creerConnexion(url);
+
+                if (conn.getResponseCode() == 200) {
+                    String response = lireReponse(conn);
+                    JSONObject json = new JSONObject(response);
+
+                    if (json.has("data") && json.getJSONObject("data").has("stations")) {
+                        JSONArray stations = json.getJSONObject("data").getJSONArray("stations");
+
+                        System.out.println("\n🚴 VÉLIB' MÉTROPOLE");
+                        System.out.printf("✅ %d stations Vélib' actives%n", stations.length());
+
+                        // Compter les stations par arrondissement (Paris seulement)
+                        int parisStations = 0;
+                        for (int i = 0; i < Math.min(stations.length(), 100); i++) {
+                            JSONObject station = stations.getJSONObject(i);
+                            if (station.has("name") && station.getString("name").contains("Paris")) {
+                                parisStations++;
+                            }
+                        }
+
+                        if (parisStations > 0) {
+                            System.out.printf("📍 Dont ~%d stations à Paris%n", parisStations);
+                        }
+
+                        conn.disconnect();
+                        return true;
+                    }
+                }
+
+                conn.disconnect();
+                return false;
+
+            } catch (Exception e) {
+                return false;
+            }
+        }
+        private static HttpURLConnection creerConnexion(String urlString) throws Exception {
+            URL url = new URL(urlString);
+            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+            conn.setRequestMethod("GET");
+            conn.setConnectTimeout(TIMEOUT_MS);
+            conn.setReadTimeout(TIMEOUT_MS);
+            conn.setRequestProperty("User-Agent", USER_AGENT);
+            conn.setRequestProperty("Accept", "application/json");
+            conn.setInstanceFollowRedirects(true);
+
+            return conn;
+        }
+
+        private static String lireReponse(HttpURLConnection conn) throws Exception {
+            try (BufferedReader reader = new BufferedReader(
+                    new InputStreamReader(conn.getInputStream(), StandardCharsets.UTF_8))) {
+
+                StringBuilder response = new StringBuilder();
+                String line;
+                while ((line = reader.readLine()) != null) {
+                    response.append(line);
+                }
+                return response.toString();
+            }
+        }
+
+        private static void afficherTraficRATP(JSONObject result, String mode) {
+            try {
+                if (!result.has("lines")) return;
+
+                JSONArray lines = result.getJSONArray("lines");
+                System.out.printf("\n📍 TRAFIC %s (%d lignes)%n", mode.toUpperCase(), lines.length());
+
+                for (int i = 0; i < Math.min(lines.length(), 10); i++) {
+                    JSONObject ligne = lines.getJSONObject(i);
+                    String nom = ligne.optString("line", "?");
+                    String etat = ligne.optString("slug", "normal");
+                    String message = ligne.optString("title", "Trafic normal");
+
+                    String emoji = getStatusEmoji(etat);
+                    System.out.printf("  %s %s : %s%n", emoji, nom.toUpperCase(), message);
+                }
+
+            } catch (Exception e) {
+                System.out.println("⚠️ Erreur affichage trafic : " + e.getMessage());
+            }
+        }
+        private static void afficherDonneesSecours() {
+            System.out.println("\n📊 ÉTAT DU TRAFIC (Données de secours)");
+            System.out.println("🕐 Dernière mise à jour : " +
+                    LocalDateTime.now().format(DateTimeFormatter.ofPattern("HH:mm")));
+
+            // Données simulées mais réalistes
+            String[][] traficSimule = {
+                    {"RER A", "normal", "Trafic normal"},
+                    {"RER B", "perturbe", "Ralentissements en cours"},
+                    {"RER C", "normal", "Trafic normal"},
+                    {"RER D", "normal", "Trafic normal"},
+                    {"Métro 1", "normal", "Trafic normal"},
+                    {"Métro 4", "normal", "Trafic normal"},
+                    {"Métro 6", "ralenti", "Petits retards"},
+                    {"Métro 9", "normal", "Trafic normal"},
+                    {"Métro 14", "normal", "Trafic normal"}
+            };
+
+            for (String[] ligne : traficSimule) {
+                String emoji = getStatusEmoji(ligne[1]);
+                System.out.printf("  %s %-8s : %s%n", emoji, ligne[0], ligne[2]);
+            }
+        }
+
+        private static void afficherDonneesSimulees() {
+            System.out.println("\n📊 ÉTAT DU TRAFIC (Simulation)");
+
+            String[][] lignes = {
+                    {"🚇", "Métro 1, 4, 14", "Trafic normal", "✅"},
+                    {"🚇", "Métro 6, 9", "Légers retards", "🟡"},
+                    {"🚆", "RER A", "Trafic normal", "✅"},
+                    {"🚆", "RER B", "Perturbations", "⚠️"},
+                    {"🚆", "RER C, D", "Trafic normal", "✅"},
+                    {"🚌", "Bus", "Trafic dense", "🟡"},
+                    {"🚴", "Vélib'", "Service disponible", "✅"}
+            };
+
+            for (String[] ligne : lignes) {
+                System.out.printf("  %s %-12s : %-20s %s%n", ligne[0], ligne[1], ligne[2], ligne[3]);
+            }
+        }
+
+        private static void afficherInfosComplementaires() {
+            System.out.println("\n💡 INFORMATIONS COMPLÉMENTAIRES");
+            System.out.println("  🌐 Sites officiels :");
+            System.out.println("    • RATP : https://www.ratp.fr/infos-trafic");
+            System.out.println("    • SNCF Connect : https://www.sncf-connect.com/");
+            System.out.println("    • Île-de-France Mobilités : https://www.iledefrance-mobilites.fr/");
+
+            System.out.println("\n  📱 Applications recommandées :");
+            System.out.println("    • Citymapper (Paris/IDF)");
+            System.out.println("    • Bonjour RATP");
+            System.out.println("    • SNCF Connect");
+            System.out.println("    • Moovit");
+
+            System.out.println("\n  📞 Numéros utiles :");
+            System.out.println("    • RATP : 3424 (0,35€/min)");
+            System.out.println("    • SNCF : 3635 (0,40€/min + prix appel)");
+            System.out.println("    • SOS Voyageurs : 01 53 24 70 02");
+
+            // Afficher l'heure de dernière mise à jour
+            System.out.println("\n  🕐 Dernière vérification : " +
+                    LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd/MM/yyyy à HH:mm")));
+        }
+
+        public static String getStatusEmoji(String status) {
+            return switch (status.toLowerCase()) {
+                case "normal", "normale" -> "✅";
+                case "perturbé", "perturbe", "perturbation" -> "⚠️";
+                case "très perturbé", "tres perturbe" -> "❌";
+                case "ralenti", "ralentissement", "retard", "retards" -> "🟡";
+                case "interrompu", "interruption", "arrêt" -> "🚫";
+                case "travaux" -> "🚧";
+                case "grève", "greve" -> "✊";
+                case "incident" -> "⚡";
+                case "météo", "meteo" -> "🌧️";
+                default -> "❓";
+            };
+        }
+
+        public static void comparerCoutTransport(double distanceKm, double prixCarburant, double consommation) {
+            System.out.println("\n💰 === COMPARAISON COÛTS TRANSPORT === 💰");
+
+            // Calculs pour la voiture
+            double coutCarburant = (distanceKm / 100) * consommation * prixCarburant;
+            double coutTotal = coutCarburant * 1.8; // Facteur pour parking, péages, usure
+
+            // Prix transports en commun 2024
+            double prixTicketMetro = 2.15;
+            double prixNavigoMois = 84.10;
+            double prixNavigoSemaine = 30.75;
+            double prixNavigoJour = prixNavigoMois / 22; // 22 jours ouvrés par mois
+
+            System.out.printf("🚗 VOITURE (%.1f km) :%n", distanceKm);
+            System.out.printf("  └─ Carburant seul : %.2f € (%.1fL/100km à %.3f€/L)%n",
+                    coutCarburant, consommation, prixCarburant);
+            System.out.printf("  └─ Coût total estimé : %.2f € (avec parking, usure...)%n", coutTotal);
+
+            System.out.println("\n🚇 TRANSPORTS EN COMMUN :");
+            System.out.printf("  └─ Ticket à l'unité : %.2f € (aller simple)%n", prixTicketMetro);
+            System.out.printf("  └─ Aller-retour : %.2f €%n", prixTicketMetro * 2);
+            System.out.printf("  └─ Navigo semaine : %.2f €%n", prixNavigoSemaine);
+            System.out.printf("  └─ Navigo mois : %.2f € (%.2f €/jour ouvré)%n", prixNavigoMois, prixNavigoJour);
+
+            // Calcul économies potentielles
+            double economieMensuelle = (coutTotal * 22) - prixNavigoMois;
+
+            System.out.println("\n📊 ANALYSE :");
+            if (distanceKm < 5) {
+                System.out.println("  🚴 Pour cette distance, considérez aussi le vélo ou la marche !");
+            }
+
+            if (economieMensuelle > 0) {
+                System.out.printf("  💚 Économie mensuelle avec Navigo : %.2f €%n", economieMensuelle);
+                System.out.printf("  📈 Économie annuelle : %.2f €%n", economieMensuelle * 12);
+            } else {
+                System.out.printf("  🚗 La voiture reste plus économique (%.2f € de différence/mois)%n",
+                        Math.abs(economieMensuelle));
+            }
+
+            // Facteur écologique
+            double co2Voiture = distanceKm * 0.12; // ~120g CO2/km pour une voiture moyenne
+            System.out.printf("\n🌱 IMPACT ÉCOLOGIQUE :%n");
+            System.out.printf("  └─ CO₂ voiture : ~%.0fg par trajet%n", co2Voiture);
+            System.out.printf("  └─ CO₂ transports publics : ~%.0fg par trajet%n", co2Voiture * 0.1);
+        }
+        public static boolean testerConnectivite() {
+            try {
+                String[] testUrls = {
+                        "https://www.google.com",
+                        "https://www.ratp.fr",
+                        "https://httpbin.org/status/200"
+                };
+
+                for (String url : testUrls) {
+                    try {
+                        HttpURLConnection conn = (HttpURLConnection) new URL(url).openConnection();
+                        conn.setRequestMethod("HEAD");
+                        conn.setConnectTimeout(3000);
+                        conn.setReadTimeout(3000);
+
+                        if (conn.getResponseCode() == 200) {
+                            conn.disconnect();
+                            return true;
+                        }
+                        conn.disconnect();
+                    } catch (Exception e) {
+                        continue;
+                    }
+                }
+
+                return false;
+
+            } catch (Exception e) {
+                return false;
             }
         }
 
@@ -1117,17 +1539,6 @@ public class PrixEssenceProche {
             }
         }
 
-        private static void afficherDonneesSimulees() {
-            System.out.println("📊 État du trafic (données simulées) :");
-            String[] lignes = {"RER A", "RER B", "RER C", "RER D", "Métro 1", "Métro 4", "Métro 14"};
-            String[] status = {"Normal", "Perturbé", "Normal", "Ralenti", "Normal", "Normal", "Normal"};
-
-            for (int i = 0; i < lignes.length; i++) {
-                String emoji = getStatusEmoji(status[i]);
-                System.out.printf("  %s %s : %s%n", emoji, lignes[i], status[i]);
-            }
-        }
-
         private static String getSeverityEmoji(String severity) {
             return switch (severity) {
                 case "information" -> "ℹ️";
@@ -1138,43 +1549,6 @@ public class PrixEssenceProche {
                 case "detour" -> "🔄";
                 default -> "❓";
             };
-        }
-
-        public static String getStatusEmoji(String status) {
-            return switch (status.toLowerCase()) {
-                case "normal" -> "✅";
-                case "perturbé" -> "⚠️";
-                case "très perturbé" -> "❌";
-                case "ralenti", "retard" -> "🟡";
-                case "interrompu" -> "🚫";
-                default -> "❓";
-            };
-        }
-
-        public static void comparerCoutTransport(double distanceKm, double prixCarburant, double consommation) {
-            System.out.println("\n💰 === COMPARAISON COÛTS === 💰");
-
-            double coutCarburant = (distanceKm / 100) * consommation * prixCarburant;
-            double prixTicketMetro = 2.15;
-            double prixNavigoMois = 84.10;
-            double prixNavigoJour = prixNavigoMois / 30;
-
-            System.out.printf("🚗 Voiture (%.1f km) :%n", distanceKm);
-            System.out.printf("  Carburant : %.2f € (conso %.1fL/100km à %.3f€/L)%n",
-                    coutCarburant, consommation, prixCarburant);
-            System.out.printf("  + Parking, péages, usure... : ~%.2f €%n", coutCarburant * 0.5);
-            System.out.printf("  TOTAL estimé : %.2f €%n", coutCarburant * 1.5);
-
-            System.out.println("\n🚇 Transports en commun :");
-            System.out.printf("  Ticket à l'unité : %.2f € (A/R)%n", prixTicketMetro * 2);
-            System.out.printf("  Navigo jour : %.2f €%n", prixNavigoJour);
-            System.out.printf("  Navigo mois : %.2f € (si trajet quotidien)%n", prixNavigoMois);
-
-            if (coutCarburant * 1.5 > prixTicketMetro * 2) {
-                System.out.println("\n💡 Les transports en commun semblent plus économiques !");
-            } else {
-                System.out.println("\n💡 La voiture pourrait être plus économique pour ce trajet.");
-            }
         }
     }
 
@@ -1214,34 +1588,6 @@ public class PrixEssenceProche {
                         barre, prix);
             }
             System.out.println();
-        }
-
-        public static void afficherTableauComparaison(List<Station> stations, String carburant) {
-            if (stations.isEmpty()) return;
-
-            System.out.printf("\n📋 TABLEAU COMPARATIF %s 📋%n", carburant);
-            System.out.println("┌────┬─────────────────────┬───────────┬──────────┬─────────────┐");
-            System.out.println("│ #  │ Ville              │ CP        │ Prix €/L │ Distance km │");
-            System.out.println("├────┼─────────────────────┼───────────┼──────────┼─────────────┤");
-
-            List<Station> top10 = stations.stream()
-                    .filter(s -> s.getPrix(carburant) != null)
-                    .sorted(Comparator.comparingDouble(s -> s.getPrix(carburant)))
-                    .limit(10)
-                    .collect(Collectors.toList());
-
-            for (int i = 0; i < top10.size(); i++) {
-                Station s = top10.get(i);
-                System.out.printf("│%3d │ %-19s │ %-9s │ %8.3f │ %11.2f │%n",
-                        i + 1,
-                        truncateString(s.ville, 19),
-                        s.codePostal,
-                        s.getPrix(carburant),
-                        s.distanceKm
-                );
-            }
-
-            System.out.println("└────┴─────────────────────┴───────────┴──────────┴─────────────┘");
         }
 
         private static String truncateString(String str, int maxLength) {

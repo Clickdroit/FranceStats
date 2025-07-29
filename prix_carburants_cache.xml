@@ -310,10 +310,10 @@
       <service>Automate CB 24/24</service>
       <service>DAB (Distributeur automatique de billets)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 08:06:00" valeur="1.626"/>
-    <prix nom="SP95" id="2" maj="2025-07-29 08:06:00" valeur="1.715"/>
-    <prix nom="E10" id="5" maj="2025-07-29 08:06:00" valeur="1.654"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 08:06:00" valeur="1.753"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:36:00" valeur="1.641"/>
+    <prix nom="SP95" id="2" maj="2025-07-29 22:36:00" valeur="1.715"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:36:00" valeur="1.671"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:36:00" valeur="1.751"/>
   </pdv>
   <pdv id="81100009" latitude="4361700" longitude="224400" cp="81100" pop="R">
     <adresse>185 av de roquecourbe</adresse>
@@ -464,9 +464,9 @@
       <service>Lavage automatique</service>
       <service>Vente de gaz domestique (Butane, Propane)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-28 21:00:00" valeur="1.729"/>
-    <prix nom="E10" id="5" maj="2025-07-28 21:00:00" valeur="1.769"/>
-    <prix nom="SP98" id="6" maj="2025-07-28 21:00:00" valeur="1.869"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 21:00:00" valeur="1.729"/>
+    <prix nom="E10" id="5" maj="2025-07-29 21:00:00" valeur="1.769"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 21:00:00" valeur="1.869"/>
   </pdv>
   <pdv id="68170003" latitude="4774500" longitude="741200" cp="68170" pop="R">
     <adresse>66 ROUTE DE HABSHEIM</adresse>
@@ -1310,9 +1310,9 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 10:52:57" valeur="1.759"/>
-    <prix nom="E10" id="5" maj="2025-07-29 10:52:57" valeur="1.789"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 10:52:57" valeur="1.969"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:06:11" valeur="1.779"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:06:11" valeur="1.809"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:06:12" valeur="1.989"/>
   </pdv>
   <pdv id="39100006" latitude="4710875" longitude="550677" cp="39100" pop="R">
     <adresse>9 Rue Léon Bel</adresse>
@@ -1726,10 +1726,10 @@
       <service>Lavage manuel</service>
       <service>Vente de gaz domestique (Butane, Propane)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-28 21:00:00" valeur="1.739"/>
-    <prix nom="GPLc" id="4" maj="2025-07-28 21:00:00" valeur="0.999"/>
-    <prix nom="E10" id="5" maj="2025-07-28 21:00:00" valeur="1.769"/>
-    <prix nom="SP98" id="6" maj="2025-07-28 21:00:00" valeur="1.869"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 21:00:00" valeur="1.739"/>
+    <prix nom="GPLc" id="4" maj="2025-07-29 21:00:00" valeur="0.999"/>
+    <prix nom="E10" id="5" maj="2025-07-29 21:00:00" valeur="1.769"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 21:00:00" valeur="1.869"/>
   </pdv>
   <pdv id="75016001" latitude="4884700" longitude="225600" cp="75016" pop="R">
     <adresse>1 Avenue du Général Sarrail</adresse>
@@ -1965,11 +1965,11 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 13:21:00" valeur="1.587"/>
-    <prix nom="SP95" id="2" maj="2025-07-29 13:21:00" valeur="1.676"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:25:00" valeur="1.586"/>
+    <prix nom="SP95" id="2" maj="2025-07-29 22:25:00" valeur="1.686"/>
     <prix nom="GPLc" id="4" maj="2025-04-12 14:51:00" valeur="0.940"/>
-    <prix nom="E10" id="5" maj="2025-07-29 13:21:00" valeur="1.623"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 13:21:00" valeur="1.721"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:25:00" valeur="1.623"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:25:00" valeur="1.738"/>
   </pdv>
   <pdv id="28260002" latitude="4885987.1629" longitude="144818.033753" cp="28260" pop="R">
     <adresse>ROUTE D'OULINS</adresse>
@@ -3508,9 +3508,9 @@
       <service>Espace bébé</service>
       <service>Wifi</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:27:14" valeur="1.879"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:27:13" valeur="1.909"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:27:14" valeur="2.019"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:16:09" valeur="1.899"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:16:10" valeur="1.929"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:16:09" valeur="2.039"/>
   </pdv>
   <pdv id="35400007" latitude="4865797" longitude="-197092" cp="35400" pop="R">
     <adresse>55 Boulevard des Déportés</adresse>
@@ -5214,10 +5214,10 @@
       <service>Automate CB 24/24</service>
       <service>DAB (Distributeur automatique de billets)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 08:06:00" valeur="1.682"/>
-    <prix nom="SP95" id="2" maj="2025-07-29 08:06:00" valeur="1.716"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:25:00" valeur="1.682"/>
+    <prix nom="SP95" id="2" maj="2025-07-29 22:25:00" valeur="1.724"/>
     <prix nom="GPLc" id="4" maj="2025-06-19 08:05:26" valeur="0.969"/>
-    <prix nom="E10" id="5" maj="2025-07-29 08:06:00" valeur="1.699"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:25:00" valeur="1.699"/>
   </pdv>
   <pdv id="83500007" latitude="4308509" longitude="588123" cp="83500" pop="R">
     <adresse>Avenue Salvador Allende</adresse>
@@ -10205,9 +10205,9 @@
       <service>Lavage automatique</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:19:35" valeur="1.639"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:19:34" valeur="1.679"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:19:35" valeur="1.769"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:09:11" valeur="1.659"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:09:11" valeur="1.699"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:09:11" valeur="1.789"/>
   </pdv>
   <pdv id="21150002" latitude="4754000" longitude="446100" cp="21150" pop="R">
     <adresse>Avenue de Dijon</adresse>
@@ -11948,9 +11948,9 @@
       <service>Automate CB 24/24</service>
       <service>DAB (Distributeur automatique de billets)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-28 21:00:00" valeur="1.669"/>
-    <prix nom="E10" id="5" maj="2025-07-28 21:00:00" valeur="1.699"/>
-    <prix nom="SP98" id="6" maj="2025-07-28 21:00:00" valeur="1.799"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 21:00:00" valeur="1.669"/>
+    <prix nom="E10" id="5" maj="2025-07-29 21:00:00" valeur="1.699"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 21:00:00" valeur="1.799"/>
   </pdv>
   <pdv id="93410002" latitude="4893500" longitude="256700" cp="93410" pop="R">
     <adresse>64 Rue de Meaux</adresse>
@@ -11994,9 +11994,9 @@
       <service>Carburant additivé</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 10:57:30" valeur="1.719"/>
-    <prix nom="E10" id="5" maj="2025-07-29 10:57:29" valeur="1.719"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 10:57:29" valeur="1.869"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:12:29" valeur="1.739"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:12:29" valeur="1.739"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:12:29" valeur="1.889"/>
   </pdv>
   <pdv id="4360001" latitude="4384400" longitude="621500" cp="04360" pop="R">
     <adresse>QUARTIER SAINT JEAN</adresse>
@@ -12721,9 +12721,9 @@
       <service>Vente d'additifs carburants</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:25:58" valeur="1.749"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:25:58" valeur="1.759"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:25:58" valeur="1.929"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:13:51" valeur="1.769"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:13:52" valeur="1.779"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:13:51" valeur="1.949"/>
   </pdv>
   <pdv id="79170001" latitude="4614000" longitude="-22100" cp="79170" pop="R">
     <adresse>Avenue de Royan</adresse>
@@ -13753,10 +13753,10 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 10:55:50" valeur="1.749"/>
-    <prix nom="GPLc" id="4" maj="2025-07-29 10:55:49" valeur="1.109"/>
-    <prix nom="E10" id="5" maj="2025-07-29 10:55:50" valeur="1.739"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 10:55:49" valeur="1.889"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:09:35" valeur="1.769"/>
+    <prix nom="GPLc" id="4" maj="2025-07-29 22:09:35" valeur="1.129"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:09:35" valeur="1.759"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:09:35" valeur="1.909"/>
   </pdv>
   <pdv id="15600001" latitude="4470600" longitude="219500" cp="15600" pop="R">
     <adresse>Avenue de Bagnac</adresse>
@@ -15010,9 +15010,9 @@
       <service>Piste poids lourds</service>
       <service>Espace bébé</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:18:14" valeur="1.739"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:18:15" valeur="1.759"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:18:14" valeur="1.909"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:09:31" valeur="1.759"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:09:31" valeur="1.779"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:09:31" valeur="1.929"/>
   </pdv>
   <pdv id="31860006" latitude="4348106.1536704" longitude="138543.13384841" cp="31860" pop="R">
     <adresse>21 CHEMIN DE LA CROISETTE</adresse>
@@ -18540,11 +18540,11 @@
       <service>Vente d'additifs carburants</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:25:14" valeur="1.679"/>
-    <prix nom="E85" id="3" maj="2025-07-29 06:25:14" valeur="0.779"/>
-    <prix nom="GPLc" id="4" maj="2025-07-29 06:25:14" valeur="1.149"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:25:14" valeur="1.699"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:25:14" valeur="1.829"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:08:31" valeur="1.699"/>
+    <prix nom="E85" id="3" maj="2025-07-29 22:08:31" valeur="0.799"/>
+    <prix nom="GPLc" id="4" maj="2025-07-29 22:08:31" valeur="1.169"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:08:31" valeur="1.719"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:08:31" valeur="1.849"/>
   </pdv>
   <pdv id="14440001" latitude="4928881" longitude="-37839" cp="14440" pop="R">
     <adresse>ROUTE DE CAEN</adresse>
@@ -21797,9 +21797,9 @@
       <service>Vente d'additifs carburants</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-28 22:00:00" valeur="1.729"/>
-    <prix nom="E10" id="5" maj="2025-07-28 22:00:00" valeur="1.749"/>
-    <prix nom="SP98" id="6" maj="2025-07-28 22:00:00" valeur="1.849"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:00:00" valeur="1.729"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:00:00" valeur="1.749"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:00:00" valeur="1.849"/>
   </pdv>
   <pdv id="53110001" latitude="4844400" longitude="-48100" cp="53110" pop="R">
     <adresse>1 Rue de l'Europe</adresse>
@@ -22344,11 +22344,11 @@
       <service>Automate CB 24/24</service>
       <service>DAB (Distributeur automatique de billets)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-27 22:26:00" valeur="1.645"/>
-    <prix nom="SP95" id="2" maj="2025-07-27 22:26:00" valeur="1.717"/>
-    <prix nom="E85" id="3" maj="2025-07-27 22:26:00" valeur="0.709"/>
-    <prix nom="E10" id="5" maj="2025-07-27 22:26:00" valeur="1.668"/>
-    <prix nom="SP98" id="6" maj="2025-07-27 22:26:00" valeur="1.750"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:25:00" valeur="1.654"/>
+    <prix nom="SP95" id="2" maj="2025-07-29 22:25:00" valeur="1.731"/>
+    <prix nom="E85" id="3" maj="2025-07-29 22:25:00" valeur="0.710"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:25:00" valeur="1.684"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:25:00" valeur="1.764"/>
   </pdv>
   <pdv id="31450008" latitude="4348300" longitude="154800" cp="31450" pop="A">
     <adresse>AUTOROUTE A61AIRE DE TOULOUSE SUD NORD</adresse>
@@ -23298,10 +23298,10 @@
       <service>Piste poids lourds</service>
       <service>Espace bébé</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:19:51" valeur="1.859"/>
-    <prix nom="GPLc" id="4" maj="2025-07-29 06:19:51" valeur="1.089"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:19:51" valeur="1.859"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:19:51" valeur="1.969"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:07:29" valeur="1.879"/>
+    <prix nom="GPLc" id="4" maj="2025-07-29 22:07:29" valeur="1.109"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:07:30" valeur="1.879"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:07:29" valeur="1.989"/>
   </pdv>
   <pdv id="59550002" latitude="5011864" longitude="370226" cp="59550" pop="R">
     <adresse>57 Faubourg de France</adresse>
@@ -23716,9 +23716,9 @@
       <service>Piste poids lourds</service>
       <service>Vente de gaz domestique (Butane, Propane)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-28 21:00:00" valeur="1.729"/>
-    <prix nom="E10" id="5" maj="2025-07-28 21:00:00" valeur="1.769"/>
-    <prix nom="SP98" id="6" maj="2025-07-28 21:00:00" valeur="1.869"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 21:00:00" valeur="1.729"/>
+    <prix nom="E10" id="5" maj="2025-07-29 21:00:00" valeur="1.769"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 21:00:00" valeur="1.869"/>
   </pdv>
   <pdv id="94537002" latitude="4875000" longitude="238900" cp="94537" pop="R">
     <adresse>1 RUE DES LANCES</adresse>
@@ -23810,9 +23810,9 @@
       <service>Lavage automatique</service>
       <service>Vente de gaz domestique (Butane, Propane)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:20:56" valeur="1.739"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:20:56" valeur="1.769"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:20:56" valeur="1.919"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:07:36" valeur="1.759"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:07:36" valeur="1.789"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:07:36" valeur="1.939"/>
   </pdv>
   <pdv id="48400003" latitude="4432800" longitude="359200" cp="48400" pop="R">
     <adresse>65 AVENUE JEAN MONESTIER</adresse>
@@ -24591,9 +24591,9 @@
       <service>Carburant additivé</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-28 21:15:00" valeur="1.699"/>
-    <prix nom="E10" id="5" maj="2025-07-28 21:15:00" valeur="1.729"/>
-    <prix nom="SP98" id="6" maj="2025-07-28 21:15:00" valeur="1.829"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 21:15:00" valeur="1.699"/>
+    <prix nom="E10" id="5" maj="2025-07-29 21:15:00" valeur="1.729"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 21:15:00" valeur="1.829"/>
   </pdv>
   <pdv id="78710005" latitude="4899200" longitude="163200" cp="78710" pop="A">
     <adresse>A13 Aire de Rosny Sud</adresse>
@@ -25111,9 +25111,9 @@
       <service>Piste poids lourds</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:26:59" valeur="1.859"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:26:58" valeur="1.899"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:26:59" valeur="1.989"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:14:14" valeur="1.879"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:14:13" valeur="1.919"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:14:14" valeur="2.009"/>
   </pdv>
   <pdv id="24310001" latitude="4536400" longitude="65300" cp="24310" pop="R">
     <adresse>27, Avenue André Maurois</adresse>
@@ -26684,10 +26684,10 @@
       <service>GNV</service>
       <service>Wifi</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:24:13" valeur="1.819"/>
-    <prix nom="GPLc" id="4" maj="2025-07-29 06:24:13" valeur="1.069"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:24:14" valeur="1.839"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:24:14" valeur="1.949"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:11:11" valeur="1.839"/>
+    <prix nom="GPLc" id="4" maj="2025-07-29 22:11:10" valeur="1.089"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:11:10" valeur="1.859"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:11:11" valeur="1.969"/>
   </pdv>
   <pdv id="20219003" latitude="4217200" longitude="917000" cp="20219" pop="R">
     <adresse>RT 20</adresse>
@@ -27347,9 +27347,9 @@
       <service>Lavage automatique</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:25:49" valeur="1.669"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:25:49" valeur="1.749"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:25:50" valeur="1.919"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:07:38" valeur="1.689"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:07:38" valeur="1.769"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:07:38" valeur="1.939"/>
   </pdv>
   <pdv id="17430007" latitude="4595000" longitude="-92600" cp="17430" pop="R">
     <adresse>109 AVENUE D'AUNIS</adresse>
@@ -29968,10 +29968,10 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-28 21:00:00" valeur="1.729"/>
-    <prix nom="E85" id="3" maj="2025-07-28 21:00:00" valeur="0.799"/>
-    <prix nom="E10" id="5" maj="2025-07-28 21:00:00" valeur="1.759"/>
-    <prix nom="SP98" id="6" maj="2025-07-28 21:00:00" valeur="1.859"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 21:00:00" valeur="1.729"/>
+    <prix nom="E85" id="3" maj="2025-07-29 21:00:00" valeur="0.799"/>
+    <prix nom="E10" id="5" maj="2025-07-29 21:00:00" valeur="1.759"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 21:00:00" valeur="1.859"/>
   </pdv>
   <pdv id="59264001" latitude="5038731.28" longitude="359873.62" cp="59264" pop="R">
     <adresse>ECHANGEUR 24</adresse>
@@ -31147,10 +31147,10 @@
       <service>Carburant additivé</service>
       <service>Vente de gaz domestique (Butane, Propane)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-28 21:00:00" valeur="1.749"/>
-    <prix nom="GPLc" id="4" maj="2025-07-28 21:00:00" valeur="0.949"/>
-    <prix nom="E10" id="5" maj="2025-07-28 21:00:00" valeur="1.769"/>
-    <prix nom="SP98" id="6" maj="2025-07-28 21:00:00" valeur="1.869"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 21:00:00" valeur="1.749"/>
+    <prix nom="GPLc" id="4" maj="2025-07-29 21:00:00" valeur="0.949"/>
+    <prix nom="E10" id="5" maj="2025-07-29 21:00:00" valeur="1.769"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 21:00:00" valeur="1.869"/>
   </pdv>
   <pdv id="17350001" latitude="4589230.7179057" longitude="-60410.382626957" cp="17350" pop="A">
     <adresse>A10 AIRE DE FENIOUX EST</adresse>
@@ -31649,9 +31649,9 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:25:54" valeur="1.769"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:25:53" valeur="1.779"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:25:54" valeur="1.929"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:07:40" valeur="1.789"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:07:40" valeur="1.799"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:07:40" valeur="1.949"/>
   </pdv>
   <pdv id="35520002" latitude="4817100" longitude="-172000" cp="35520" pop="R">
     <adresse>LA BROSSE</adresse>
@@ -31840,9 +31840,9 @@
       <service>Carburant additivé</service>
       <service>Vente de gaz domestique (Butane, Propane)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-28 21:45:00" valeur="1.759"/>
-    <prix nom="E10" id="5" maj="2025-07-28 21:45:00" valeur="1.789"/>
-    <prix nom="SP98" id="6" maj="2025-07-28 21:45:00" valeur="1.889"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 21:45:00" valeur="1.759"/>
+    <prix nom="E10" id="5" maj="2025-07-29 21:45:00" valeur="1.789"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 21:45:00" valeur="1.889"/>
   </pdv>
   <pdv id="71100030" latitude="4678976.2" longitude="486116.1" cp="71100" pop="R">
     <adresse>20-22 AVENUE MONOT</adresse>
@@ -31877,9 +31877,9 @@
       <service>Carburant additivé</service>
       <service>Vente de gaz domestique (Butane, Propane)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-28 22:00:00" valeur="1.739"/>
-    <prix nom="E10" id="5" maj="2025-07-28 22:00:00" valeur="1.769"/>
-    <prix nom="SP98" id="6" maj="2025-07-28 22:00:00" valeur="1.869"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:00:00" valeur="1.739"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:00:00" valeur="1.769"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:00:00" valeur="1.869"/>
   </pdv>
   <pdv id="32150002" latitude="4393500" longitude="-6200" cp="32150" pop="R">
     <adresse>Rue Cousiné</adresse>
@@ -32053,12 +32053,12 @@
       <service>Automate CB 24/24</service>
       <service>DAB (Distributeur automatique de billets)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 13:21:00" valeur="1.667"/>
-    <prix nom="SP95" id="2" maj="2025-07-29 13:21:00" valeur="1.719"/>
-    <prix nom="E85" id="3" maj="2025-07-29 13:21:00" valeur="0.783"/>
-    <prix nom="GPLc" id="4" maj="2025-07-29 13:21:00" valeur="0.839"/>
-    <prix nom="E10" id="5" maj="2025-07-29 13:21:00" valeur="1.686"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 13:21:00" valeur="1.758"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:36:00" valeur="1.664"/>
+    <prix nom="SP95" id="2" maj="2025-07-29 22:36:00" valeur="1.727"/>
+    <prix nom="E85" id="3" maj="2025-07-29 22:36:00" valeur="0.783"/>
+    <prix nom="GPLc" id="4" maj="2025-07-29 22:36:00" valeur="0.839"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:36:00" valeur="1.697"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:36:00" valeur="1.758"/>
   </pdv>
   <pdv id="20144003" latitude="4170000" longitude="934800" cp="20144" pop="R">
     <adresse>LIEU DIT MOLENDINU</adresse>
@@ -32146,9 +32146,9 @@
       <service>Carburant additivé</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:20:54" valeur="1.659"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:20:54" valeur="1.669"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:20:54" valeur="1.839"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:04:33" valeur="1.679"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:04:33" valeur="1.689"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:04:34" valeur="1.859"/>
   </pdv>
   <pdv id="63201001" latitude="4588800" longitude="306900" cp="63530" pop="R">
     <adresse>Route de Volvic</adresse>
@@ -32584,10 +32584,10 @@
       <service>Carburant additivé</service>
       <service>Vente de gaz domestique (Butane, Propane)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-28 21:00:00" valeur="1.749"/>
-    <prix nom="E85" id="3" maj="2025-07-28 21:00:00" valeur="0.829"/>
-    <prix nom="E10" id="5" maj="2025-07-28 21:00:00" valeur="1.769"/>
-    <prix nom="SP98" id="6" maj="2025-07-28 21:00:00" valeur="1.869"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 21:00:00" valeur="1.749"/>
+    <prix nom="E85" id="3" maj="2025-07-29 21:00:00" valeur="0.829"/>
+    <prix nom="E10" id="5" maj="2025-07-29 21:00:00" valeur="1.769"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 21:00:00" valeur="1.869"/>
   </pdv>
   <pdv id="38280001" latitude="4579231.28647" longitude="513214.811395" cp="38280" pop="R">
     <adresse>RUE DES DIAMANTS</adresse>
@@ -32928,10 +32928,10 @@
       <service>Espace bébé</service>
       <service>DAB (Distributeur automatique de billets)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-28 21:00:00" valeur="1.969"/>
-    <prix nom="GPLc" id="4" maj="2025-07-28 21:00:00" valeur="1.099"/>
-    <prix nom="E10" id="5" maj="2025-07-28 21:00:00" valeur="1.979"/>
-    <prix nom="SP98" id="6" maj="2025-07-28 21:00:00" valeur="2.079"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 21:00:00" valeur="1.969"/>
+    <prix nom="GPLc" id="4" maj="2025-07-29 21:00:00" valeur="1.099"/>
+    <prix nom="E10" id="5" maj="2025-07-29 21:00:00" valeur="1.979"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 21:00:00" valeur="2.079"/>
   </pdv>
   <pdv id="6150005" latitude="4355000" longitude="697000" cp="06150" pop="R">
     <adresse>Avenue Francis Tonner</adresse>
@@ -33242,9 +33242,9 @@
       <service>Carburant additivé</service>
       <service>Vente de gaz domestique (Butane, Propane)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-28 21:00:00" valeur="1.749"/>
-    <prix nom="E10" id="5" maj="2025-07-28 21:00:00" valeur="1.769"/>
-    <prix nom="SP98" id="6" maj="2025-07-28 21:00:00" valeur="1.869"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 21:00:00" valeur="1.749"/>
+    <prix nom="E10" id="5" maj="2025-07-29 21:00:00" valeur="1.769"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 21:00:00" valeur="1.869"/>
   </pdv>
   <pdv id="30150002" latitude="4404500" longitude="478700" cp="30150" pop="R">
     <adresse>ROUTE D'AVIGNON</adresse>
@@ -34776,11 +34776,11 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:21:10" valeur="1.669"/>
-    <prix nom="E85" id="3" maj="2025-07-29 06:21:10" valeur="0.699"/>
-    <prix nom="GPLc" id="4" maj="2025-07-29 06:21:10" valeur="0.979"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:21:09" valeur="1.689"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:21:10" valeur="1.859"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:09:29" valeur="1.689"/>
+    <prix nom="E85" id="3" maj="2025-07-29 22:09:30" valeur="0.719"/>
+    <prix nom="GPLc" id="4" maj="2025-07-29 22:09:30" valeur="0.999"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:09:29" valeur="1.709"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:09:29" valeur="1.879"/>
   </pdv>
   <pdv id="21120004" latitude="4752000" longitude="517900" cp="21120" pop="R">
     <adresse>51, route de Langres</adresse>
@@ -36583,9 +36583,9 @@
       <service>Lavage automatique</service>
       <service>Vente de gaz domestique (Butane, Propane)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 10:56:30" valeur="1.729"/>
-    <prix nom="E10" id="5" maj="2025-07-29 10:56:29" valeur="1.759"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 10:56:29" valeur="1.909"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:09:51" valeur="1.749"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:09:51" valeur="1.779"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:09:51" valeur="1.929"/>
   </pdv>
   <pdv id="46160001" latitude="4448692" longitude="184248" cp="46160" pop="R">
     <adresse>PLACE DU FOIRAIL</adresse>
@@ -36740,11 +36740,11 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:19:29" valeur="1.769"/>
-    <prix nom="E85" id="3" maj="2025-07-29 06:19:29" valeur="0.729"/>
-    <prix nom="GPLc" id="4" maj="2025-07-29 06:19:30" valeur="1.129"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:19:29" valeur="1.779"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:19:30" valeur="1.929"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:02:50" valeur="1.789"/>
+    <prix nom="E85" id="3" maj="2025-07-29 22:02:50" valeur="0.749"/>
+    <prix nom="GPLc" id="4" maj="2025-07-29 22:02:49" valeur="1.149"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:02:50" valeur="1.799"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:02:50" valeur="1.949"/>
   </pdv>
   <pdv id="77230004" latitude="4906414.392" longitude="259786.578" cp="77230" pop="R">
     <adresse>Route de Vémars</adresse>
@@ -37238,9 +37238,9 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 10:51:31" valeur="1.779"/>
-    <prix nom="E10" id="5" maj="2025-07-29 10:51:31" valeur="1.809"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 10:51:32" valeur="1.959"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:11:35" valeur="1.799"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:11:35" valeur="1.829"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:11:35" valeur="1.979"/>
   </pdv>
   <pdv id="73182003" latitude="4567436" longitude="592993.8" cp="73182" pop="A">
     <adresse>AIRE DE MOUXY</adresse>
@@ -37314,10 +37314,10 @@
       <service>Automate CB 24/24</service>
       <service>DAB (Distributeur automatique de billets)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:29:49" valeur="1.869"/>
-    <prix nom="GPLc" id="4" maj="2025-07-29 06:29:49" valeur="1.209"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:29:49" valeur="1.889"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:29:50" valeur="2.039"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:12:10" valeur="1.889"/>
+    <prix nom="GPLc" id="4" maj="2025-07-29 22:12:09" valeur="1.229"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:12:09" valeur="1.909"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:12:09" valeur="2.059"/>
   </pdv>
   <pdv id="37700010" latitude="4739668" longitude="71715" cp="37700" pop="R">
     <adresse>76, QUAI DE LA LOIRE</adresse>
@@ -39157,10 +39157,10 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:22:09" valeur="1.629"/>
-    <prix nom="E85" id="3" maj="2025-07-29 06:22:10" valeur="0.739"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:22:10" valeur="1.649"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:22:09" valeur="1.819"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:08:53" valeur="1.649"/>
+    <prix nom="E85" id="3" maj="2025-07-29 22:08:53" valeur="0.759"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:08:53" valeur="1.669"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:08:53" valeur="1.839"/>
   </pdv>
   <pdv id="95470008" latitude="4907100" longitude="255100" cp="95470" pop="A">
     <adresse>AUT A1 Aire de Vémars Ouest</adresse>
@@ -39315,10 +39315,10 @@
       <service>Piste poids lourds</service>
       <service>Vente de gaz domestique (Butane, Propane)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-28 21:00:00" valeur="1.739"/>
-    <prix nom="E85" id="3" maj="2025-07-28 21:00:00" valeur="0.829"/>
-    <prix nom="E10" id="5" maj="2025-07-28 21:00:00" valeur="1.769"/>
-    <prix nom="SP98" id="6" maj="2025-07-28 21:00:00" valeur="1.869"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 21:00:00" valeur="1.739"/>
+    <prix nom="E85" id="3" maj="2025-07-29 21:00:00" valeur="0.829"/>
+    <prix nom="E10" id="5" maj="2025-07-29 21:00:00" valeur="1.769"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 21:00:00" valeur="1.869"/>
   </pdv>
   <pdv id="27170002" latitude="4902978" longitude="74290.999999998" cp="27170" pop="R">
     <adresse>Route de Beaumont</adresse>
@@ -41589,10 +41589,10 @@
       <service>Piste poids lourds</service>
       <service>Wifi</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:25:12" valeur="1.819"/>
-    <prix nom="GPLc" id="4" maj="2025-07-29 06:25:12" valeur="1.089"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:25:11" valeur="1.819"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:25:12" valeur="1.909"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:08:55" valeur="1.839"/>
+    <prix nom="GPLc" id="4" maj="2025-07-29 22:08:55" valeur="1.109"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:08:55" valeur="1.839"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:08:55" valeur="1.929"/>
   </pdv>
   <pdv id="32130003" latitude="4348982.65" longitude="93190.67" cp="32130" pop="R">
     <adresse>ALLEE JEAN CAHUZAC</adresse>
@@ -41659,9 +41659,9 @@
       <service>Carburant additivé</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 11:19:09" valeur="1.639"/>
-    <prix nom="E10" id="5" maj="2025-07-29 11:19:10" valeur="1.689"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 11:19:09" valeur="1.839"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:02:52" valeur="1.659"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:02:52" valeur="1.709"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:02:52" valeur="1.859"/>
   </pdv>
   <pdv id="85250003" latitude="4687400" longitude="-128400" cp="85250" pop="A">
     <adresse>AUTOROUTE A83AIRE DE CHAVAGNES EN PAILLERS</adresse>
@@ -43281,10 +43281,10 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>DAB (Distributeur automatique de billets)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 08:06:00" valeur="1.604"/>
-    <prix nom="E85" id="3" maj="2025-07-29 08:06:00" valeur="0.769"/>
-    <prix nom="E10" id="5" maj="2025-07-29 08:06:00" valeur="1.661"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 08:06:00" valeur="1.744"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:36:00" valeur="1.601"/>
+    <prix nom="E85" id="3" maj="2025-07-29 22:36:00" valeur="0.769"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:36:00" valeur="1.661"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:36:00" valeur="1.744"/>
   </pdv>
   <pdv id="31290004" latitude="4336900" longitude="177500" cp="31290" pop="R">
     <adresse>RN.113</adresse>
@@ -43805,10 +43805,10 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 10:50:10" valeur="1.749"/>
-    <prix nom="GPLc" id="4" maj="2025-07-29 10:50:10" valeur="1.089"/>
-    <prix nom="E10" id="5" maj="2025-07-29 10:50:10" valeur="1.729"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 10:50:09" valeur="1.899"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:08:09" valeur="1.769"/>
+    <prix nom="GPLc" id="4" maj="2025-07-29 22:08:09" valeur="1.109"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:08:09" valeur="1.749"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:08:09" valeur="1.919"/>
   </pdv>
   <pdv id="93200008" latitude="4893500" longitude="236800" cp="93200" pop="R">
     <adresse>112 AV P. VAILLANT COUTURIER</adresse>
@@ -43845,10 +43845,10 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 10:54:16" valeur="1.839"/>
-    <prix nom="E85" id="3" maj="2025-07-29 10:54:16" valeur="0.839"/>
-    <prix nom="E10" id="5" maj="2025-07-29 10:54:16" valeur="1.869"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 10:54:09" valeur="2.039"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:12:36" valeur="1.859"/>
+    <prix nom="E85" id="3" maj="2025-07-29 22:12:36" valeur="0.859"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:12:36" valeur="1.889"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:12:35" valeur="2.059"/>
   </pdv>
   <pdv id="68040001" latitude="4808936" longitude="731870" cp="68040" pop="R">
     <adresse>126 Route de Colmar</adresse>
@@ -44045,9 +44045,9 @@
       <service>Piste poids lourds</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:27:55" valeur="1.659"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:27:54" valeur="1.679"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:27:55" valeur="1.849"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:10:52" valeur="1.679"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:10:52" valeur="1.699"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:10:52" valeur="1.869"/>
   </pdv>
   <pdv id="13009008" latitude="4327200" longitude="540100" cp="13009" pop="R">
     <adresse>32 BOULEVARD SCHLOESING</adresse>
@@ -44246,9 +44246,9 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 10:53:31" valeur="1.689"/>
-    <prix nom="E10" id="5" maj="2025-07-29 10:53:31" valeur="1.719"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 10:53:31" valeur="1.849"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:07:59" valeur="1.709"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:07:58" valeur="1.739"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:07:58" valeur="1.869"/>
   </pdv>
   <pdv id="87190001" latitude="4621500" longitude="116600" cp="87190" pop="R">
     <adresse>Avenue Jules Courivaud</adresse>
@@ -44368,11 +44368,11 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:25:51" valeur="1.669"/>
-    <prix nom="E85" id="3" maj="2025-07-29 06:25:52" valeur="0.829"/>
-    <prix nom="GPLc" id="4" maj="2025-07-29 06:25:51" valeur="1.119"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:25:52" valeur="1.689"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:25:52" valeur="1.839"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:08:57" valeur="1.689"/>
+    <prix nom="E85" id="3" maj="2025-07-29 22:08:57" valeur="0.849"/>
+    <prix nom="GPLc" id="4" maj="2025-07-29 22:08:57" valeur="1.139"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:08:57" valeur="1.709"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:08:57" valeur="1.859"/>
   </pdv>
   <pdv id="6700006" latitude="4366868" longitude="719193" cp="06700" pop="R">
     <adresse>702 AVENUE DU GENERAL DE GAULLE</adresse>
@@ -45796,9 +45796,9 @@
       <service>Carburant additivé</service>
       <service>Espace bébé</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-28 21:30:00" valeur="1.979"/>
-    <prix nom="E10" id="5" maj="2025-07-28 21:30:00" valeur="1.999"/>
-    <prix nom="SP98" id="6" maj="2025-07-28 21:30:00" valeur="2.099"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 21:30:00" valeur="1.979"/>
+    <prix nom="E10" id="5" maj="2025-07-29 21:30:00" valeur="1.999"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 21:30:00" valeur="2.099"/>
   </pdv>
   <pdv id="88150003" latitude="4826100" longitude="641000" cp="88150" pop="R">
     <adresse>196 Rue de Lorraine</adresse>
@@ -46166,10 +46166,10 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 10:59:11" valeur="1.709"/>
-    <prix nom="GPLc" id="4" maj="2025-07-29 10:59:11" valeur="1.089"/>
-    <prix nom="E10" id="5" maj="2025-07-29 10:59:11" valeur="1.729"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 10:59:11" valeur="1.879"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:03:10" valeur="1.729"/>
+    <prix nom="GPLc" id="4" maj="2025-07-29 22:03:09" valeur="1.109"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:03:10" valeur="1.749"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:03:09" valeur="1.899"/>
   </pdv>
   <pdv id="40210004" latitude="4420200" longitude="-92900" cp="40210" pop="R">
     <adresse>67 allée de Genets</adresse>
@@ -47363,9 +47363,9 @@
       <service>Carburant additivé</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 11:00:15" valeur="1.689"/>
-    <prix nom="E10" id="5" maj="2025-07-29 11:00:15" valeur="1.709"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 11:00:15" valeur="1.879"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:09:37" valeur="1.709"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:09:37" valeur="1.729"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:09:37" valeur="1.899"/>
   </pdv>
   <pdv id="70220001" latitude="4787400" longitude="639000" cp="70220" pop="R">
     <adresse>66 route de Luxeuil</adresse>
@@ -48798,10 +48798,10 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:22:49" valeur="1.679"/>
-    <prix nom="E85" id="3" maj="2025-07-29 06:22:49" valeur="0.719"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:22:50" valeur="1.719"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:22:50" valeur="1.869"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:05:30" valeur="1.699"/>
+    <prix nom="E85" id="3" maj="2025-07-29 22:05:29" valeur="0.739"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:05:30" valeur="1.739"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:05:29" valeur="1.889"/>
   </pdv>
   <pdv id="7190001" latitude="4482160" longitude="458402" cp="07190" pop="R">
     <adresse>Grande Rue</adresse>
@@ -50398,12 +50398,12 @@
       <service>Automate CB 24/24</service>
       <service>DAB (Distributeur automatique de billets)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 08:06:00" valeur="1.599"/>
-    <prix nom="SP95" id="2" maj="2025-07-29 08:06:00" valeur="1.705"/>
-    <prix nom="E85" id="3" maj="2025-07-29 08:06:00" valeur="0.639"/>
-    <prix nom="GPLc" id="4" maj="2025-07-29 08:06:00" valeur="0.929"/>
-    <prix nom="E10" id="5" maj="2025-07-29 08:06:00" valeur="1.643"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 08:06:00" valeur="1.742"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:36:00" valeur="1.599"/>
+    <prix nom="SP95" id="2" maj="2025-07-29 22:36:00" valeur="1.718"/>
+    <prix nom="E85" id="3" maj="2025-07-29 22:36:00" valeur="0.639"/>
+    <prix nom="GPLc" id="4" maj="2025-07-29 22:36:00" valeur="0.929"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:36:00" valeur="1.658"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:36:00" valeur="1.755"/>
   </pdv>
   <pdv id="16430001" latitude="4571500" longitude="21300" cp="16430" pop="R">
     <adresse>RN10 LES GRANDES CHAUMES</adresse>
@@ -50731,10 +50731,10 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 10:59:49" valeur="1.789"/>
-    <prix nom="E85" id="3" maj="2025-07-29 10:59:49" valeur="0.799"/>
-    <prix nom="E10" id="5" maj="2025-07-29 10:59:49" valeur="1.839"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 10:59:49" valeur="2.019"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:04:30" valeur="1.809"/>
+    <prix nom="E85" id="3" maj="2025-07-29 22:04:29" valeur="0.819"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:04:29" valeur="1.859"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:04:30" valeur="2.039"/>
   </pdv>
   <pdv id="94400004" latitude="4879400" longitude="241600" cp="94400" pop="R">
     <adresse>2 Rue Eugène Hénaff</adresse>
@@ -51527,9 +51527,9 @@
       <service>Lavage manuel</service>
       <service>Vente de gaz domestique (Butane, Propane)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 10:55:30" valeur="1.719"/>
-    <prix nom="E10" id="5" maj="2025-07-29 10:55:29" valeur="1.759"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 10:55:29" valeur="1.849"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:04:31" valeur="1.739"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:04:31" valeur="1.779"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:04:32" valeur="1.869"/>
   </pdv>
   <pdv id="61120003" latitude="4893500" longitude="19900" cp="61120" pop="R">
     <adresse>19 boulevard du Dr Dentu</adresse>
@@ -52219,11 +52219,11 @@
       <service>Services réparation / entretien</service>
       <service>Vente de gaz domestique (Butane, Propane)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:20:51" valeur="1.729"/>
-    <prix nom="E85" id="3" maj="2025-07-29 06:20:52" valeur="0.749"/>
-    <prix nom="GPLc" id="4" maj="2025-07-29 06:20:52" valeur="1.089"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:20:52" valeur="1.789"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:20:52" valeur="1.939"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:03:50" valeur="1.749"/>
+    <prix nom="E85" id="3" maj="2025-07-29 22:03:50" valeur="0.769"/>
+    <prix nom="GPLc" id="4" maj="2025-07-29 22:03:50" valeur="1.109"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:03:50" valeur="1.809"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:03:49" valeur="1.959"/>
   </pdv>
   <pdv id="89100007" latitude="4819800" longitude="327700" cp="89100" pop="R">
     <adresse>4 Quai Jean Moulin</adresse>
@@ -53080,9 +53080,9 @@
       <service>Carburant additivé</service>
       <service>Lavage manuel</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-28 21:00:00" valeur="1.805"/>
-    <prix nom="E10" id="5" maj="2025-07-28 21:00:00" valeur="1.812"/>
-    <prix nom="SP98" id="6" maj="2025-07-28 21:00:00" valeur="1.922"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 21:00:00" valeur="1.806"/>
+    <prix nom="E10" id="5" maj="2025-07-29 21:00:00" valeur="1.815"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 21:00:00" valeur="1.925"/>
   </pdv>
   <pdv id="47330001" latitude="4464300" longitude="59400" cp="47330" pop="R">
     <adresse>RN 21 - MONPLAISIR</adresse>
@@ -53579,10 +53579,10 @@
       <service>Wifi</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:21:12" valeur="1.709"/>
-    <prix nom="GPLc" id="4" maj="2025-07-29 06:21:12" valeur="1.139"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:21:12" valeur="1.719"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:21:12" valeur="1.889"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:10:16" valeur="1.729"/>
+    <prix nom="GPLc" id="4" maj="2025-07-29 22:10:15" valeur="1.159"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:10:16" valeur="1.739"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:10:15" valeur="1.909"/>
   </pdv>
   <pdv id="84000023" latitude="4392947.3098521" longitude="479102.455869" cp="84000" pop="R">
     <adresse>390 RUE JEAN MARIE TJIBAOU</adresse>
@@ -54332,11 +54332,11 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 10:50:55" valeur="1.719"/>
-    <prix nom="E85" id="3" maj="2025-07-29 10:50:55" valeur="0.809"/>
-    <prix nom="GPLc" id="4" maj="2025-07-29 10:50:55" valeur="1.049"/>
-    <prix nom="E10" id="5" maj="2025-07-29 10:50:55" valeur="1.749"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 10:50:55" valeur="1.929"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:10:50" valeur="1.739"/>
+    <prix nom="E85" id="3" maj="2025-07-29 22:10:49" valeur="0.829"/>
+    <prix nom="GPLc" id="4" maj="2025-07-29 22:10:50" valeur="1.069"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:10:50" valeur="1.769"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:10:49" valeur="1.949"/>
   </pdv>
   <pdv id="1960005" latitude="4612800" longitude="516300" cp="01960" pop="R">
     <adresse>50 RUE DES ACACIAS</adresse>
@@ -55340,9 +55340,9 @@
       <service>Services réparation / entretien</service>
       <service>Vente de gaz domestique (Butane, Propane)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:17:31" valeur="1.629"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:17:31" valeur="1.659"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:17:31" valeur="1.829"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:08:29" valeur="1.649"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:08:29" valeur="1.679"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:08:29" valeur="1.849"/>
   </pdv>
   <pdv id="50300004" latitude="4868647" longitude="-136356" cp="50300" pop="R">
     <adresse>RUE DU GENERAL DE GAULLE</adresse>
@@ -56064,10 +56064,10 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 10:53:49" valeur="1.689"/>
-    <prix nom="E85" id="3" maj="2025-07-29 10:53:49" valeur="0.829"/>
-    <prix nom="E10" id="5" maj="2025-07-29 10:53:49" valeur="1.719"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 10:53:50" valeur="1.869"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:08:13" valeur="1.709"/>
+    <prix nom="E85" id="3" maj="2025-07-29 22:08:13" valeur="0.849"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:08:13" valeur="1.739"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:08:13" valeur="1.889"/>
   </pdv>
   <pdv id="48700001" latitude="4463336" longitude="347619" cp="48700" pop="R">
     <adresse>RD806</adresse>
@@ -57983,10 +57983,10 @@
       <service>Services réparation / entretien</service>
       <service>Vente de gaz domestique (Butane, Propane)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 11:02:49" valeur="1.779"/>
-    <prix nom="E85" id="3" maj="2025-07-29 11:02:49" valeur="0.789"/>
-    <prix nom="E10" id="5" maj="2025-07-29 11:02:50" valeur="1.799"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 11:02:49" valeur="1.969"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:12:40" valeur="1.799"/>
+    <prix nom="E85" id="3" maj="2025-07-29 22:12:40" valeur="0.809"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:12:40" valeur="1.819"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:12:39" valeur="1.989"/>
   </pdv>
   <pdv id="35490003" latitude="4832908.18661" longitude="-152412.44194" cp="35490" pop="R">
     <adresse>LA CROIX COUVERTE</adresse>
@@ -59059,9 +59059,9 @@
       <service>Carburant additivé</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 10:58:49" valeur="1.619"/>
-    <prix nom="E10" id="5" maj="2025-07-29 10:58:49" valeur="1.669"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 10:58:49" valeur="1.819"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:09:49" valeur="1.639"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:09:49" valeur="1.689"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:09:49" valeur="1.839"/>
   </pdv>
   <pdv id="63120002" latitude="4576200" longitude="354000" cp="63120" pop="R">
     <adresse>54 AVENUE DE THIERS</adresse>
@@ -60959,11 +60959,11 @@
       <service>Lavage automatique</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:25:17" valeur="1.819"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:14:29" valeur="1.839"/>
     <prix nom="SP95" id="2" maj="2025-07-28 16:12:00" valeur="1.849"/>
-    <prix nom="GPLc" id="4" maj="2025-07-29 06:25:18" valeur="1.139"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:25:18" valeur="1.859"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:25:17" valeur="2.009"/>
+    <prix nom="GPLc" id="4" maj="2025-07-29 22:14:30" valeur="1.159"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:14:30" valeur="1.879"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:14:29" valeur="2.029"/>
   </pdv>
   <pdv id="1250004" latitude="4613408" longitude="528880" cp="01250" pop="R">
     <adresse>route de la Vavrette</adresse>
@@ -61453,9 +61453,9 @@
       <service>Lavage automatique</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 11:00:34" valeur="1.669"/>
-    <prix nom="E10" id="5" maj="2025-07-29 11:00:34" valeur="1.689"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 11:00:34" valeur="1.839"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:09:53" valeur="1.689"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:09:53" valeur="1.709"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:09:53" valeur="1.859"/>
   </pdv>
   <pdv id="40990002" latitude="4373200" longitude="-104500" cp="40990" pop="R">
     <adresse>226 Rue Maurice Menton</adresse>
@@ -61557,10 +61557,10 @@
       <service>Lavage automatique</service>
       <service>Vente de gaz domestique (Butane, Propane)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:29:09" valeur="1.779"/>
-    <prix nom="E85" id="3" maj="2025-07-29 06:29:10" valeur="0.779"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:29:09" valeur="1.789"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:29:09" valeur="1.939"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:14:10" valeur="1.799"/>
+    <prix nom="E85" id="3" maj="2025-07-29 22:14:10" valeur="0.799"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:14:09" valeur="1.809"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:14:09" valeur="1.959"/>
   </pdv>
   <pdv id="11000007" latitude="4322500" longitude="232900" cp="11000" pop="R">
     <adresse>Route de Toulouse</adresse>
@@ -63792,10 +63792,10 @@
       <service>Carburant additivé</service>
       <service>Vente de gaz domestique (Butane, Propane)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-28 21:00:00" valeur="1.739"/>
-    <prix nom="E85" id="3" maj="2025-07-28 21:00:00" valeur="0.799"/>
-    <prix nom="E10" id="5" maj="2025-07-28 21:00:00" valeur="1.759"/>
-    <prix nom="SP98" id="6" maj="2025-07-28 21:00:00" valeur="1.859"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 21:00:00" valeur="1.739"/>
+    <prix nom="E85" id="3" maj="2025-07-29 21:00:00" valeur="0.799"/>
+    <prix nom="E10" id="5" maj="2025-07-29 21:00:00" valeur="1.759"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 21:00:00" valeur="1.859"/>
   </pdv>
   <pdv id="91230005" latitude="4869100" longitude="245400" cp="91230" pop="R">
     <adresse>RN 6</adresse>
@@ -63832,10 +63832,10 @@
       <service>Lavage automatique</service>
       <service>Vente de gaz domestique (Butane, Propane)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:25:31" valeur="1.719"/>
-    <prix nom="GPLc" id="4" maj="2025-07-29 06:25:32" valeur="1.089"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:25:32" valeur="1.729"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:25:31" valeur="1.899"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:12:34" valeur="1.739"/>
+    <prix nom="GPLc" id="4" maj="2025-07-29 22:12:33" valeur="1.109"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:12:34" valeur="1.749"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:12:33" valeur="1.919"/>
   </pdv>
   <pdv id="35330002" latitude="4789400" longitude="-199000" cp="35330" pop="R">
     <adresse>2 rue du querpon</adresse>
@@ -64813,9 +64813,9 @@
       <service>Lavage automatique</service>
       <service>Vente de gaz domestique (Butane, Propane)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 10:54:31" valeur="1.779"/>
-    <prix nom="E10" id="5" maj="2025-07-29 10:54:31" valeur="1.789"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 10:54:31" valeur="1.989"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:13:29" valeur="1.799"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:13:29" valeur="1.809"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:13:30" valeur="2.009"/>
   </pdv>
   <pdv id="89270001" latitude="4766413.0022077" longitude="373877.14294689" cp="89270" pop="R">
     <adresse>Rue Restif de la Bretonne</adresse>
@@ -64954,9 +64954,9 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:27:30" valeur="1.799"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:27:29" valeur="1.829"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:27:29" valeur="1.999"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:11:14" valeur="1.819"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:11:14" valeur="1.849"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:11:14" valeur="2.019"/>
   </pdv>
   <pdv id="35590008" latitude="4816489.35963" longitude="-186619.891216" cp="35590" pop="R">
     <adresse>ROUTE NATIONALE 12 - AIRE DU PAYS DE RENNES</adresse>
@@ -67501,9 +67501,9 @@
       <service>Carburant additivé</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 10:52:50" valeur="1.659"/>
-    <prix nom="E10" id="5" maj="2025-07-29 10:52:49" valeur="1.689"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 10:52:49" valeur="1.859"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:07:33" valeur="1.679"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:07:33" valeur="1.709"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:07:33" valeur="1.879"/>
   </pdv>
   <pdv id="36230002" latitude="4659909" longitude="177655" cp="36230" pop="R">
     <adresse>ZA  Le Fay</adresse>
@@ -67640,10 +67640,10 @@
       <service>Vente d'additifs carburants</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:23:11" valeur="1.719"/>
-    <prix nom="GPLc" id="4" maj="2025-07-29 06:23:12" valeur="0.999"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:23:12" valeur="1.739"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:23:12" valeur="1.909"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:06:54" valeur="1.739"/>
+    <prix nom="GPLc" id="4" maj="2025-07-29 22:06:53" valeur="1.019"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:06:54" valeur="1.759"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:06:54" valeur="1.929"/>
   </pdv>
   <pdv id="33470001" latitude="4461900" longitude="-107400" cp="33470" pop="R">
     <adresse>Centre Commercial Grand Large Avenue de Césarée</adresse>
@@ -69255,10 +69255,10 @@
       <service>Vente d'additifs carburants</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:18:11" valeur="1.709"/>
-    <prix nom="GPLc" id="4" maj="2025-07-29 06:18:12" valeur="0.979"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:18:11" valeur="1.739"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:18:11" valeur="1.909"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:06:32" valeur="1.729"/>
+    <prix nom="GPLc" id="4" maj="2025-07-29 22:06:31" valeur="0.999"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:06:32" valeur="1.759"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:06:32" valeur="1.929"/>
   </pdv>
   <pdv id="93390001" latitude="4890700" longitude="253200" cp="93390" pop="R">
     <adresse>12 Allée de la Fosse-Maussoin</adresse>
@@ -70838,9 +70838,9 @@
       <service>Wifi</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 10:48:09" valeur="1.729"/>
-    <prix nom="E10" id="5" maj="2025-07-29 10:48:09" valeur="1.749"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 10:48:09" valeur="1.919"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:11:49" valeur="1.749"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:11:49" valeur="1.769"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:11:49" valeur="1.939"/>
   </pdv>
   <pdv id="21190007" latitude="4695888" longitude="483532" cp="21190" pop="A">
     <adresse>AUTOROUTE A6 - AIRE DE BEAUNE MERCEUIL</adresse>
@@ -71075,10 +71075,10 @@
       <service>Wifi</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 10:52:51" valeur="1.729"/>
-    <prix nom="E85" id="3" maj="2025-07-29 10:52:52" valeur="0.729"/>
-    <prix nom="E10" id="5" maj="2025-07-29 10:52:52" valeur="1.749"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 10:52:51" valeur="1.899"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:11:30" valeur="1.749"/>
+    <prix nom="E85" id="3" maj="2025-07-29 22:11:30" valeur="0.749"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:11:29" valeur="1.769"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:11:29" valeur="1.919"/>
   </pdv>
   <pdv id="59287002" latitude="5034647.2836108" longitude="314827.07370177" cp="59287" pop="R">
     <adresse>bd ambroize croizat</adresse>
@@ -71396,10 +71396,10 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:18:49" valeur="1.649"/>
-    <prix nom="E85" id="3" maj="2025-07-29 06:18:49" valeur="0.739"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:18:49" valeur="1.699"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:18:50" valeur="1.809"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:06:49" valeur="1.669"/>
+    <prix nom="E85" id="3" maj="2025-07-29 22:06:50" valeur="0.759"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:06:49" valeur="1.719"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:06:50" valeur="1.829"/>
   </pdv>
   <pdv id="26130002" latitude="4434609" longitude="475517" cp="26130" pop="R">
     <adresse>Rond-Point de l'Europe</adresse>
@@ -71458,10 +71458,10 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 10:52:59" valeur="1.789"/>
-    <prix nom="E85" id="3" maj="2025-07-29 10:52:59" valeur="0.789"/>
-    <prix nom="E10" id="5" maj="2025-07-29 10:52:59" valeur="1.799"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 10:52:59" valeur="1.969"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:11:51" valeur="1.809"/>
+    <prix nom="E85" id="3" maj="2025-07-29 22:11:51" valeur="0.809"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:11:51" valeur="1.819"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:11:52" valeur="1.989"/>
   </pdv>
   <pdv id="64600007" latitude="4349200" longitude="-153300" cp="64600" pop="R">
     <adresse>1 BIS RUE DU PALOUMET</adresse>
@@ -71591,9 +71591,9 @@
       <service>Lavage automatique</service>
       <service>Vente de gaz domestique (Butane, Propane)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 10:55:12" valeur="1.709"/>
-    <prix nom="E10" id="5" maj="2025-07-29 10:55:11" valeur="1.739"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 10:55:12" valeur="1.869"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:13:49" valeur="1.729"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:13:50" valeur="1.759"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:13:49" valeur="1.889"/>
   </pdv>
   <pdv id="89290002" latitude="4770500" longitude="363400" cp="89290" pop="R">
     <adresse>ROUTE DE VINCELOTTES</adresse>
@@ -72306,10 +72306,10 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>DAB (Distributeur automatique de billets)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 08:06:00" valeur="1.642"/>
-    <prix nom="SP95" id="2" maj="2025-07-29 08:06:00" valeur="1.715"/>
-    <prix nom="E10" id="5" maj="2025-07-29 08:06:00" valeur="1.655"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 08:06:00" valeur="1.739"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:36:00" valeur="1.639"/>
+    <prix nom="SP95" id="2" maj="2025-07-29 22:36:00" valeur="1.716"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:36:00" valeur="1.663"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:36:00" valeur="1.747"/>
   </pdv>
   <pdv id="6560001" latitude="4364500" longitude="704900" cp="06560" pop="R">
     <adresse>Chemin du Darbousson</adresse>
@@ -72496,10 +72496,10 @@
       <service>Carburant additivé</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 10:58:11" valeur="1.729"/>
-    <prix nom="E85" id="3" maj="2025-07-29 10:58:11" valeur="0.709"/>
-    <prix nom="E10" id="5" maj="2025-07-29 10:58:11" valeur="1.769"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 10:58:11" valeur="1.899"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:08:51" valeur="1.749"/>
+    <prix nom="E85" id="3" maj="2025-07-29 22:08:51" valeur="0.729"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:08:51" valeur="1.789"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:08:51" valeur="1.919"/>
   </pdv>
   <pdv id="57980001" latitude="4910600" longitude="694900" cp="57980" pop="R">
     <adresse>Rue Principale</adresse>
@@ -74427,7 +74427,7 @@
       <service>DAB (Distributeur automatique de billets)</service>
     </services>
     <prix nom="Gazole" id="1" maj="2025-07-24 23:00:00" valeur="1.677"/>
-    <prix nom="SP95" id="2" maj="2025-07-17 22:00:00" valeur="1.789"/>
+    <prix nom="SP95" id="2" maj="2025-07-29 22:00:00" valeur="1.778"/>
   </pdv>
   <pdv id="33140009" latitude="4477000" longitude="-57900" cp="33140" pop="R">
     <adresse>21 Route de Léognan</adresse>
@@ -74935,8 +74935,8 @@
     </services>
     <prix nom="Gazole" id="1" maj="2025-07-28 22:14:00" valeur="1.739"/>
     <prix nom="E85" id="3" maj="2025-07-25 22:14:00" valeur="0.803"/>
-    <prix nom="E10" id="5" maj="2025-07-28 22:14:00" valeur="1.781"/>
-    <prix nom="SP98" id="6" maj="2025-07-28 22:14:00" valeur="1.891"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:14:00" valeur="1.783"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:14:00" valeur="1.893"/>
   </pdv>
   <pdv id="52800002" latitude="4803543" longitude="534692" cp="52800" pop="R">
     <adresse>13 Rue de Mandres</adresse>
@@ -75102,10 +75102,10 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:28:29" valeur="1.689"/>
-    <prix nom="GPLc" id="4" maj="2025-07-29 06:28:29" valeur="0.989"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:28:29" valeur="1.709"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:28:29" valeur="1.859"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:11:56" valeur="1.709"/>
+    <prix nom="GPLc" id="4" maj="2025-07-29 22:11:55" valeur="1.009"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:11:56" valeur="1.729"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:11:55" valeur="1.879"/>
   </pdv>
   <pdv id="23300007" latitude="4582700" longitude="125900" cp="87000" pop="R">
     <adresse>4 avenue baudin</adresse>
@@ -75372,11 +75372,11 @@
       <service>Automate CB 24/24</service>
       <service>DAB (Distributeur automatique de billets)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 11:05:10" valeur="1.959"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:13:54" valeur="1.979"/>
     <prix nom="E85" id="3" maj="2025-05-28 10:06:09" valeur="1.200"/>
-    <prix nom="GPLc" id="4" maj="2025-07-29 11:05:10" valeur="1.149"/>
-    <prix nom="E10" id="5" maj="2025-07-29 11:05:09" valeur="2.039"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 11:05:09" valeur="2.179"/>
+    <prix nom="GPLc" id="4" maj="2025-07-29 22:13:53" valeur="1.169"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:13:53" valeur="2.059"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:13:53" valeur="2.199"/>
   </pdv>
   <pdv id="25000028" latitude="4723100" longitude="599400" cp="25000" pop="R">
     <adresse>110 RUE DE DOLE</adresse>
@@ -76258,10 +76258,10 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:22:52" valeur="1.629"/>
-    <prix nom="E85" id="3" maj="2025-07-29 06:22:52" valeur="0.829"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:22:52" valeur="1.679"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:22:51" valeur="1.769"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:06:34" valeur="1.649"/>
+    <prix nom="E85" id="3" maj="2025-07-29 22:06:34" valeur="0.849"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:06:34" valeur="1.699"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:06:34" valeur="1.789"/>
   </pdv>
   <pdv id="26600002" latitude="4507200" longitude="483400" cp="26600" pop="R">
     <adresse>PLACE DU MARCHE AUX FRUITS</adresse>
@@ -76664,10 +76664,10 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>DAB (Distributeur automatique de billets)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 13:21:00" valeur="1.578"/>
-    <prix nom="E85" id="3" maj="2025-07-29 13:21:00" valeur="0.698"/>
-    <prix nom="E10" id="5" maj="2025-07-29 13:21:00" valeur="1.598"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 13:21:00" valeur="1.707"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:25:00" valeur="1.607"/>
+    <prix nom="E85" id="3" maj="2025-07-29 22:25:00" valeur="0.698"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:25:00" valeur="1.637"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:25:00" valeur="1.724"/>
   </pdv>
   <pdv id="91420002" latitude="4869300" longitude="233700" cp="91420" pop="R">
     <adresse>RUE DE SAVIGNY</adresse>
@@ -77104,10 +77104,10 @@
       <service>Wifi</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:30:10" valeur="1.889"/>
-    <prix nom="GPLc" id="4" maj="2025-07-29 06:30:10" valeur="1.089"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:30:10" valeur="1.949"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:30:09" valeur="2.089"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:12:44" valeur="1.909"/>
+    <prix nom="GPLc" id="4" maj="2025-07-29 22:12:43" valeur="1.109"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:12:44" valeur="1.969"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:12:44" valeur="2.109"/>
   </pdv>
   <pdv id="77430001" latitude="4839575" longitude="279896" cp="77430" pop="R">
     <adresse>2 RUE JEAN COCTEAU</adresse>
@@ -78034,10 +78034,10 @@
       <service>Espace bébé</service>
       <service>Bornes électriques</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:20:29" valeur="1.959"/>
-    <prix nom="GPLc" id="4" maj="2025-07-29 06:20:30" valeur="1.149"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:20:30" valeur="1.979"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:20:29" valeur="2.149"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:07:53" valeur="1.979"/>
+    <prix nom="GPLc" id="4" maj="2025-07-29 22:07:53" valeur="1.169"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:07:52" valeur="1.999"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:07:53" valeur="2.169"/>
   </pdv>
   <pdv id="78960004" latitude="4876200" longitude="204200" cp="78960" pop="R">
     <adresse>CD 36</adresse>
@@ -78721,9 +78721,9 @@
       <service>Piste poids lourds</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:19:36" valeur="1.629"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:19:36" valeur="1.679"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:19:36" valeur="1.789"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:02:54" valeur="1.649"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:02:54" valeur="1.699"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:02:54" valeur="1.809"/>
   </pdv>
   <pdv id="91100021" latitude="4860600" longitude="246600" cp="91100" pop="R">
     <adresse>18 Boulevard Jean jaures</adresse>
@@ -79304,10 +79304,10 @@
       <service>Espace bébé</service>
       <service>Bornes électriques</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:29:31" valeur="1.959"/>
-    <prix nom="GPLc" id="4" maj="2025-07-29 06:29:31" valeur="1.099"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:29:31" valeur="1.979"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:29:31" valeur="2.089"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:11:58" valeur="1.979"/>
+    <prix nom="GPLc" id="4" maj="2025-07-29 22:11:57" valeur="1.119"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:11:58" valeur="1.999"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:11:58" valeur="2.109"/>
   </pdv>
   <pdv id="86130010" latitude="4669100" longitude="35500" cp="86130" pop="A">
     <adresse>AUTOROUTE A10</adresse>
@@ -81168,8 +81168,8 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="E10" id="5" maj="2025-07-29 06:22:33" valeur="1.719"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:22:33" valeur="1.869"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:11:31" valeur="1.739"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:11:31" valeur="1.889"/>
   </pdv>
   <pdv id="51260005" latitude="4858900" longitude="381300" cp="51260" pop="R">
     <adresse>38 rue de sezanne</adresse>
@@ -81338,9 +81338,9 @@
       <service>Carburant additivé</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:22:56" valeur="1.619"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:22:56" valeur="1.689"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:22:56" valeur="1.799"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:07:11" valeur="1.639"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:07:11" valeur="1.709"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:07:11" valeur="1.819"/>
   </pdv>
   <pdv id="44130001" latitude="4747306.1839157" longitude="-174698.07605743" cp="44130" pop="R">
     <adresse>27 Route de l'Isac</adresse>
@@ -82302,9 +82302,9 @@
       <service>Vente d'additifs carburants</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:20:13" valeur="1.639"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:20:13" valeur="1.679"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:20:12" valeur="1.849"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:03:31" valeur="1.659"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:03:31" valeur="1.699"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:03:31" valeur="1.869"/>
   </pdv>
   <pdv id="79100003" latitude="4699600" longitude="-20700" cp="79100" pop="R">
     <adresse>Route de Saumur</adresse>
@@ -82616,9 +82616,9 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 10:51:53" valeur="1.769"/>
-    <prix nom="E10" id="5" maj="2025-07-29 10:51:53" valeur="1.769"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 10:51:53" valeur="1.939"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:11:53" valeur="1.789"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:11:54" valeur="1.789"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:11:53" valeur="1.959"/>
   </pdv>
   <pdv id="62140002" latitude="5036700" longitude="205500" cp="62140" pop="R">
     <adresse>14 Route d'Arras</adresse>
@@ -82688,11 +82688,11 @@
       <service>Piste poids lourds</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:20:15" valeur="1.639"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:08:11" valeur="1.659"/>
     <prix nom="SP95" id="2" maj="2025-02-20 13:41:54" valeur="1.700"/>
     <prix nom="GPLc" id="4" maj="2025-02-20 13:41:54" valeur="0.930"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:20:15" valeur="1.689"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:20:15" valeur="1.799"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:12:20" valeur="1.709"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:12:20" valeur="1.819"/>
   </pdv>
   <pdv id="64800007" latitude="4318600" longitude="-24000" cp="64800" pop="R">
     <adresse>132 Rue des Pyrénées</adresse>
@@ -83196,10 +83196,10 @@
       <service>Automate CB 24/24</service>
       <service>DAB (Distributeur automatique de billets)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 13:21:00" valeur="1.611"/>
-    <prix nom="SP95" id="2" maj="2025-07-29 13:21:00" valeur="1.689"/>
-    <prix nom="E10" id="5" maj="2025-07-29 13:21:00" valeur="1.641"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 13:21:00" valeur="1.738"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:25:00" valeur="1.611"/>
+    <prix nom="SP95" id="2" maj="2025-07-29 22:25:00" valeur="1.700"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:25:00" valeur="1.644"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:25:00" valeur="1.738"/>
   </pdv>
   <pdv id="31800003" latitude="4311942" longitude="72578" cp="31800" pop="R">
     <adresse>71 Avenue de l'Isle</adresse>
@@ -83688,9 +83688,9 @@
       <service>Piste poids lourds</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 10:57:51" valeur="1.649"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:07:51" valeur="1.669"/>
     <prix nom="E85" id="3" maj="2025-01-17 15:58:52" valeur="1.255"/>
-    <prix nom="E10" id="5" maj="2025-07-29 10:57:51" valeur="1.719"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:07:51" valeur="1.739"/>
     <prix nom="SP98" id="6" maj="2024-05-15 13:40:00" valeur="2.069"/>
   </pdv>
   <pdv id="73800003" latitude="4550400" longitude="603800" cp="73800" pop="R">
@@ -87954,10 +87954,10 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:25:34" valeur="1.809"/>
-    <prix nom="E85" id="3" maj="2025-07-29 06:25:33" valeur="0.779"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:25:34" valeur="1.839"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:25:34" valeur="2.009"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:08:00" valeur="1.829"/>
+    <prix nom="E85" id="3" maj="2025-07-29 22:08:00" valeur="0.799"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:08:00" valeur="1.859"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:08:00" valeur="2.029"/>
   </pdv>
   <pdv id="21700006" latitude="4714000" longitude="495200" cp="21700" pop="R">
     <adresse>2 rue de Bingen</adresse>
@@ -88879,9 +88879,9 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 10:50:53" valeur="1.909"/>
-    <prix nom="E10" id="5" maj="2025-07-29 10:50:53" valeur="1.919"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 10:50:53" valeur="2.049"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:05:52" valeur="1.929"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:05:51" valeur="1.939"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:05:52" valeur="2.069"/>
   </pdv>
   <pdv id="67250001" latitude="4893585" longitude="788082" cp="67250" pop="R">
     <adresse>5 place Charls de Gaulles</adresse>
@@ -89714,7 +89714,7 @@
       <service>Vente d'additifs carburants</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-28 22:23:00" valeur="1.702"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:23:00" valeur="1.703"/>
     <prix nom="E10" id="5" maj="2025-07-25 22:23:00" valeur="1.746"/>
     <prix nom="SP98" id="6" maj="2025-07-25 22:23:00" valeur="1.856"/>
   </pdv>
@@ -92745,12 +92745,12 @@
       <service>Automate CB 24/24</service>
       <service>DAB (Distributeur automatique de billets)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 07:59:00" valeur="1.634"/>
-    <prix nom="SP95" id="2" maj="2025-07-29 07:59:00" valeur="1.707"/>
-    <prix nom="E85" id="3" maj="2025-07-29 07:59:00" valeur="0.781"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:36:00" valeur="1.634"/>
+    <prix nom="SP95" id="2" maj="2025-07-29 22:36:00" valeur="1.707"/>
+    <prix nom="E85" id="3" maj="2025-07-29 22:36:00" valeur="0.784"/>
     <prix nom="GPLc" id="4" maj="2025-07-26 07:58:00" valeur="0.960"/>
-    <prix nom="E10" id="5" maj="2025-07-29 07:59:00" valeur="1.671"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 07:59:00" valeur="1.765"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:36:00" valeur="1.680"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:36:00" valeur="1.765"/>
   </pdv>
   <pdv id="26503001" latitude="4495900" longitude="488300" cp="26500" pop="R">
     <adresse>Les Chabanneries</adresse>
@@ -93432,6 +93432,44 @@
     <prix nom="E10" id="5" maj="2025-07-28 10:32:10" valeur="1.634"/>
     <prix nom="SP98" id="6" maj="2025-07-28 10:32:11" valeur="1.701"/>
   </pdv>
+  <pdv id="93320002" latitude="4891000" longitude="251000" cp="93320" pop="R">
+    <adresse>262 AVENUE ARISTIDE BRIAND</adresse>
+    <ville>Les Pavillons-sous-Bois</ville>
+    <horaires automate-24-24="">
+      <jour id="1" nom="Lundi" ferme="">
+        <horaire ouverture="07.00" fermeture="21.00"/>
+      </jour>
+      <jour id="2" nom="Mardi" ferme="">
+        <horaire ouverture="07.00" fermeture="21.00"/>
+      </jour>
+      <jour id="3" nom="Mercredi" ferme="">
+        <horaire ouverture="07.00" fermeture="21.00"/>
+      </jour>
+      <jour id="4" nom="Jeudi" ferme="">
+        <horaire ouverture="07.00" fermeture="21.00"/>
+      </jour>
+      <jour id="5" nom="Vendredi" ferme="">
+        <horaire ouverture="07.00" fermeture="21.00"/>
+      </jour>
+      <jour id="6" nom="Samedi" ferme="">
+        <horaire ouverture="08.00" fermeture="20.30"/>
+      </jour>
+      <jour id="7" nom="Dimanche" ferme="">
+        <horaire ouverture="09.00" fermeture="20.30"/>
+      </jour>
+    </horaires>
+    <services>
+      <service>Boutique alimentaire</service>
+      <service>Boutique non alimentaire</service>
+      <service>Lavage automatique</service>
+      <service>Lavage manuel</service>
+      <service>Vente de gaz domestique (Butane, Propane)</service>
+    </services>
+    <prix nom="Gazole" id="1" maj="2025-07-29 00:01:00" valeur="1.783"/>
+    <prix nom="E85" id="3" maj="2025-07-29 00:01:00" valeur="0.786"/>
+    <prix nom="E10" id="5" maj="2025-07-29 00:01:00" valeur="1.802"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 00:01:00" valeur="1.912"/>
+  </pdv>
   <pdv id="30160001" latitude="4429233" longitude="409340" cp="30160" pop="R">
     <adresse> Rue du Docteur Paul Vermale</adresse>
     <ville>BESSEGES</ville>
@@ -93581,44 +93619,6 @@
     <prix nom="Gazole" id="1" maj="2025-07-22 12:12:45" valeur="1.589"/>
     <prix nom="SP95" id="2" maj="2025-07-10 15:59:46" valeur="1.669"/>
     <prix nom="E10" id="5" maj="2025-07-10 15:59:46" valeur="1.619"/>
-  </pdv>
-  <pdv id="93320002" latitude="4891000" longitude="251000" cp="93320" pop="R">
-    <adresse>262 AVENUE ARISTIDE BRIAND</adresse>
-    <ville>Les Pavillons-sous-Bois</ville>
-    <horaires automate-24-24="">
-      <jour id="1" nom="Lundi" ferme="">
-        <horaire ouverture="07.00" fermeture="21.00"/>
-      </jour>
-      <jour id="2" nom="Mardi" ferme="">
-        <horaire ouverture="07.00" fermeture="21.00"/>
-      </jour>
-      <jour id="3" nom="Mercredi" ferme="">
-        <horaire ouverture="07.00" fermeture="21.00"/>
-      </jour>
-      <jour id="4" nom="Jeudi" ferme="">
-        <horaire ouverture="07.00" fermeture="21.00"/>
-      </jour>
-      <jour id="5" nom="Vendredi" ferme="">
-        <horaire ouverture="07.00" fermeture="21.00"/>
-      </jour>
-      <jour id="6" nom="Samedi" ferme="">
-        <horaire ouverture="08.00" fermeture="20.30"/>
-      </jour>
-      <jour id="7" nom="Dimanche" ferme="">
-        <horaire ouverture="09.00" fermeture="20.30"/>
-      </jour>
-    </horaires>
-    <services>
-      <service>Boutique alimentaire</service>
-      <service>Boutique non alimentaire</service>
-      <service>Lavage automatique</service>
-      <service>Lavage manuel</service>
-      <service>Vente de gaz domestique (Butane, Propane)</service>
-    </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 00:01:00" valeur="1.783"/>
-    <prix nom="E85" id="3" maj="2025-07-29 00:01:00" valeur="0.786"/>
-    <prix nom="E10" id="5" maj="2025-07-29 00:01:00" valeur="1.802"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 00:01:00" valeur="1.912"/>
   </pdv>
   <pdv id="77500009" latitude="4887820" longitude="260782" cp="77500" pop="R">
     <adresse>119 AV DU GENDARME CASTERMANT</adresse>
@@ -99712,11 +99712,11 @@
       <service>Lavage manuel</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 08:06:00" valeur="1.623"/>
-    <prix nom="SP95" id="2" maj="2025-07-29 08:06:00" valeur="1.689"/>
-    <prix nom="E85" id="3" maj="2025-07-29 08:06:00" valeur="0.689"/>
-    <prix nom="E10" id="5" maj="2025-07-29 08:06:00" valeur="1.649"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 08:06:00" valeur="1.749"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:36:00" valeur="1.619"/>
+    <prix nom="SP95" id="2" maj="2025-07-29 22:36:00" valeur="1.689"/>
+    <prix nom="E85" id="3" maj="2025-07-29 22:36:00" valeur="0.689"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:36:00" valeur="1.649"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:36:00" valeur="1.763"/>
   </pdv>
   <pdv id="60490008" latitude="4953900" longitude="270200" cp="60490" pop="R">
     <adresse>RD 1017</adresse>
@@ -100593,10 +100593,10 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>Vente d'additifs carburants</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-28 20:50:00" valeur="1.776"/>
-    <prix nom="E85" id="3" maj="2025-07-28 20:50:00" valeur="0.776"/>
-    <prix nom="E10" id="5" maj="2025-07-28 20:50:00" valeur="1.789"/>
-    <prix nom="SP98" id="6" maj="2025-07-28 20:50:00" valeur="1.899"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 20:50:00" valeur="1.779"/>
+    <prix nom="E85" id="3" maj="2025-07-29 20:50:00" valeur="0.776"/>
+    <prix nom="E10" id="5" maj="2025-07-29 20:50:00" valeur="1.791"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 20:50:00" valeur="1.901"/>
   </pdv>
   <pdv id="63350003" latitude="4591200" longitude="333400" cp="63350" pop="R">
     <adresse>Rond Point Sud-Route de Clermont Ferrand</adresse>
@@ -103258,50 +103258,6 @@
     <prix nom="E10" id="5" maj="2025-07-29 08:06:00" valeur="1.645"/>
     <prix nom="SP98" id="6" maj="2025-07-29 08:06:00" valeur="1.749"/>
   </pdv>
-  <pdv id="80290007" latitude="4977474.7581038" longitude="198465.31982469" cp="80290" pop="R">
-    <adresse>6/12 rue benjamin hardivillers</adresse>
-    <ville>Poix-de-Picardie</ville>
-    <horaires automate-24-24="1">
-      <jour id="1" nom="Lundi" ferme="">
-        <horaire ouverture="07.30" fermeture="12.30"/>
-        <horaire ouverture="13.30" fermeture="19.00"/>
-      </jour>
-      <jour id="2" nom="Mardi" ferme="">
-        <horaire ouverture="07.30" fermeture="12.30"/>
-        <horaire ouverture="13.30" fermeture="19.00"/>
-      </jour>
-      <jour id="3" nom="Mercredi" ferme="">
-        <horaire ouverture="07.30" fermeture="12.30"/>
-        <horaire ouverture="13.30" fermeture="19.00"/>
-      </jour>
-      <jour id="4" nom="Jeudi" ferme="">
-        <horaire ouverture="07.30" fermeture="12.30"/>
-        <horaire ouverture="13.30" fermeture="19.00"/>
-      </jour>
-      <jour id="5" nom="Vendredi" ferme="">
-        <horaire ouverture="07.30" fermeture="12.30"/>
-        <horaire ouverture="13.30" fermeture="19.00"/>
-      </jour>
-      <jour id="6" nom="Samedi" ferme="">
-        <horaire ouverture="09.00" fermeture="12.00"/>
-      </jour>
-      <jour id="7" nom="Dimanche" ferme="1"/>
-    </horaires>
-    <services>
-      <service>Relais colis</service>
-      <service>Boutique non alimentaire</service>
-      <service>Station de gonflage</service>
-      <service>Carburant additivé</service>
-      <service>Piste poids lourds</service>
-      <service>Services réparation / entretien</service>
-      <service>Vente de gaz domestique (Butane, Propane)</service>
-      <service>Vente d'additifs carburants</service>
-      <service>Automate CB 24/24</service>
-    </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 08:22:30" valeur="1.719"/>
-    <prix nom="E10" id="5" maj="2025-07-29 08:22:30" valeur="1.739"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 08:22:30" valeur="1.849"/>
-  </pdv>
   <pdv id="20260003" latitude="4255900" longitude="879800" cp="20260" pop="R">
     <adresse>Lieu dit Alzeta</adresse>
     <ville>Calvi</ville>
@@ -103638,6 +103594,50 @@
     </services>
     <prix nom="Gazole" id="1" maj="2025-05-22 08:25:09" valeur="1.659"/>
     <prix nom="E10" id="5" maj="2025-05-22 08:25:09" valeur="1.769"/>
+  </pdv>
+  <pdv id="80290007" latitude="4977474.7581038" longitude="198465.31982469" cp="80290" pop="R">
+    <adresse>6/12 rue benjamin hardivillers</adresse>
+    <ville>Poix-de-Picardie</ville>
+    <horaires automate-24-24="1">
+      <jour id="1" nom="Lundi" ferme="">
+        <horaire ouverture="07.30" fermeture="12.30"/>
+        <horaire ouverture="13.30" fermeture="19.00"/>
+      </jour>
+      <jour id="2" nom="Mardi" ferme="">
+        <horaire ouverture="07.30" fermeture="12.30"/>
+        <horaire ouverture="13.30" fermeture="19.00"/>
+      </jour>
+      <jour id="3" nom="Mercredi" ferme="">
+        <horaire ouverture="07.30" fermeture="12.30"/>
+        <horaire ouverture="13.30" fermeture="19.00"/>
+      </jour>
+      <jour id="4" nom="Jeudi" ferme="">
+        <horaire ouverture="07.30" fermeture="12.30"/>
+        <horaire ouverture="13.30" fermeture="19.00"/>
+      </jour>
+      <jour id="5" nom="Vendredi" ferme="">
+        <horaire ouverture="07.30" fermeture="12.30"/>
+        <horaire ouverture="13.30" fermeture="19.00"/>
+      </jour>
+      <jour id="6" nom="Samedi" ferme="">
+        <horaire ouverture="09.00" fermeture="12.00"/>
+      </jour>
+      <jour id="7" nom="Dimanche" ferme="1"/>
+    </horaires>
+    <services>
+      <service>Relais colis</service>
+      <service>Boutique non alimentaire</service>
+      <service>Station de gonflage</service>
+      <service>Carburant additivé</service>
+      <service>Piste poids lourds</service>
+      <service>Services réparation / entretien</service>
+      <service>Vente de gaz domestique (Butane, Propane)</service>
+      <service>Vente d'additifs carburants</service>
+      <service>Automate CB 24/24</service>
+    </services>
+    <prix nom="Gazole" id="1" maj="2025-07-29 08:22:30" valeur="1.719"/>
+    <prix nom="E10" id="5" maj="2025-07-29 08:22:30" valeur="1.739"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 08:22:30" valeur="1.849"/>
   </pdv>
   <pdv id="91260002" latitude="4869500" longitude="235600" cp="91260" pop="R">
     <adresse>Avenue Camille Desmoulins</adresse>
@@ -105192,8 +105192,8 @@
     </services>
     <prix nom="Gazole" id="1" maj="2025-07-28 22:20:00" valeur="1.743"/>
     <prix nom="E85" id="3" maj="2025-07-25 22:20:00" valeur="0.805"/>
-    <prix nom="E10" id="5" maj="2025-07-28 22:20:00" valeur="1.772"/>
-    <prix nom="SP98" id="6" maj="2025-07-28 22:20:00" valeur="1.882"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:20:00" valeur="1.775"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:20:00" valeur="1.885"/>
   </pdv>
   <pdv id="1430004" latitude="4612800" longitude="554000" cp="01430" pop="R">
     <adresse>2 Rue de l'Égalité</adresse>
@@ -106988,6 +106988,46 @@
     <prix nom="E10" id="5" maj="2025-07-25 11:44:02" valeur="1.639"/>
     <prix nom="SP98" id="6" maj="2025-07-25 11:44:02" valeur="1.739"/>
   </pdv>
+  <pdv id="29600004" latitude="4858100" longitude="-386400" cp="29600" pop="R">
+    <adresse>ROUTE DE ROSCOFF CD.19</adresse>
+    <ville>Saint-Martin-des-Champs</ville>
+    <horaires automate-24-24="">
+      <jour id="1" nom="Lundi" ferme="">
+        <horaire ouverture="07.00" fermeture="21.00"/>
+      </jour>
+      <jour id="2" nom="Mardi" ferme="">
+        <horaire ouverture="07.00" fermeture="21.00"/>
+      </jour>
+      <jour id="3" nom="Mercredi" ferme="">
+        <horaire ouverture="07.00" fermeture="21.00"/>
+      </jour>
+      <jour id="4" nom="Jeudi" ferme="">
+        <horaire ouverture="07.00" fermeture="21.00"/>
+      </jour>
+      <jour id="5" nom="Vendredi" ferme="">
+        <horaire ouverture="07.00" fermeture="21.00"/>
+      </jour>
+      <jour id="6" nom="Samedi" ferme="">
+        <horaire ouverture="08.00" fermeture="21.00"/>
+      </jour>
+      <jour id="7" nom="Dimanche" ferme="">
+        <horaire ouverture="08.00" fermeture="21.00"/>
+      </jour>
+    </horaires>
+    <services>
+      <service>Toilettes publiques</service>
+      <service>Boutique alimentaire</service>
+      <service>Boutique non alimentaire</service>
+      <service>Station de gonflage</service>
+      <service>Carburant additivé</service>
+      <service>Piste poids lourds</service>
+      <service>Lavage automatique</service>
+      <service>Vente de gaz domestique (Butane, Propane)</service>
+      <service>Vente d'additifs carburants</service>
+      <service>Wifi</service>
+    </services>
+    <prix nom="E10" id="5" maj="2025-07-29 00:01:00" valeur="1.722"/>
+  </pdv>
   <pdv id="35111001" latitude="4859151.2004465" longitude="-184388.51562724" cp="35111" pop="R">
     <adresse>Rue des Frênes</adresse>
     <ville>LA FRESNAIS</ville>
@@ -107159,47 +107199,6 @@
     <prix nom="E85" id="3" maj="2025-04-30 08:49:08" valeur="0.889"/>
     <prix nom="E10" id="5" maj="2025-07-28 09:21:36" valeur="1.739"/>
     <prix nom="SP98" id="6" maj="2025-07-28 09:21:36" valeur="1.829"/>
-  </pdv>
-  <pdv id="29600004" latitude="4858100" longitude="-386400" cp="29600" pop="R">
-    <adresse>ROUTE DE ROSCOFF CD.19</adresse>
-    <ville>Saint-Martin-des-Champs</ville>
-    <horaires automate-24-24="">
-      <jour id="1" nom="Lundi" ferme="">
-        <horaire ouverture="07.00" fermeture="21.00"/>
-      </jour>
-      <jour id="2" nom="Mardi" ferme="">
-        <horaire ouverture="07.00" fermeture="21.00"/>
-      </jour>
-      <jour id="3" nom="Mercredi" ferme="">
-        <horaire ouverture="07.00" fermeture="21.00"/>
-      </jour>
-      <jour id="4" nom="Jeudi" ferme="">
-        <horaire ouverture="07.00" fermeture="21.00"/>
-      </jour>
-      <jour id="5" nom="Vendredi" ferme="">
-        <horaire ouverture="07.00" fermeture="21.00"/>
-      </jour>
-      <jour id="6" nom="Samedi" ferme="">
-        <horaire ouverture="08.00" fermeture="21.00"/>
-      </jour>
-      <jour id="7" nom="Dimanche" ferme="">
-        <horaire ouverture="08.00" fermeture="21.00"/>
-      </jour>
-    </horaires>
-    <services>
-      <service>Toilettes publiques</service>
-      <service>Boutique alimentaire</service>
-      <service>Boutique non alimentaire</service>
-      <service>Station de gonflage</service>
-      <service>Carburant additivé</service>
-      <service>Piste poids lourds</service>
-      <service>Lavage automatique</service>
-      <service>Vente de gaz domestique (Butane, Propane)</service>
-      <service>Vente d'additifs carburants</service>
-      <service>Wifi</service>
-    </services>
-    <prix nom="SP95" id="2" maj="2025-04-23 12:00:35" valeur="1.711"/>
-    <prix nom="E10" id="5" maj="2025-07-29 00:01:00" valeur="1.722"/>
   </pdv>
   <pdv id="86220001" latitude="4693511" longitude="60576" cp="86220" pop="R">
     <adresse>RN10</adresse>
@@ -108963,6 +108962,21 @@
     <prix nom="E10" id="5" maj="2025-07-25 09:45:38" valeur="1.656"/>
     <prix nom="SP98" id="6" maj="2025-07-25 09:45:38" valeur="1.749"/>
   </pdv>
+  <pdv id="19110001" latitude="4540410.32586" longitude="249992.356761" cp="19110" pop="R">
+    <adresse>av victor hugo</adresse>
+    <ville>BORT-LES-ORGUES</ville>
+    <services>
+      <service>Station de gonflage</service>
+      <service>Piste poids lourds</service>
+      <service>Lavage automatique</service>
+      <service>Lavage manuel</service>
+      <service>DAB (Distributeur automatique de billets)</service>
+    </services>
+    <prix nom="Gazole" id="1" maj="2025-07-23 08:49:04" valeur="1.619"/>
+    <prix nom="E85" id="3" maj="2025-03-07 08:36:07" valeur="0.768"/>
+    <prix nom="E10" id="5" maj="2025-07-29 21:24:02" valeur="1.629"/>
+    <prix nom="SP98" id="6" maj="2025-07-02 09:10:00" valeur="1.725"/>
+  </pdv>
   <pdv id="45300006" latitude="4817100" longitude="223600" cp="45300" pop="R">
     <adresse>ZAC DE MORAILLES</adresse>
     <ville>Pithiviers-le-Vieil</ville>
@@ -109162,21 +109176,6 @@
     <prix nom="Gazole" id="1" maj="2025-07-24 18:41:01" valeur="1.731"/>
     <prix nom="E10" id="5" maj="2025-07-24 18:41:02" valeur="1.755"/>
     <prix nom="SP98" id="6" maj="2025-07-24 18:41:02" valeur="1.865"/>
-  </pdv>
-  <pdv id="19110001" latitude="4540410.32586" longitude="249992.356761" cp="19110" pop="R">
-    <adresse>av victor hugo</adresse>
-    <ville>BORT-LES-ORGUES</ville>
-    <services>
-      <service>Station de gonflage</service>
-      <service>Piste poids lourds</service>
-      <service>Lavage automatique</service>
-      <service>Lavage manuel</service>
-      <service>DAB (Distributeur automatique de billets)</service>
-    </services>
-    <prix nom="Gazole" id="1" maj="2025-07-23 08:49:04" valeur="1.619"/>
-    <prix nom="E85" id="3" maj="2025-03-07 08:36:07" valeur="0.768"/>
-    <prix nom="E10" id="5" maj="2025-07-29 20:01:00" valeur="1.622"/>
-    <prix nom="SP98" id="6" maj="2025-07-02 09:10:00" valeur="1.725"/>
   </pdv>
   <pdv id="65400005" latitude="4300594.7411947" longitude="-9854.6519566444" cp="65400" pop="R">
     <adresse>27 AVENUE DES PYRENEES</adresse>
@@ -115282,9 +115281,9 @@
       <service>Vente d'additifs carburants</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-25 21:00:00" valeur="1.702"/>
-    <prix nom="E10" id="5" maj="2025-07-28 21:00:00" valeur="1.743"/>
-    <prix nom="SP98" id="6" maj="2025-07-28 21:00:00" valeur="1.853"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 21:00:00" valeur="1.701"/>
+    <prix nom="E10" id="5" maj="2025-07-29 21:00:00" valeur="1.745"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 21:00:00" valeur="1.855"/>
   </pdv>
   <pdv id="59470003" latitude="5089100" longitude="246300" cp="59470" pop="R">
     <adresse>Route de Begues</adresse>
@@ -116145,10 +116144,10 @@
       <service>Automate CB 24/24</service>
       <service>DAB (Distributeur automatique de billets)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-25 22:15:00" valeur="1.716"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:15:00" valeur="1.719"/>
     <prix nom="E85" id="3" maj="2025-07-25 22:15:00" valeur="0.762"/>
-    <prix nom="E10" id="5" maj="2025-07-29 07:19:37" valeur="1.745"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 07:19:37" valeur="1.855"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:15:00" valeur="1.746"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:15:00" valeur="1.856"/>
   </pdv>
   <pdv id="81300001" latitude="4375969.17928" longitude="196428.409176" cp="81300" pop="R">
     <adresse>Avenue du Maréchal Juin</adresse>
@@ -124216,6 +124215,42 @@
     <prix nom="Gazole" id="1" maj="2025-07-24 07:36:55" valeur="1.739"/>
     <prix nom="SP95" id="2" maj="2025-07-24 07:36:55" valeur="1.809"/>
   </pdv>
+  <pdv id="26730001" latitude="4505600" longitude="519200" cp="26730" pop="R">
+    <adresse>4030 Les Fauries - RN 532</adresse>
+    <ville>Eymeux</ville>
+    <horaires automate-24-24="1">
+      <jour id="1" nom="Lundi" ferme="">
+        <horaire ouverture="07.00" fermeture="14.00"/>
+      </jour>
+      <jour id="2" nom="Mardi" ferme="">
+        <horaire ouverture="11.30" fermeture="18.30"/>
+      </jour>
+      <jour id="3" nom="Mercredi" ferme="">
+        <horaire ouverture="07.00" fermeture="14.00"/>
+      </jour>
+      <jour id="4" nom="Jeudi" ferme="">
+        <horaire ouverture="11.30" fermeture="18.30"/>
+      </jour>
+      <jour id="5" nom="Vendredi" ferme="">
+        <horaire ouverture="07.00" fermeture="14.00"/>
+      </jour>
+      <jour id="6" nom="Samedi" ferme="1"/>
+      <jour id="7" nom="Dimanche" ferme="1"/>
+    </horaires>
+    <services>
+      <service>Toilettes publiques</service>
+      <service>Boutique alimentaire</service>
+      <service>Boutique non alimentaire</service>
+      <service>Station de gonflage</service>
+      <service>Carburant additivé</service>
+      <service>Piste poids lourds</service>
+      <service>Vente de gaz domestique (Butane, Propane)</service>
+      <service>Automate CB 24/24</service>
+    </services>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:20:21" valeur="1.713"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:20:22" valeur="1.755"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:20:22" valeur="1.865"/>
+  </pdv>
   <pdv id="68490002" latitude="4781643" longitude="753969" cp="68490" pop="R">
     <adresse> Avenue de la Gare</adresse>
     <ville>CHALAMPé</ville>
@@ -124603,42 +124638,6 @@
     <prix nom="E10" id="5" maj="2025-07-25 06:01:22" valeur="1.639"/>
     <prix nom="SP98" id="6" maj="2025-07-25 06:01:22" valeur="1.729"/>
   </pdv>
-  <pdv id="26730001" latitude="4505600" longitude="519200" cp="26730" pop="R">
-    <adresse>4030 Les Fauries - RN 532</adresse>
-    <ville>Eymeux</ville>
-    <horaires automate-24-24="1">
-      <jour id="1" nom="Lundi" ferme="">
-        <horaire ouverture="07.00" fermeture="14.00"/>
-      </jour>
-      <jour id="2" nom="Mardi" ferme="">
-        <horaire ouverture="11.30" fermeture="18.30"/>
-      </jour>
-      <jour id="3" nom="Mercredi" ferme="">
-        <horaire ouverture="07.00" fermeture="14.00"/>
-      </jour>
-      <jour id="4" nom="Jeudi" ferme="">
-        <horaire ouverture="11.30" fermeture="18.30"/>
-      </jour>
-      <jour id="5" nom="Vendredi" ferme="">
-        <horaire ouverture="07.00" fermeture="14.00"/>
-      </jour>
-      <jour id="6" nom="Samedi" ferme="1"/>
-      <jour id="7" nom="Dimanche" ferme="1"/>
-    </horaires>
-    <services>
-      <service>Toilettes publiques</service>
-      <service>Boutique alimentaire</service>
-      <service>Boutique non alimentaire</service>
-      <service>Station de gonflage</service>
-      <service>Carburant additivé</service>
-      <service>Piste poids lourds</service>
-      <service>Vente de gaz domestique (Butane, Propane)</service>
-      <service>Automate CB 24/24</service>
-    </services>
-    <prix nom="Gazole" id="1" maj="2025-07-25 21:46:51" valeur="1.709"/>
-    <prix nom="E10" id="5" maj="2025-07-25 21:46:52" valeur="1.751"/>
-    <prix nom="SP98" id="6" maj="2025-07-25 21:46:52" valeur="1.861"/>
-  </pdv>
   <pdv id="77280001" latitude="4907300" longitude="267100" cp="77280" pop="R">
     <adresse>Rue du 8 Mai 1945</adresse>
     <ville>Othis</ville>
@@ -124788,10 +124787,10 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-28 21:00:00" valeur="1.719"/>
-    <prix nom="E85" id="3" maj="2025-07-28 21:00:00" valeur="0.734"/>
-    <prix nom="E10" id="5" maj="2025-07-28 21:00:00" valeur="1.733"/>
-    <prix nom="SP98" id="6" maj="2025-07-28 21:00:00" valeur="1.843"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 21:00:00" valeur="1.719"/>
+    <prix nom="E85" id="3" maj="2025-07-29 21:00:00" valeur="0.734"/>
+    <prix nom="E10" id="5" maj="2025-07-29 21:00:00" valeur="1.735"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 21:00:00" valeur="1.845"/>
   </pdv>
   <pdv id="73200002" latitude="4566700" longitude="639400" cp="73200" pop="R">
     <adresse>PLAINE DE CONFLANS</adresse>
@@ -128054,10 +128053,10 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 10:51:29" valeur="1.729"/>
-    <prix nom="E85" id="3" maj="2025-07-29 10:51:29" valeur="0.699"/>
-    <prix nom="E10" id="5" maj="2025-07-29 10:51:30" valeur="1.739"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 10:51:30" valeur="1.889"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:01:10" valeur="1.749"/>
+    <prix nom="E85" id="3" maj="2025-07-29 22:01:09" valeur="0.719"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:01:10" valeur="1.759"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:01:09" valeur="1.909"/>
   </pdv>
   <pdv id="42600003" latitude="4560844" longitude="408929" cp="42600" pop="R">
     <adresse>ROUTE DE LYON</adresse>
@@ -128148,10 +128147,10 @@
       <service>Piste poids lourds</service>
       <service>Espace bébé</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-28 22:00:00" valeur="1.964"/>
-    <prix nom="GPLc" id="4" maj="2025-07-28 22:00:00" valeur="1.099"/>
-    <prix nom="E10" id="5" maj="2025-07-28 22:00:00" valeur="1.974"/>
-    <prix nom="SP98" id="6" maj="2025-07-28 22:00:00" valeur="2.074"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:00:00" valeur="1.964"/>
+    <prix nom="GPLc" id="4" maj="2025-07-29 22:00:00" valeur="1.099"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:00:00" valeur="1.974"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:00:00" valeur="2.074"/>
   </pdv>
   <pdv id="87100010" latitude="4582146.54804" longitude="124194.302558" cp="87100" pop="R">
     <adresse>BOULEVARD DE BEL AIR</adresse>
@@ -130485,9 +130484,9 @@
       <service>Piste poids lourds</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-28 22:20:00" valeur="1.731"/>
-    <prix nom="E10" id="5" maj="2025-07-28 22:20:00" valeur="1.783"/>
-    <prix nom="SP98" id="6" maj="2025-07-28 22:20:00" valeur="1.893"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:20:00" valeur="1.732"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:20:00" valeur="1.786"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:20:00" valeur="1.896"/>
   </pdv>
   <pdv id="57804001" latitude="4913700" longitude="680800" cp="57800" pop="R">
     <adresse>4 rue des Genêts Zac de Betting</adresse>
@@ -132475,10 +132474,10 @@
       <service>Lavage automatique</service>
       <service>Vente de gaz domestique (Butane, Propane)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:26:12" valeur="1.779"/>
-    <prix nom="E85" id="3" maj="2025-07-29 06:26:12" valeur="0.799"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:26:12" valeur="1.819"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:26:12" valeur="1.989"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:14:12" valeur="1.799"/>
+    <prix nom="E85" id="3" maj="2025-07-29 22:14:12" valeur="0.819"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:14:11" valeur="1.839"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:14:12" valeur="2.009"/>
   </pdv>
   <pdv id="71620002" latitude="4683800" longitude="499600" cp="71620" pop="R">
     <adresse>STATION TOTAL RN.73</adresse>
@@ -134518,9 +134517,9 @@
       <service>Services réparation / entretien</service>
       <service>Vente de gaz domestique (Butane, Propane)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-28 21:00:00" valeur="1.679"/>
-    <prix nom="E10" id="5" maj="2025-07-28 21:00:00" valeur="1.699"/>
-    <prix nom="SP98" id="6" maj="2025-07-28 21:00:00" valeur="1.799"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 21:00:00" valeur="1.679"/>
+    <prix nom="E10" id="5" maj="2025-07-29 21:00:00" valeur="1.699"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 21:00:00" valeur="1.799"/>
   </pdv>
   <pdv id="77340009" latitude="4877800" longitude="259100" cp="77340" pop="R">
     <adresse>Zac Les 4 Chênes, 35 Rte de Paris</adresse>
@@ -135914,9 +135913,9 @@
       <service>Carburant additivé</service>
       <service>Piste poids lourds</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:22:32" valeur="1.629"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:22:31" valeur="1.669"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:22:32" valeur="1.819"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:10:12" valeur="1.649"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:10:13" valeur="1.689"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:10:13" valeur="1.839"/>
   </pdv>
   <pdv id="28100002" latitude="4873700" longitude="135100" cp="28100" pop="R">
     <adresse>Rue Bautzen</adresse>
@@ -136318,7 +136317,7 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>DAB (Distributeur automatique de billets)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 07:11:39" valeur="1.736"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:20:00" valeur="1.733"/>
     <prix nom="E85" id="3" maj="2025-07-29 07:11:39" valeur="0.801"/>
     <prix nom="E10" id="5" maj="2025-07-29 07:11:40" valeur="1.772"/>
     <prix nom="SP98" id="6" maj="2025-07-29 07:11:40" valeur="1.882"/>
@@ -136498,9 +136497,9 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>Vente d'additifs carburants</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-28 21:00:00" valeur="1.769"/>
-    <prix nom="E10" id="5" maj="2025-07-28 21:00:00" valeur="1.789"/>
-    <prix nom="SP98" id="6" maj="2025-07-28 21:00:00" valeur="1.889"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 21:00:00" valeur="1.769"/>
+    <prix nom="E10" id="5" maj="2025-07-29 21:00:00" valeur="1.789"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 21:00:00" valeur="1.889"/>
   </pdv>
   <pdv id="40700001" latitude="4365900" longitude="-59100" cp="40700" pop="R">
     <adresse>ROUTE DE ST SEVER</adresse>
@@ -136874,10 +136873,10 @@
       <jour id="7" nom="Dimanche" ferme=""/>
     </horaires>
     <services/>
-    <prix nom="Gazole" id="1" maj="2025-07-29 08:06:00" valeur="1.599"/>
-    <prix nom="SP95" id="2" maj="2025-07-29 08:06:00" valeur="1.679"/>
-    <prix nom="E10" id="5" maj="2025-07-29 08:06:00" valeur="1.618"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 08:06:00" valeur="1.703"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:36:00" valeur="1.598"/>
+    <prix nom="SP95" id="2" maj="2025-07-29 22:36:00" valeur="1.695"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:36:00" valeur="1.619"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:36:00" valeur="1.716"/>
   </pdv>
   <pdv id="38490007" latitude="4553253.0454456" longitude="558691.96293609" cp="38490" pop="R">
     <adresse>84 rue Gambetta</adresse>
@@ -136954,8 +136953,8 @@
       <service>Automate CB 24/24</service>
     </services>
     <prix nom="Gazole" id="1" maj="2025-07-28 22:20:00" valeur="1.723"/>
-    <prix nom="E10" id="5" maj="2025-07-28 22:20:00" valeur="1.773"/>
-    <prix nom="SP98" id="6" maj="2025-07-28 22:20:00" valeur="1.883"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:20:00" valeur="1.779"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:20:00" valeur="1.889"/>
   </pdv>
   <pdv id="31480002" latitude="4373000" longitude="106300" cp="31480" pop="R">
     <adresse>LASSOULAN</adresse>
@@ -137574,9 +137573,9 @@
       <service>Automate CB 24/24</service>
       <service>DAB (Distributeur automatique de billets)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-28 21:59:00" valeur="1.969"/>
-    <prix nom="E10" id="5" maj="2025-07-28 21:59:00" valeur="1.979"/>
-    <prix nom="SP98" id="6" maj="2025-07-28 21:59:00" valeur="2.079"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 21:59:00" valeur="1.969"/>
+    <prix nom="E10" id="5" maj="2025-07-29 21:59:00" valeur="1.979"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 21:59:00" valeur="2.079"/>
   </pdv>
   <pdv id="13010005" latitude="4328700" longitude="540000" cp="13010" pop="R">
     <adresse>BOULEVARD JEAN MOULIN</adresse>
@@ -137746,9 +137745,9 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-28 21:00:00" valeur="1.729"/>
-    <prix nom="E10" id="5" maj="2025-07-28 21:00:00" valeur="1.759"/>
-    <prix nom="SP98" id="6" maj="2025-07-28 21:00:00" valeur="1.859"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 21:00:00" valeur="1.729"/>
+    <prix nom="E10" id="5" maj="2025-07-29 21:00:00" valeur="1.759"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 21:00:00" valeur="1.859"/>
   </pdv>
   <pdv id="5350001" latitude="4475919.68" longitude="680774.96" cp="05350" pop="R">
     <adresse>RN 547</adresse>
@@ -141283,9 +141282,9 @@
       <service>Lavage automatique</service>
       <service>Vente de gaz domestique (Butane, Propane)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-28 21:00:00" valeur="1.729"/>
-    <prix nom="E10" id="5" maj="2025-07-28 21:00:00" valeur="1.759"/>
-    <prix nom="SP98" id="6" maj="2025-07-28 21:00:00" valeur="1.859"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 21:00:00" valeur="1.729"/>
+    <prix nom="E10" id="5" maj="2025-07-29 21:00:00" valeur="1.759"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 21:00:00" valeur="1.859"/>
   </pdv>
   <pdv id="27000005" latitude="4902423" longitude="112508" cp="27000" pop="R">
     <adresse>108 Avenue du Maréchal Foch</adresse>
@@ -142066,9 +142065,9 @@
       <service>Lavage manuel</service>
       <service>Vente de gaz domestique (Butane, Propane)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-28 21:30:00" valeur="1.749"/>
-    <prix nom="E10" id="5" maj="2025-07-28 21:30:00" valeur="1.769"/>
-    <prix nom="SP98" id="6" maj="2025-07-28 21:30:00" valeur="1.869"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 21:30:00" valeur="1.749"/>
+    <prix nom="E10" id="5" maj="2025-07-29 21:30:00" valeur="1.769"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 21:30:00" valeur="1.869"/>
   </pdv>
   <pdv id="34070020" latitude="4359600" longitude="388700" cp="34070" pop="R">
     <adresse>112 AVENUE DE PALAVAS</adresse>
@@ -144154,9 +144153,9 @@
       <service>Piste poids lourds</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:27:49" valeur="1.729"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:27:49" valeur="1.769"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:27:49" valeur="1.899"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:06:36" valeur="1.749"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:06:36" valeur="1.789"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:06:36" valeur="1.919"/>
   </pdv>
   <pdv id="55130001" latitude="4851838" longitude="550427" cp="55130" pop="R">
     <adresse>3 Rue de Verdun</adresse>
@@ -144394,10 +144393,10 @@
       <service>Station de gonflage</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-27 22:36:00" valeur="1.596"/>
-    <prix nom="E85" id="3" maj="2025-07-27 22:36:00" valeur="0.787"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:36:00" valeur="1.596"/>
+    <prix nom="E85" id="3" maj="2025-07-29 22:36:00" valeur="0.786"/>
     <prix nom="E10" id="5" maj="2025-07-22 22:36:00" valeur="1.670"/>
-    <prix nom="SP98" id="6" maj="2025-07-27 22:36:00" valeur="1.784"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:36:00" valeur="1.784"/>
   </pdv>
   <pdv id="57300004" latitude="4925391" longitude="617003" cp="57300" pop="R">
     <adresse>20 -22 Rue de Metz</adresse>
@@ -145640,9 +145639,9 @@
       <service>Automate CB 24/24</service>
       <service>DAB (Distributeur automatique de billets)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-28 21:00:00" valeur="1.750"/>
-    <prix nom="E10" id="5" maj="2025-07-28 21:00:00" valeur="1.770"/>
-    <prix nom="SP98" id="6" maj="2025-07-28 21:00:00" valeur="1.870"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 21:00:00" valeur="1.750"/>
+    <prix nom="E10" id="5" maj="2025-07-29 21:00:00" valeur="1.770"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 21:00:00" valeur="1.870"/>
   </pdv>
   <pdv id="63000009" latitude="4576400" longitude="312700" cp="63000" pop="R">
     <adresse>153 BD GUSTAVE FLAUBERT</adresse>
@@ -146205,12 +146204,12 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>DAB (Distributeur automatique de billets)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 14:51:00" valeur="1.587"/>
-    <prix nom="SP95" id="2" maj="2025-07-29 14:51:00" valeur="1.674"/>
-    <prix nom="E85" id="3" maj="2025-07-29 14:51:00" valeur="0.766"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:25:00" valeur="1.582"/>
+    <prix nom="SP95" id="2" maj="2025-07-29 22:25:00" valeur="1.686"/>
+    <prix nom="E85" id="3" maj="2025-07-29 22:25:00" valeur="0.765"/>
     <prix nom="GPLc" id="4" maj="2025-06-06 20:10:00" valeur="0.949"/>
     <prix nom="E10" id="5" maj="2025-07-25 22:27:00" valeur="1.629"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 14:51:00" valeur="1.709"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:25:00" valeur="1.718"/>
   </pdv>
   <pdv id="69190009" latitude="4570300" longitude="485000" cp="69190" pop="R">
     <adresse>130 Boulevard Yves Farges</adresse>
@@ -146673,11 +146672,11 @@
       <service>Vente d'additifs carburants</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:22:11" valeur="1.629"/>
-    <prix nom="E85" id="3" maj="2025-07-29 06:22:12" valeur="0.719"/>
-    <prix nom="GPLc" id="4" maj="2025-07-29 06:22:12" valeur="0.979"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:22:12" valeur="1.669"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:22:12" valeur="1.759"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:09:33" valeur="1.649"/>
+    <prix nom="E85" id="3" maj="2025-07-29 22:09:34" valeur="0.739"/>
+    <prix nom="GPLc" id="4" maj="2025-07-29 22:09:33" valeur="0.999"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:09:33" valeur="1.689"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:09:33" valeur="1.779"/>
   </pdv>
   <pdv id="69800017" latitude="4570700" longitude="498900" cp="69800" pop="R">
     <adresse>91 RTE DE GRENOBLE</adresse>
@@ -147466,9 +147465,9 @@
       <jour id="7" nom="Dimanche" ferme=""/>
     </horaires>
     <services/>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:51:00" valeur="1.789"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:51:00" valeur="1.809"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:51:00" valeur="1.879"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:25:00" valeur="1.799"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:25:00" valeur="1.819"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:25:00" valeur="1.889"/>
   </pdv>
   <pdv id="93700006" latitude="4891300" longitude="246300" cp="93700" pop="R">
     <adresse>274 avenue Jean-Jaures</adresse>
@@ -147486,9 +147485,9 @@
       <service>Carburant additivé</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 10:58:12" valeur="1.689"/>
-    <prix nom="E10" id="5" maj="2025-07-29 10:58:12" valeur="1.709"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 10:58:13" valeur="1.879"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:12:38" valeur="1.709"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:12:37" valeur="1.729"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:12:38" valeur="1.899"/>
   </pdv>
   <pdv id="75013023" latitude="4882586" longitude="238433" cp="75013" pop="R">
     <adresse>RUE JEAN-BAPTISTE BERLIER - QUAI</adresse>
@@ -147625,9 +147624,9 @@
       <service>Bornes électriques</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:19:11" valeur="1.789"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:19:11" valeur="1.799"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:19:11" valeur="1.949"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:07:49" valeur="1.809"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:07:49" valeur="1.819"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:07:49" valeur="1.969"/>
   </pdv>
   <pdv id="75016007" latitude="4883937" longitude="225662" cp="75016" pop="R">
     <adresse>105 Boulevard Murat</adresse>
@@ -148237,9 +148236,9 @@
       <service>Piste poids lourds</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 11:00:53" valeur="1.659"/>
-    <prix nom="E10" id="5" maj="2025-07-29 11:00:52" valeur="1.689"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 11:00:52" valeur="1.819"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:05:34" valeur="1.679"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:05:33" valeur="1.709"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:05:34" valeur="1.839"/>
   </pdv>
   <pdv id="78130011" latitude="4899240" longitude="191384" cp="78130" pop="R">
     <adresse>29 AV. PAUL RAOULT</adresse>
@@ -148571,10 +148570,10 @@
       <service>GNV</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 10:52:54" valeur="1.699"/>
-    <prix nom="E85" id="3" maj="2025-07-29 10:52:54" valeur="0.749"/>
-    <prix nom="E10" id="5" maj="2025-07-29 10:52:53" valeur="1.729"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 10:52:54" valeur="1.819"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:12:31" valeur="1.719"/>
+    <prix nom="E85" id="3" maj="2025-07-29 22:12:31" valeur="0.769"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:12:31" valeur="1.749"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:12:32" valeur="1.839"/>
   </pdv>
   <pdv id="80200002" latitude="4994186" longitude="294077" cp="80200" pop="R">
     <adresse>Avenue des Australiens</adresse>
@@ -148847,9 +148846,9 @@
       <service>Lavage automatique</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:23:33" valeur="1.789"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:23:34" valeur="1.799"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:23:34" valeur="1.979"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:11:33" valeur="1.809"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:11:33" valeur="1.819"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:11:33" valeur="1.999"/>
   </pdv>
   <pdv id="83210006" latitude="4316000" longitude="606400" cp="83210" pop="R">
     <adresse>329 Route de la Crau</adresse>
@@ -148921,9 +148920,9 @@
       <service>Services réparation / entretien</service>
       <service>Vente de gaz domestique (Butane, Propane)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-28 20:45:00" valeur="1.729"/>
-    <prix nom="E10" id="5" maj="2025-07-28 20:45:00" valeur="1.759"/>
-    <prix nom="SP98" id="6" maj="2025-07-28 20:45:00" valeur="1.859"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 20:45:00" valeur="1.729"/>
+    <prix nom="E10" id="5" maj="2025-07-29 20:45:00" valeur="1.759"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 20:45:00" valeur="1.859"/>
   </pdv>
   <pdv id="83136005" latitude="4333024" longitude="604965" cp="83136" pop="R">
     <adresse>3, Bd de la Libération</adresse>
@@ -149120,10 +149119,10 @@
       <service>Carburant additivé</service>
       <service>Vente de gaz domestique (Butane, Propane)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:27:32" valeur="1.629"/>
-    <prix nom="E85" id="3" maj="2025-07-29 06:27:31" valeur="0.699"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:27:31" valeur="1.689"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:27:32" valeur="1.859"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:10:18" valeur="1.649"/>
+    <prix nom="E85" id="3" maj="2025-07-29 22:10:17" valeur="0.719"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:10:18" valeur="1.709"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:10:18" valeur="1.879"/>
   </pdv>
   <pdv id="83570001" latitude="4347373" longitude="617634" cp="83570" pop="R">
     <adresse>route de Brignoles</adresse>
@@ -149302,9 +149301,9 @@
       <service>Lavage automatique</service>
       <service>Vente de gaz domestique (Butane, Propane)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:20:34" valeur="1.749"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:20:33" valeur="1.769"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:20:34" valeur="1.939"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:09:09" valeur="1.769"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:09:09" valeur="1.789"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:09:09" valeur="1.959"/>
   </pdv>
   <pdv id="84570001" latitude="4405784" longitude="523212" cp="84570" pop="R">
     <adresse> Avenue Jean Jaurès</adresse>
@@ -149438,10 +149437,10 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:18:09" valeur="1.699"/>
-    <prix nom="E85" id="3" maj="2025-07-29 06:18:09" valeur="0.739"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:18:10" valeur="1.719"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:18:09" valeur="1.869"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:06:30" valeur="1.719"/>
+    <prix nom="E85" id="3" maj="2025-07-29 22:06:29" valeur="0.759"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:06:29" valeur="1.739"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:06:30" valeur="1.889"/>
   </pdv>
   <pdv id="88170004" latitude="4826800" longitude="586100" cp="88170" pop="A">
     <adresse>Aire de Lorraine Sandaucourt Trel</adresse>
@@ -149539,10 +149538,10 @@
       <service>Bornes électriques</service>
       <service>DAB (Distributeur automatique de billets)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 07:59:00" valeur="1.619"/>
-    <prix nom="SP95" id="2" maj="2025-07-29 07:59:00" valeur="1.695"/>
-    <prix nom="E10" id="5" maj="2025-07-29 07:59:00" valeur="1.647"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 07:59:00" valeur="1.748"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:36:00" valeur="1.614"/>
+    <prix nom="SP95" id="2" maj="2025-07-29 22:36:00" valeur="1.706"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:36:00" valeur="1.658"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:36:00" valeur="1.758"/>
   </pdv>
   <pdv id="89000007" latitude="4779900" longitude="355300" cp="89000" pop="R">
     <adresse>Boulevard Gallieni</adresse>
@@ -150051,10 +150050,10 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>Vente d'additifs carburants</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:22:54" valeur="1.679"/>
-    <prix nom="GPLc" id="4" maj="2025-07-29 06:22:53" valeur="1.049"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:22:54" valeur="1.729"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:22:54" valeur="1.819"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:10:09" valeur="1.699"/>
+    <prix nom="GPLc" id="4" maj="2025-07-29 22:10:10" valeur="1.069"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:10:11" valeur="1.749"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:10:10" valeur="1.839"/>
   </pdv>
   <pdv id="51520002" latitude="4899100" longitude="434200" cp="51520" pop="R">
     <adresse>ROUTE NATIONALE 44 - AIRE DE SAINT MARTIN SUR LE PRÉ</adresse>
@@ -150296,10 +150295,10 @@
       <service>Services réparation / entretien</service>
       <service>Vente de gaz domestique (Butane, Propane)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:23:30" valeur="1.739"/>
-    <prix nom="E85" id="3" maj="2025-07-29 06:23:30" valeur="0.749"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:23:29" valeur="1.769"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:23:29" valeur="1.919"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:04:35" valeur="1.759"/>
+    <prix nom="E85" id="3" maj="2025-07-29 22:04:36" valeur="0.769"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:04:35" valeur="1.789"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:04:36" valeur="1.939"/>
   </pdv>
   <pdv id="76140001" latitude="4942700" longitude="106300" cp="76140" pop="R">
     <adresse>Avenue Jean-Jaurès</adresse>
@@ -150562,10 +150561,10 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:21:49" valeur="1.679"/>
-    <prix nom="E85" id="3" maj="2025-07-29 06:21:50" valeur="0.699"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:21:49" valeur="1.669"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:21:50" valeur="1.819"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:04:09" valeur="1.699"/>
+    <prix nom="E85" id="3" maj="2025-07-29 22:04:10" valeur="0.719"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:04:10" valeur="1.689"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:04:09" valeur="1.839"/>
   </pdv>
   <pdv id="13013011" latitude="4332321" longitude="544699" cp="13013" pop="R">
     <adresse>281 Avenue des Olives</adresse>
@@ -151063,9 +151062,9 @@
     <adresse>1 rue Jacques Anquetil</adresse>
     <ville>GOUSSAINVILLE</ville>
     <services/>
-    <prix nom="Gazole" id="1" maj="2025-07-29 08:06:00" valeur="1.662"/>
-    <prix nom="E10" id="5" maj="2025-07-29 08:06:00" valeur="1.675"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 08:06:00" valeur="1.730"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:36:00" valeur="1.659"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:36:00" valeur="1.674"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:36:00" valeur="1.729"/>
   </pdv>
   <pdv id="59620003" latitude="5021057.2754006" longitude="383089.72176239" cp="59620" pop="R">
     <adresse>Rue Mirabeau</adresse>
@@ -151494,8 +151493,8 @@
       <service>Vente d'additifs carburants</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 10:07:36" valeur="1.709"/>
-    <prix nom="E10" id="5" maj="2025-07-29 10:07:36" valeur="1.749"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 21:11:04" valeur="1.699"/>
+    <prix nom="E10" id="5" maj="2025-07-29 21:11:05" valeur="1.749"/>
     <prix nom="SP98" id="6" maj="2025-07-29 10:07:36" valeur="1.859"/>
   </pdv>
   <pdv id="44510001" latitude="4727503" longitude="-244083" cp="44510" pop="R">
@@ -151567,10 +151566,10 @@
       <service>Lavage automatique</service>
       <service>Vente de gaz domestique (Butane, Propane)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:24:29" valeur="1.709"/>
-    <prix nom="E85" id="3" maj="2025-07-29 06:24:30" valeur="0.869"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:24:29" valeur="1.739"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:24:30" valeur="1.909"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:06:10" valeur="1.729"/>
+    <prix nom="E85" id="3" maj="2025-07-29 22:06:10" valeur="0.889"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:06:09" valeur="1.759"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:06:09" valeur="1.929"/>
   </pdv>
   <pdv id="65400004" latitude="4299900" longitude="-9600" cp="65400" pop="R">
     <adresse>32, avenue du Général de Gaulle</adresse>
@@ -152233,10 +152232,10 @@
       <service>Bornes électriques</service>
       <service>DAB (Distributeur automatique de billets)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 11:06:09" valeur="1.884"/>
-    <prix nom="GPLc" id="4" maj="2025-07-29 11:06:10" valeur="1.089"/>
-    <prix nom="E10" id="5" maj="2025-07-29 11:06:09" valeur="1.914"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 11:06:10" valeur="2.024"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:15:10" valeur="1.904"/>
+    <prix nom="GPLc" id="4" maj="2025-07-29 22:15:09" valeur="1.109"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:15:09" valeur="1.934"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:15:10" valeur="2.044"/>
   </pdv>
   <pdv id="17350003" latitude="4587419" longitude="-67693" cp="17350" pop="R">
     <adresse>ROUTE DE SAINTES</adresse>
@@ -152891,9 +152890,9 @@
       <service>Automate CB 24/24</service>
       <service>DAB (Distributeur automatique de billets)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 07:59:00" valeur="1.611"/>
-    <prix nom="E85" id="3" maj="2025-07-29 07:59:00" valeur="0.784"/>
-    <prix nom="E10" id="5" maj="2025-07-29 07:59:00" valeur="1.641"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:36:00" valeur="1.606"/>
+    <prix nom="E85" id="3" maj="2025-07-29 22:36:00" valeur="0.788"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:36:00" valeur="1.652"/>
   </pdv>
   <pdv id="45430004" latitude="4790600" longitude="203600" cp="45430" pop="R">
     <adresse>Rond-Point de la Guignardière</adresse>
@@ -153415,10 +153414,10 @@
       <service>Automate CB 24/24</service>
       <service>DAB (Distributeur automatique de billets)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 11:01:10" valeur="1.879"/>
-    <prix nom="GPLc" id="4" maj="2025-07-29 11:01:10" valeur="1.089"/>
-    <prix nom="E10" id="5" maj="2025-07-29 11:01:10" valeur="1.929"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 11:01:10" valeur="2.049"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:05:10" valeur="1.899"/>
+    <prix nom="GPLc" id="4" maj="2025-07-29 22:05:09" valeur="1.109"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:05:10" valeur="1.949"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:05:09" valeur="2.069"/>
   </pdv>
   <pdv id="64470001" latitude="4312100" longitude="-86700" cp="64470" pop="R">
     <adresse>-</adresse>
@@ -155139,9 +155138,9 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:25:19" valeur="1.709"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:25:20" valeur="1.729"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:25:20" valeur="1.879"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:12:42" valeur="1.729"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:12:42" valeur="1.749"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:12:42" valeur="1.899"/>
   </pdv>
   <pdv id="40250001" latitude="4374608.6877" longitude="-75802.1592231" cp="40250" pop="R">
     <adresse>Route de Monfort</adresse>
@@ -158499,10 +158498,10 @@
       <service>Piste poids lourds</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:19:09" valeur="1.679"/>
-    <prix nom="GPLc" id="4" maj="2025-07-29 06:19:10" valeur="0.969"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:19:09" valeur="1.689"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:19:09" valeur="1.859"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:06:51" valeur="1.699"/>
+    <prix nom="GPLc" id="4" maj="2025-07-29 22:06:52" valeur="0.989"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:06:52" valeur="1.709"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:06:52" valeur="1.879"/>
   </pdv>
   <pdv id="1310001" latitude="4625082.58935" longitude="511211.332738" cp="01310" pop="R">
     <adresse>1123 Route de Mâcon</adresse>
@@ -160085,10 +160084,10 @@
       <service>Automate CB 24/24</service>
       <service>DAB (Distributeur automatique de billets)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-28 22:15:00" valeur="1.577"/>
-    <prix nom="SP95" id="2" maj="2025-07-28 22:15:00" valeur="1.664"/>
-    <prix nom="E10" id="5" maj="2025-07-28 22:15:00" valeur="1.615"/>
-    <prix nom="SP98" id="6" maj="2025-07-28 22:15:00" valeur="1.691"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:15:00" valeur="1.577"/>
+    <prix nom="SP95" id="2" maj="2025-07-29 22:15:00" valeur="1.664"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:15:00" valeur="1.604"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:15:00" valeur="1.691"/>
   </pdv>
   <pdv id="82350001" latitude="4409000" longitude="144700" cp="82350" pop="R">
     <adresse>60 RN 20</adresse>
@@ -160750,10 +160749,10 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:21:32" valeur="1.679"/>
-    <prix nom="GPLc" id="4" maj="2025-07-29 06:21:31" valeur="1.009"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:21:32" valeur="1.709"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:21:31" valeur="1.879"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:07:55" valeur="1.699"/>
+    <prix nom="GPLc" id="4" maj="2025-07-29 22:07:54" valeur="1.029"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:07:54" valeur="1.729"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:07:55" valeur="1.899"/>
   </pdv>
   <pdv id="44360008" latitude="4733000" longitude="-178100" cp="44360" pop="R">
     <adresse>ROUTE NATIONALE 165</adresse>
@@ -160964,10 +160963,10 @@
       <service>Lavage automatique</service>
       <service>Vente de gaz domestique (Butane, Propane)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:27:10" valeur="1.719"/>
-    <prix nom="GPLc" id="4" maj="2025-07-29 06:27:09" valeur="0.999"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:27:10" valeur="1.729"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:27:09" valeur="1.869"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:14:32" valeur="1.739"/>
+    <prix nom="GPLc" id="4" maj="2025-07-29 22:14:32" valeur="0.999"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:14:31" valeur="1.749"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:14:32" valeur="1.889"/>
   </pdv>
   <pdv id="22540002" latitude="4857000" longitude="-333900" cp="22540" pop="R">
     <adresse>Chemin de l'Oratoire</adresse>
@@ -162755,9 +162754,9 @@
       <service>Lavage automatique</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:27:53" valeur="1.649"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:27:53" valeur="1.679"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:27:53" valeur="1.819"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:11:13" valeur="1.669"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:11:12" valeur="1.699"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:11:12" valeur="1.839"/>
   </pdv>
   <pdv id="61790001" latitude="4882929.56" longitude="-56169.43" cp="61790" pop="R">
     <adresse>ZA LA REMAIZIERE</adresse>
@@ -164374,10 +164373,10 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>DAB (Distributeur automatique de billets)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-28 21:00:00" valeur="1.716"/>
-    <prix nom="E85" id="3" maj="2025-07-28 21:00:00" valeur="0.769"/>
-    <prix nom="E10" id="5" maj="2025-07-28 21:00:00" valeur="1.752"/>
-    <prix nom="SP98" id="6" maj="2025-07-28 21:00:00" valeur="1.862"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 21:00:00" valeur="1.716"/>
+    <prix nom="E85" id="3" maj="2025-07-29 21:00:00" valeur="0.769"/>
+    <prix nom="E10" id="5" maj="2025-07-29 21:00:00" valeur="1.754"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 21:00:00" valeur="1.864"/>
   </pdv>
   <pdv id="41700006" latitude="4742500" longitude="142800" cp="41700" pop="R">
     <adresse>16 Avenue du Général De Gaulle</adresse>
@@ -169759,10 +169758,10 @@
       <service>Automate CB 24/24</service>
       <service>DAB (Distributeur automatique de billets)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-28 22:15:00" valeur="1.714"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:15:00" valeur="1.715"/>
     <prix nom="GPLc" id="4" maj="2025-07-29 18:44:28" valeur="0.960"/>
-    <prix nom="E10" id="5" maj="2025-07-28 22:15:00" valeur="1.732"/>
-    <prix nom="SP98" id="6" maj="2025-07-28 22:15:00" valeur="1.842"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:15:00" valeur="1.739"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:15:00" valeur="1.849"/>
   </pdv>
   <pdv id="52000001" latitude="4810500" longitude="514300" cp="52000" pop="R">
     <adresse>7 Avenue de la République</adresse>
@@ -170461,10 +170460,10 @@
       <service>Carburant additivé</service>
       <service>Vente de gaz domestique (Butane, Propane)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-28 21:00:00" valeur="1.799"/>
-    <prix nom="E85" id="3" maj="2025-07-28 21:00:00" valeur="0.799"/>
-    <prix nom="E10" id="5" maj="2025-07-28 21:00:00" valeur="1.829"/>
-    <prix nom="SP98" id="6" maj="2025-07-28 21:00:00" valeur="1.929"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 21:00:00" valeur="1.799"/>
+    <prix nom="E85" id="3" maj="2025-07-29 21:00:00" valeur="0.799"/>
+    <prix nom="E10" id="5" maj="2025-07-29 21:00:00" valeur="1.829"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 21:00:00" valeur="1.929"/>
   </pdv>
   <pdv id="70400004" latitude="4756300" longitude="675900" cp="70400" pop="R">
     <adresse>100 FAUBOURG DE MONTBELIARD</adresse>
@@ -171961,11 +171960,11 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:17:49" valeur="1.629"/>
-    <prix nom="E85" id="3" maj="2025-07-29 06:17:50" valeur="0.809"/>
-    <prix nom="GPLc" id="4" maj="2025-07-29 06:17:49" valeur="1.099"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:17:49" valeur="1.689"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:17:50" valeur="1.799"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:05:50" valeur="1.649"/>
+    <prix nom="E85" id="3" maj="2025-07-29 22:05:50" valeur="0.829"/>
+    <prix nom="GPLc" id="4" maj="2025-07-29 22:05:50" valeur="1.119"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:05:49" valeur="1.709"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:05:49" valeur="1.819"/>
   </pdv>
   <pdv id="56800006" latitude="4791899.4310637" longitude="-236376.16080019" cp="56800" pop="R">
     <adresse>ROUTE NATIONALE 24 - AIRE SUD DE BROCÉLIANDE</adresse>
@@ -175744,10 +175743,10 @@
       <service>Automate CB 24/24</service>
       <service>DAB (Distributeur automatique de billets)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 07:59:00" valeur="1.630"/>
-    <prix nom="SP95" id="2" maj="2025-07-29 07:59:00" valeur="1.718"/>
-    <prix nom="E10" id="5" maj="2025-07-29 07:59:00" valeur="1.628"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 07:59:00" valeur="1.738"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:25:00" valeur="1.648"/>
+    <prix nom="SP95" id="2" maj="2025-07-29 22:25:00" valeur="1.734"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:25:00" valeur="1.664"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:25:00" valeur="1.755"/>
   </pdv>
   <pdv id="30132003" latitude="4378400" longitude="439300" cp="30132" pop="R">
     <adresse>ROUTE DE ST GILLES</adresse>
@@ -184778,11 +184777,11 @@
       <service>Services réparation / entretien</service>
       <service>Vente de gaz domestique (Butane, Propane)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-28 20:45:00" valeur="1.769"/>
-    <prix nom="E85" id="3" maj="2025-07-28 20:45:00" valeur="0.829"/>
-    <prix nom="GPLc" id="4" maj="2025-07-28 20:45:00" valeur="0.999"/>
-    <prix nom="E10" id="5" maj="2025-07-28 20:45:00" valeur="1.789"/>
-    <prix nom="SP98" id="6" maj="2025-07-28 20:45:00" valeur="1.889"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 20:45:00" valeur="1.769"/>
+    <prix nom="E85" id="3" maj="2025-07-29 20:45:00" valeur="0.829"/>
+    <prix nom="GPLc" id="4" maj="2025-07-29 20:45:00" valeur="0.999"/>
+    <prix nom="E10" id="5" maj="2025-07-29 20:45:00" valeur="1.789"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 20:45:00" valeur="1.889"/>
   </pdv>
   <pdv id="45270001" latitude="4799200" longitude="244900" cp="45270" pop="R">
     <adresse>ZI ROUTE NATIONALE 60</adresse>
@@ -192076,10 +192075,10 @@
       <service>Lavage automatique</service>
       <service>Vente d'additifs carburants</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:25:29" valeur="1.819"/>
-    <prix nom="E85" id="3" maj="2025-07-29 06:25:30" valeur="0.839"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:25:29" valeur="1.829"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:25:30" valeur="1.979"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:07:09" valeur="1.839"/>
+    <prix nom="E85" id="3" maj="2025-07-29 22:07:09" valeur="0.859"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:07:10" valeur="1.849"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:07:09" valeur="1.999"/>
   </pdv>
   <pdv id="6600024" latitude="4359874" longitude="708726" cp="06600" pop="R">
     <adresse>RD 35 1856 RTE DE GRASSE</adresse>
@@ -192278,12 +192277,12 @@
       <service>Automate CB 24/24</service>
       <service>DAB (Distributeur automatique de billets)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 08:06:00" valeur="1.642"/>
-    <prix nom="SP95" id="2" maj="2025-07-29 08:06:00" valeur="1.705"/>
-    <prix nom="E85" id="3" maj="2025-07-29 08:06:00" valeur="0.740"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:36:00" valeur="1.642"/>
+    <prix nom="SP95" id="2" maj="2025-07-29 22:36:00" valeur="1.705"/>
+    <prix nom="E85" id="3" maj="2025-07-29 22:36:00" valeur="0.741"/>
     <prix nom="GPLc" id="4" maj="2025-07-26 07:58:00" valeur="0.929"/>
-    <prix nom="E10" id="5" maj="2025-07-29 08:06:00" valeur="1.645"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 08:06:00" valeur="1.749"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:36:00" valeur="1.656"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:36:00" valeur="1.748"/>
   </pdv>
   <pdv id="23290001" latitude="4615000" longitude="151000" cp="23290" pop="R">
     <adresse>8 route de la souterraine</adresse>
@@ -192667,9 +192666,9 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-28 23:35:41" valeur="1.733"/>
-    <prix nom="E10" id="5" maj="2025-07-28 23:35:42" valeur="1.769"/>
-    <prix nom="SP98" id="6" maj="2025-07-28 23:35:42" valeur="1.859"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 20:49:17" valeur="1.733"/>
+    <prix nom="E10" id="5" maj="2025-07-29 20:49:18" valeur="1.771"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 20:49:18" valeur="1.881"/>
   </pdv>
   <pdv id="72400002" latitude="4819400" longitude="66900" cp="72400" pop="R">
     <adresse>AVENUE DE VERDUN</adresse>
@@ -193381,11 +193380,11 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>Vente d'additifs carburants</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 10:54:30" valeur="1.739"/>
-    <prix nom="E85" id="3" maj="2025-07-29 10:54:29" valeur="0.729"/>
-    <prix nom="GPLc" id="4" maj="2025-07-29 10:54:29" valeur="0.989"/>
-    <prix nom="E10" id="5" maj="2025-07-29 10:54:30" valeur="1.759"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 10:54:30" valeur="1.909"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:07:57" valeur="1.759"/>
+    <prix nom="E85" id="3" maj="2025-07-29 22:07:57" valeur="0.749"/>
+    <prix nom="GPLc" id="4" maj="2025-07-29 22:07:57" valeur="1.009"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:07:56" valeur="1.779"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:07:56" valeur="1.929"/>
   </pdv>
   <pdv id="38660002" latitude="4534900" longitude="594600" cp="38660" pop="R">
     <adresse>RN90</adresse>
@@ -196834,11 +196833,11 @@
       <service>Automate CB 24/24</service>
       <service>DAB (Distributeur automatique de billets)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-28 22:39:00" valeur="1.562"/>
-    <prix nom="SP95" id="2" maj="2025-07-28 22:39:00" valeur="1.679"/>
-    <prix nom="E85" id="3" maj="2025-07-28 22:39:00" valeur="0.649"/>
-    <prix nom="E10" id="5" maj="2025-07-28 22:39:00" valeur="1.606"/>
-    <prix nom="SP98" id="6" maj="2025-07-28 22:39:00" valeur="1.692"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:36:00" valeur="1.573"/>
+    <prix nom="SP95" id="2" maj="2025-07-29 22:36:00" valeur="1.679"/>
+    <prix nom="E85" id="3" maj="2025-07-29 22:36:00" valeur="0.649"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:36:00" valeur="1.620"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:36:00" valeur="1.709"/>
   </pdv>
   <pdv id="80210001" latitude="5006153.703" longitude="159455.665" cp="80210" pop="R">
     <adresse>43 RUE VICTOR HUGO</adresse>
@@ -196851,50 +196850,6 @@
     <prix nom="Gazole" id="1" maj="2025-07-24 17:03:20" valeur="1.609"/>
     <prix nom="SP95" id="2" maj="2025-07-24 17:03:20" valeur="1.669"/>
     <prix nom="SP98" id="6" maj="2025-07-24 17:03:20" valeur="1.699"/>
-  </pdv>
-  <pdv id="23300008" latitude="4477600" longitude="-59500" cp="33170" pop="R">
-    <adresse>77 rue de la croix de monjous</adresse>
-    <ville>Gradignan</ville>
-    <horaires automate-24-24="1">
-      <jour id="1" nom="Lundi" ferme="">
-        <horaire ouverture="07.30" fermeture="19.30"/>
-      </jour>
-      <jour id="2" nom="Mardi" ferme="">
-        <horaire ouverture="07.30" fermeture="19.30"/>
-      </jour>
-      <jour id="3" nom="Mercredi" ferme="">
-        <horaire ouverture="07.30" fermeture="19.30"/>
-      </jour>
-      <jour id="4" nom="Jeudi" ferme="">
-        <horaire ouverture="07.30" fermeture="19.30"/>
-      </jour>
-      <jour id="5" nom="Vendredi" ferme="">
-        <horaire ouverture="07.30" fermeture="19.30"/>
-      </jour>
-      <jour id="6" nom="Samedi" ferme="">
-        <horaire ouverture="07.30" fermeture="19.30"/>
-      </jour>
-      <jour id="7" nom="Dimanche" ferme="1"/>
-    </horaires>
-    <services>
-      <service>Laverie</service>
-      <service>Relais colis</service>
-      <service>Boutique alimentaire</service>
-      <service>Boutique non alimentaire</service>
-      <service>Restauration à emporter</service>
-      <service>Restauration sur place</service>
-      <service>Station de gonflage</service>
-      <service>Lavage automatique</service>
-      <service>Services réparation / entretien</service>
-      <service>Vente de gaz domestique (Butane, Propane)</service>
-      <service>Bornes électriques</service>
-      <service>Vente d'additifs carburants</service>
-      <service>Automate CB 24/24</service>
-    </services>
-    <prix nom="Gazole" id="1" maj="2025-07-23 06:08:55" valeur="1.699"/>
-    <prix nom="E85" id="3" maj="2025-07-23 06:08:56" valeur="0.815"/>
-    <prix nom="E10" id="5" maj="2025-07-23 06:08:56" valeur="1.729"/>
-    <prix nom="SP98" id="6" maj="2025-07-23 06:08:56" valeur="1.799"/>
   </pdv>
   <pdv id="40280005" latitude="4387600" longitude="-50700" cp="40280" pop="R">
     <adresse>600 AVENUE DE SAINT SEVER</adresse>
@@ -197264,6 +197219,50 @@
     </services>
     <prix nom="Gazole" id="1" maj="2025-07-16 08:22:44" valeur="1.740"/>
     <prix nom="SP95" id="2" maj="2025-07-16 08:22:44" valeur="1.800"/>
+  </pdv>
+  <pdv id="23300008" latitude="4477600" longitude="-59500" cp="33170" pop="R">
+    <adresse>77 rue de la croix de monjous</adresse>
+    <ville>Gradignan</ville>
+    <horaires automate-24-24="1">
+      <jour id="1" nom="Lundi" ferme="">
+        <horaire ouverture="07.30" fermeture="19.30"/>
+      </jour>
+      <jour id="2" nom="Mardi" ferme="">
+        <horaire ouverture="07.30" fermeture="19.30"/>
+      </jour>
+      <jour id="3" nom="Mercredi" ferme="">
+        <horaire ouverture="07.30" fermeture="19.30"/>
+      </jour>
+      <jour id="4" nom="Jeudi" ferme="">
+        <horaire ouverture="07.30" fermeture="19.30"/>
+      </jour>
+      <jour id="5" nom="Vendredi" ferme="">
+        <horaire ouverture="07.30" fermeture="19.30"/>
+      </jour>
+      <jour id="6" nom="Samedi" ferme="">
+        <horaire ouverture="07.30" fermeture="19.30"/>
+      </jour>
+      <jour id="7" nom="Dimanche" ferme="1"/>
+    </horaires>
+    <services>
+      <service>Laverie</service>
+      <service>Relais colis</service>
+      <service>Boutique alimentaire</service>
+      <service>Boutique non alimentaire</service>
+      <service>Restauration à emporter</service>
+      <service>Restauration sur place</service>
+      <service>Station de gonflage</service>
+      <service>Lavage automatique</service>
+      <service>Services réparation / entretien</service>
+      <service>Vente de gaz domestique (Butane, Propane)</service>
+      <service>Bornes électriques</service>
+      <service>Vente d'additifs carburants</service>
+      <service>Automate CB 24/24</service>
+    </services>
+    <prix nom="Gazole" id="1" maj="2025-07-23 06:08:55" valeur="1.699"/>
+    <prix nom="E85" id="3" maj="2025-07-23 06:08:56" valeur="0.815"/>
+    <prix nom="E10" id="5" maj="2025-07-23 06:08:56" valeur="1.729"/>
+    <prix nom="SP98" id="6" maj="2025-07-23 06:08:56" valeur="1.799"/>
   </pdv>
   <pdv id="91470007" latitude="4864167.09" longitude="206514.17" cp="91470" pop="R">
     <adresse>20 RUE DE CHARTRES</adresse>
@@ -201426,11 +201425,11 @@
       <service>Automate CB 24/24</service>
       <service>DAB (Distributeur automatique de billets)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 07:59:00" valeur="1.587"/>
-    <prix nom="SP95" id="2" maj="2025-07-29 07:59:00" valeur="1.666"/>
-    <prix nom="GPLc" id="4" maj="2025-07-29 07:59:00" valeur="0.839"/>
-    <prix nom="E10" id="5" maj="2025-07-29 07:59:00" valeur="1.622"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 07:59:00" valeur="1.695"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:36:00" valeur="1.585"/>
+    <prix nom="SP95" id="2" maj="2025-07-29 22:36:00" valeur="1.674"/>
+    <prix nom="GPLc" id="4" maj="2025-07-29 22:36:00" valeur="0.839"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:36:00" valeur="1.622"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:36:00" valeur="1.704"/>
   </pdv>
   <pdv id="2300002" latitude="4959100" longitude="323400" cp="02300" pop="R">
     <adresse>CHEMIN DEPARTEMENTAL 937</adresse>
@@ -203205,8 +203204,8 @@
       <service>Automate CB 24/24</service>
     </services>
     <prix nom="Gazole" id="1" maj="2025-07-28 22:14:00" valeur="1.729"/>
-    <prix nom="E10" id="5" maj="2025-07-28 22:14:00" valeur="1.766"/>
-    <prix nom="SP98" id="6" maj="2025-07-28 22:14:00" valeur="1.876"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:14:00" valeur="1.769"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:14:00" valeur="1.879"/>
   </pdv>
   <pdv id="85190003" latitude="4679100" longitude="-170700" cp="85190" pop="R">
     <adresse>BEL AIR</adresse>
@@ -205743,11 +205742,11 @@
       <service>Station de gonflage</service>
       <service>Vente de gaz domestique (Butane, Propane)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-28 22:39:00" valeur="1.600"/>
-    <prix nom="SP95" id="2" maj="2025-07-28 22:39:00" valeur="1.670"/>
-    <prix nom="E85" id="3" maj="2025-07-28 22:39:00" valeur="0.699"/>
-    <prix nom="E10" id="5" maj="2025-07-28 22:39:00" valeur="1.628"/>
-    <prix nom="SP98" id="6" maj="2025-07-28 22:39:00" valeur="1.702"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:36:00" valeur="1.597"/>
+    <prix nom="SP95" id="2" maj="2025-07-29 22:36:00" valeur="1.678"/>
+    <prix nom="E85" id="3" maj="2025-07-29 22:36:00" valeur="0.699"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:36:00" valeur="1.635"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:36:00" valeur="1.710"/>
   </pdv>
   <pdv id="42120004" latitude="4601495" longitude="409629" cp="42120" pop="R">
     <adresse>31 boulevard Charles de Gaulle</adresse>
@@ -206322,10 +206321,10 @@
       <service>Automate CB 24/24</service>
     </services>
     <prix nom="Gazole" id="1" maj="2025-07-24 14:51:00" valeur="1.669"/>
-    <prix nom="SP95" id="2" maj="2025-07-28 22:29:00" valeur="1.709"/>
-    <prix nom="GPLc" id="4" maj="2025-07-28 22:29:00" valeur="0.839"/>
-    <prix nom="E10" id="5" maj="2025-07-28 22:29:00" valeur="1.659"/>
-    <prix nom="SP98" id="6" maj="2025-07-28 22:29:00" valeur="1.746"/>
+    <prix nom="SP95" id="2" maj="2025-07-29 22:25:00" valeur="1.709"/>
+    <prix nom="GPLc" id="4" maj="2025-07-29 22:25:00" valeur="0.839"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:25:00" valeur="1.659"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:25:00" valeur="1.761"/>
   </pdv>
   <pdv id="77140003" latitude="4826800" longitude="267600" cp="77140" pop="R">
     <adresse>Route de Larchant</adresse>
@@ -210118,9 +210117,9 @@
       <service>Carburant additivé</service>
       <service>Vente de gaz domestique (Butane, Propane)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:19:13" valeur="1.629"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:19:13" valeur="1.669"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:19:13" valeur="1.839"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:07:31" valeur="1.649"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:07:31" valeur="1.689"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:07:31" valeur="1.859"/>
   </pdv>
   <pdv id="27520001" latitude="4929100" longitude="87500" cp="27520" pop="R">
     <adresse>300 Chemin Vautier</adresse>
@@ -212367,10 +212366,10 @@
       <service>Espace bébé</service>
       <service>Wifi</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:20:31" valeur="1.829"/>
-    <prix nom="GPLc" id="4" maj="2025-07-29 06:20:32" valeur="1.139"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:20:31" valeur="1.849"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:20:32" valeur="1.969"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:04:12" valeur="1.849"/>
+    <prix nom="GPLc" id="4" maj="2025-07-29 22:04:12" valeur="1.159"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:04:11" valeur="1.869"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:04:12" valeur="1.989"/>
   </pdv>
   <pdv id="53061001" latitude="4805600" longitude="-73600" cp="53000" pop="R">
     <adresse>60, avenue de la Comm. Européenne</adresse>
@@ -213294,11 +213293,11 @@
       <service>Lavage manuel</service>
       <service>DAB (Distributeur automatique de billets)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-27 22:26:00" valeur="1.595"/>
-    <prix nom="SP95" id="2" maj="2025-07-27 22:26:00" valeur="1.651"/>
-    <prix nom="E85" id="3" maj="2025-07-27 22:26:00" valeur="0.695"/>
-    <prix nom="E10" id="5" maj="2025-07-27 22:26:00" valeur="1.625"/>
-    <prix nom="SP98" id="6" maj="2025-07-27 22:26:00" valeur="1.705"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:25:00" valeur="1.595"/>
+    <prix nom="SP95" id="2" maj="2025-07-29 22:25:00" valeur="1.668"/>
+    <prix nom="E85" id="3" maj="2025-07-29 22:25:00" valeur="0.696"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:25:00" valeur="1.625"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:25:00" valeur="1.710"/>
   </pdv>
   <pdv id="2580002" latitude="4990354.43" longitude="391399.88" cp="02580" pop="R">
     <adresse>14 RUE DU MONVINAGE</adresse>
@@ -218817,10 +218816,10 @@
       <service>Lavage manuel</service>
       <service>Services réparation / entretien</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-25 18:33:16" valeur="1.689"/>
-    <prix nom="E85" id="3" maj="2025-07-25 18:33:16" valeur="0.799"/>
-    <prix nom="E10" id="5" maj="2025-07-25 18:33:16" valeur="1.749"/>
-    <prix nom="SP98" id="6" maj="2025-07-25 18:33:16" valeur="1.859"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:30:00" valeur="1.689"/>
+    <prix nom="E85" id="3" maj="2025-07-29 22:30:00" valeur="0.799"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:30:00" valeur="1.753"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:30:00" valeur="1.863"/>
   </pdv>
   <pdv id="47290002" latitude="4453300" longitude="62500" cp="47290" pop="R">
     <adresse>ROUTE NATIONALE 21</adresse>
@@ -218882,8 +218881,8 @@
     </services>
     <prix nom="Gazole" id="1" maj="2025-07-28 22:20:00" valeur="1.714"/>
     <prix nom="GPLc" id="4" maj="2025-07-10 06:14:57" valeur="0.975"/>
-    <prix nom="E10" id="5" maj="2025-07-28 22:20:00" valeur="1.742"/>
-    <prix nom="SP98" id="6" maj="2025-07-28 22:20:00" valeur="1.852"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:20:00" valeur="1.744"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:20:00" valeur="1.854"/>
   </pdv>
   <pdv id="15400003" latitude="4528800" longitude="266900" cp="15400" pop="R">
     <adresse>zi du Sedour</adresse>
@@ -220535,11 +220534,11 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>DAB (Distributeur automatique de billets)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 08:06:00" valeur="1.602"/>
-    <prix nom="SP95" id="2" maj="2025-07-29 08:06:00" valeur="1.690"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:25:00" valeur="1.599"/>
+    <prix nom="SP95" id="2" maj="2025-07-29 22:25:00" valeur="1.701"/>
     <prix nom="E85" id="3" maj="2025-07-28 13:21:00" valeur="0.710"/>
-    <prix nom="E10" id="5" maj="2025-07-29 08:06:00" valeur="1.634"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 08:06:00" valeur="1.726"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:25:00" valeur="1.646"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:25:00" valeur="1.737"/>
   </pdv>
   <pdv id="20147001" latitude="4228900" longitude="870000" cp="20147" pop="R">
     <adresse>Trajinu</adresse>
@@ -222826,12 +222825,12 @@
       <service>Automate CB 24/24</service>
       <service>DAB (Distributeur automatique de billets)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-24 22:36:00" valeur="1.590"/>
-    <prix nom="SP95" id="2" maj="2025-07-24 22:36:00" valeur="1.699"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:36:00" valeur="1.598"/>
+    <prix nom="SP95" id="2" maj="2025-07-29 22:36:00" valeur="1.708"/>
     <prix nom="E85" id="3" maj="2025-06-11 08:17:00" valeur="0.698"/>
     <prix nom="GPLc" id="4" maj="2025-07-18 22:43:00" valeur="0.839"/>
-    <prix nom="E10" id="5" maj="2025-07-24 22:36:00" valeur="1.628"/>
-    <prix nom="SP98" id="6" maj="2025-07-24 22:36:00" valeur="1.720"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:36:00" valeur="1.638"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:36:00" valeur="1.730"/>
   </pdv>
   <pdv id="47450003" latitude="4422130.4898879" longitude="55686.48032204" cp="47450" pop="R">
     <adresse>246 AVENUE DE LA LIBERATION</adresse>
@@ -225438,6 +225437,37 @@
     <prix nom="E10" id="5" maj="2025-07-25 09:23:33" valeur="1.625"/>
     <prix nom="SP98" id="6" maj="2025-07-25 09:23:33" valeur="1.719"/>
   </pdv>
+  <pdv id="80000012" latitude="4987100" longitude="230000" cp="80000" pop="R">
+    <adresse>Rue Alexandre Dumas</adresse>
+    <ville>AMIENS</ville>
+    <horaires automate-24-24="1">
+      <jour id="1" nom="Lundi" ferme=""/>
+      <jour id="2" nom="Mardi" ferme=""/>
+      <jour id="3" nom="Mercredi" ferme=""/>
+      <jour id="4" nom="Jeudi" ferme=""/>
+      <jour id="5" nom="Vendredi" ferme=""/>
+      <jour id="6" nom="Samedi" ferme=""/>
+      <jour id="7" nom="Dimanche" ferme=""/>
+    </horaires>
+    <services>
+      <service>Automate CB 24/24</service>
+    </services>
+    <prix nom="Gazole" id="1" maj="2025-07-28 08:58:17" valeur="1.599"/>
+    <prix nom="E85" id="3" maj="2025-07-28 08:58:17" valeur="0.698"/>
+    <prix nom="E10" id="5" maj="2025-07-28 08:58:17" valeur="1.627"/>
+    <prix nom="SP98" id="6" maj="2025-07-28 08:58:18" valeur="1.707"/>
+  </pdv>
+  <pdv id="73000002" latitude="4559482.53473" longitude="589802.672622" cp="73000" pop="R">
+    <adresse>1097 Avenue des Landiers</adresse>
+    <ville>CHAMBéRY</ville>
+    <services>
+      <service>DAB (Distributeur automatique de billets)</service>
+    </services>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:36:00" valeur="1.613"/>
+    <prix nom="E85" id="3" maj="2025-07-29 22:36:00" valeur="0.787"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:36:00" valeur="1.669"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:36:00" valeur="1.779"/>
+  </pdv>
   <pdv id="38700003" latitude="4519500" longitude="575000" cp="38700" pop="R">
     <adresse>Avenue de Verdun</adresse>
     <ville>LA TRONCHE</ville>
@@ -225477,42 +225507,11 @@
       <service>Vente d'additifs carburants</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-28 20:24:14" valeur="1.634"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 21:01:45" valeur="1.634"/>
     <prix nom="E85" id="3" maj="2025-07-28 20:24:14" valeur="0.781"/>
     <prix nom="GPLc" id="4" maj="2025-07-25 09:01:41" valeur="0.960"/>
-    <prix nom="E10" id="5" maj="2025-07-28 20:24:14" valeur="1.671"/>
-    <prix nom="SP98" id="6" maj="2025-07-28 20:24:14" valeur="1.765"/>
-  </pdv>
-  <pdv id="80000012" latitude="4987100" longitude="230000" cp="80000" pop="R">
-    <adresse>Rue Alexandre Dumas</adresse>
-    <ville>AMIENS</ville>
-    <horaires automate-24-24="1">
-      <jour id="1" nom="Lundi" ferme=""/>
-      <jour id="2" nom="Mardi" ferme=""/>
-      <jour id="3" nom="Mercredi" ferme=""/>
-      <jour id="4" nom="Jeudi" ferme=""/>
-      <jour id="5" nom="Vendredi" ferme=""/>
-      <jour id="6" nom="Samedi" ferme=""/>
-      <jour id="7" nom="Dimanche" ferme=""/>
-    </horaires>
-    <services>
-      <service>Automate CB 24/24</service>
-    </services>
-    <prix nom="Gazole" id="1" maj="2025-07-28 08:58:17" valeur="1.599"/>
-    <prix nom="E85" id="3" maj="2025-07-28 08:58:17" valeur="0.698"/>
-    <prix nom="E10" id="5" maj="2025-07-28 08:58:17" valeur="1.627"/>
-    <prix nom="SP98" id="6" maj="2025-07-28 08:58:18" valeur="1.707"/>
-  </pdv>
-  <pdv id="73000002" latitude="4559482.53473" longitude="589802.672622" cp="73000" pop="R">
-    <adresse>1097 Avenue des Landiers</adresse>
-    <ville>CHAMBéRY</ville>
-    <services>
-      <service>DAB (Distributeur automatique de billets)</service>
-    </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 07:59:00" valeur="1.613"/>
-    <prix nom="E85" id="3" maj="2025-07-29 07:59:00" valeur="0.784"/>
-    <prix nom="E10" id="5" maj="2025-07-29 07:59:00" valeur="1.669"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 07:59:00" valeur="1.779"/>
+    <prix nom="E10" id="5" maj="2025-07-29 21:01:45" valeur="1.671"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 21:01:45" valeur="1.765"/>
   </pdv>
   <pdv id="94110005" latitude="4880400" longitude="232500" cp="94110" pop="R">
     <adresse>89 AV A. BRIAND</adresse>
@@ -229864,47 +229863,58 @@
     <prix nom="E10" id="5" maj="2025-07-29 09:00:00" valeur="1.646"/>
     <prix nom="SP98" id="6" maj="2025-07-29 09:00:00" valeur="1.740"/>
   </pdv>
-  <pdv id="64100015" latitude="4349200" longitude="-145900" cp="64100" pop="R">
-    <adresse>20 AVENUE MARECHAL JUIN</adresse>
-    <ville>BAYONNE</ville>
-    <horaires automate-24-24="1">
+  <pdv id="41000007" latitude="4761000" longitude="132700" cp="41000" pop="R">
+    <adresse>15 rue du bout des haies</adresse>
+    <ville>Blois</ville>
+    <horaires automate-24-24="">
       <jour id="1" nom="Lundi" ferme="">
-        <horaire ouverture="07.00" fermeture="20.30"/>
+        <horaire ouverture="08.30" fermeture="20.00"/>
       </jour>
       <jour id="2" nom="Mardi" ferme="">
-        <horaire ouverture="07.00" fermeture="20.30"/>
+        <horaire ouverture="08.30" fermeture="20.00"/>
       </jour>
       <jour id="3" nom="Mercredi" ferme="">
-        <horaire ouverture="07.00" fermeture="20.30"/>
+        <horaire ouverture="08.30" fermeture="20.00"/>
       </jour>
       <jour id="4" nom="Jeudi" ferme="">
-        <horaire ouverture="07.00" fermeture="20.30"/>
+        <horaire ouverture="08.30" fermeture="20.00"/>
       </jour>
       <jour id="5" nom="Vendredi" ferme="">
-        <horaire ouverture="07.00" fermeture="20.30"/>
+        <horaire ouverture="08.30" fermeture="20.00"/>
       </jour>
       <jour id="6" nom="Samedi" ferme="">
-        <horaire ouverture="08.00" fermeture="20.00"/>
+        <horaire ouverture="08.30" fermeture="20.00"/>
       </jour>
-      <jour id="7" nom="Dimanche" ferme="">
-        <horaire ouverture="08.00" fermeture="20.00"/>
-      </jour>
+      <jour id="7" nom="Dimanche" ferme="1"/>
     </horaires>
     <services>
+      <service>Toilettes publiques</service>
+      <service>Laverie</service>
+      <service>Relais colis</service>
       <service>Boutique alimentaire</service>
       <service>Boutique non alimentaire</service>
+      <service>Restauration à emporter</service>
+      <service>Restauration sur place</service>
+      <service>Bar</service>
+      <service>Vente de fioul domestique</service>
+      <service>Vente de pétrole lampant</service>
       <service>Station de gonflage</service>
-      <service>Carburant additivé</service>
+      <service>Location de véhicule</service>
       <service>Piste poids lourds</service>
       <service>Lavage automatique</service>
+      <service>Lavage manuel</service>
+      <service>Espace bébé</service>
       <service>Vente de gaz domestique (Butane, Propane)</service>
+      <service>Bornes électriques</service>
       <service>Vente d'additifs carburants</service>
       <service>Wifi</service>
-      <service>Automate CB 24/24</service>
+      <service>DAB (Distributeur automatique de billets)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 00:01:00" valeur="1.629"/>
-    <prix nom="E85" id="3" maj="2025-07-29 00:01:00" valeur="0.721"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 00:01:00" valeur="1.751"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 09:14:13" valeur="1.616"/>
+    <prix nom="SP95" id="2" maj="2025-07-29 09:14:13" valeur="1.699"/>
+    <prix nom="E85" id="3" maj="2025-07-29 09:14:14" valeur="0.760"/>
+    <prix nom="GPLc" id="4" maj="2025-07-29 09:14:14" valeur="0.940"/>
+    <prix nom="E10" id="5" maj="2025-07-29 09:14:14" valeur="1.626"/>
   </pdv>
   <pdv id="85330003" latitude="4700200" longitude="-225900" cp="85330" pop="R">
     <adresse>148, ROUTE NATIONALE</adresse>
@@ -229962,58 +229972,47 @@
     <prix nom="E85" id="3" maj="2025-07-05 20:00:00" valeur="0.700"/>
     <prix nom="E10" id="5" maj="2025-07-16 08:00:00" valeur="1.660"/>
   </pdv>
-  <pdv id="41000007" latitude="4761000" longitude="132700" cp="41000" pop="R">
-    <adresse>15 rue du bout des haies</adresse>
-    <ville>Blois</ville>
-    <horaires automate-24-24="">
+  <pdv id="64100015" latitude="4349200" longitude="-145900" cp="64100" pop="R">
+    <adresse>20 AVENUE MARECHAL JUIN</adresse>
+    <ville>BAYONNE</ville>
+    <horaires automate-24-24="1">
       <jour id="1" nom="Lundi" ferme="">
-        <horaire ouverture="08.30" fermeture="20.00"/>
+        <horaire ouverture="07.00" fermeture="20.30"/>
       </jour>
       <jour id="2" nom="Mardi" ferme="">
-        <horaire ouverture="08.30" fermeture="20.00"/>
+        <horaire ouverture="07.00" fermeture="20.30"/>
       </jour>
       <jour id="3" nom="Mercredi" ferme="">
-        <horaire ouverture="08.30" fermeture="20.00"/>
+        <horaire ouverture="07.00" fermeture="20.30"/>
       </jour>
       <jour id="4" nom="Jeudi" ferme="">
-        <horaire ouverture="08.30" fermeture="20.00"/>
+        <horaire ouverture="07.00" fermeture="20.30"/>
       </jour>
       <jour id="5" nom="Vendredi" ferme="">
-        <horaire ouverture="08.30" fermeture="20.00"/>
+        <horaire ouverture="07.00" fermeture="20.30"/>
       </jour>
       <jour id="6" nom="Samedi" ferme="">
-        <horaire ouverture="08.30" fermeture="20.00"/>
+        <horaire ouverture="08.00" fermeture="20.00"/>
       </jour>
-      <jour id="7" nom="Dimanche" ferme="1"/>
+      <jour id="7" nom="Dimanche" ferme="">
+        <horaire ouverture="08.00" fermeture="20.00"/>
+      </jour>
     </horaires>
     <services>
-      <service>Toilettes publiques</service>
-      <service>Laverie</service>
-      <service>Relais colis</service>
       <service>Boutique alimentaire</service>
       <service>Boutique non alimentaire</service>
-      <service>Restauration à emporter</service>
-      <service>Restauration sur place</service>
-      <service>Bar</service>
-      <service>Vente de fioul domestique</service>
-      <service>Vente de pétrole lampant</service>
       <service>Station de gonflage</service>
-      <service>Location de véhicule</service>
+      <service>Carburant additivé</service>
       <service>Piste poids lourds</service>
       <service>Lavage automatique</service>
-      <service>Lavage manuel</service>
-      <service>Espace bébé</service>
       <service>Vente de gaz domestique (Butane, Propane)</service>
-      <service>Bornes électriques</service>
       <service>Vente d'additifs carburants</service>
       <service>Wifi</service>
-      <service>DAB (Distributeur automatique de billets)</service>
+      <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 09:14:13" valeur="1.616"/>
-    <prix nom="SP95" id="2" maj="2025-07-29 09:14:13" valeur="1.699"/>
-    <prix nom="E85" id="3" maj="2025-07-29 09:14:14" valeur="0.760"/>
-    <prix nom="GPLc" id="4" maj="2025-07-29 09:14:14" valeur="0.940"/>
-    <prix nom="E10" id="5" maj="2025-07-29 09:14:14" valeur="1.626"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 00:01:00" valeur="1.629"/>
+    <prix nom="E85" id="3" maj="2025-07-29 00:01:00" valeur="0.721"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 00:01:00" valeur="1.751"/>
   </pdv>
   <pdv id="40410004" latitude="4436286.0807475" longitude="-85169.803376746" cp="40410" pop="A">
     <adresse>Aire Portes Landes Ouest</adresse>
@@ -238347,9 +238346,9 @@
       <service>Wifi</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-28 21:00:00" valeur="1.609"/>
-    <prix nom="E10" id="5" maj="2025-07-28 21:00:00" valeur="1.655"/>
-    <prix nom="SP98" id="6" maj="2025-07-28 21:00:00" valeur="1.749"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 21:00:00" valeur="1.611"/>
+    <prix nom="E10" id="5" maj="2025-07-29 21:00:00" valeur="1.655"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 21:00:00" valeur="1.749"/>
   </pdv>
   <pdv id="76280002" latitude="4964033" longitude="22423" cp="76280" pop="R">
     <adresse>2 place du Marché</adresse>
@@ -244813,12 +244812,12 @@
       <service>Automate CB 24/24</service>
       <service>DAB (Distributeur automatique de billets)</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 08:06:00" valeur="1.595"/>
-    <prix nom="SP95" id="2" maj="2025-07-29 08:06:00" valeur="1.686"/>
-    <prix nom="E85" id="3" maj="2025-07-29 08:06:00" valeur="0.675"/>
-    <prix nom="GPLc" id="4" maj="2025-07-29 08:06:00" valeur="0.839"/>
-    <prix nom="E10" id="5" maj="2025-07-29 08:06:00" valeur="1.620"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 08:06:00" valeur="1.722"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:36:00" valeur="1.594"/>
+    <prix nom="SP95" id="2" maj="2025-07-29 22:36:00" valeur="1.686"/>
+    <prix nom="E85" id="3" maj="2025-07-29 22:36:00" valeur="0.675"/>
+    <prix nom="GPLc" id="4" maj="2025-07-29 22:36:00" valeur="0.839"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:36:00" valeur="1.619"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:36:00" valeur="1.721"/>
   </pdv>
   <pdv id="94550001" latitude="4876700" longitude="236800" cp="94550" pop="R">
     <adresse>264 Avenue de Stalingrad</adresse>
@@ -251475,8 +251474,8 @@
       <service>Wifi</service>
     </services>
     <prix nom="Gazole" id="1" maj="2025-07-29 10:27:37" valeur="1.759"/>
-    <prix nom="E10" id="5" maj="2025-07-24 07:39:00" valeur="1.759"/>
-    <prix nom="SP98" id="6" maj="2025-07-24 07:39:00" valeur="1.869"/>
+    <prix nom="E10" id="5" maj="2025-07-29 21:17:45" valeur="1.769"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 21:17:46" valeur="1.879"/>
   </pdv>
   <pdv id="69650001" latitude="4591700" longitude="477500" cp="69650" pop="R">
     <adresse>1 Rue de la république</adresse>
@@ -252432,9 +252431,9 @@
       <service>Carburant additivé</service>
       <service>Lavage automatique</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:23:14" valeur="1.629"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:23:13" valeur="1.709"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:23:14" valeur="1.859"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:06:56" valeur="1.649"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:06:55" valeur="1.729"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:06:56" valeur="1.879"/>
   </pdv>
   <pdv id="68300004" latitude="4759900" longitude="755200" cp="68300" pop="R">
     <adresse>125 RUE DE MULHOUSE</adresse>
@@ -252765,10 +252764,10 @@
       <service>Piste poids lourds</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:22:16" valeur="1.739"/>
-    <prix nom="GPLc" id="4" maj="2025-07-29 06:22:16" valeur="1.089"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:22:16" valeur="1.759"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:22:16" valeur="1.909"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:08:59" valeur="1.759"/>
+    <prix nom="GPLc" id="4" maj="2025-07-29 22:08:59" valeur="1.109"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:08:59" valeur="1.779"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:08:59" valeur="1.929"/>
   </pdv>
   <pdv id="94100011" latitude="4879800" longitude="248100" cp="94100" pop="R">
     <adresse>57 BD DE CRETEIL</adresse>
@@ -252885,10 +252884,10 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 10:51:33" valeur="1.739"/>
-    <prix nom="E85" id="3" maj="2025-07-29 10:51:34" valeur="0.749"/>
-    <prix nom="E10" id="5" maj="2025-07-29 10:51:33" valeur="1.759"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 10:51:34" valeur="1.929"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:12:12" valeur="1.759"/>
+    <prix nom="E85" id="3" maj="2025-07-29 22:12:12" valeur="0.769"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:12:12" valeur="1.779"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:12:11" valeur="1.949"/>
   </pdv>
   <pdv id="18100010" latitude="4721500" longitude="210900" cp="18100" pop="R">
     <adresse>01 Route de Bourges</adresse>
@@ -255137,10 +255136,10 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 10:59:09" valeur="1.729"/>
-    <prix nom="GPLc" id="4" maj="2025-07-29 10:59:09" valeur="0.979"/>
-    <prix nom="E10" id="5" maj="2025-07-29 10:59:09" valeur="1.749"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 10:59:09" valeur="1.899"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:08:49" valeur="1.749"/>
+    <prix nom="GPLc" id="4" maj="2025-07-29 22:08:49" valeur="0.999"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:08:49" valeur="1.769"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:08:49" valeur="1.919"/>
   </pdv>
   <pdv id="83550006" latitude="4341600" longitude="645300" cp="83550" pop="A">
     <adresse>Aire de PROVENCE VERDON - Autoroute A8</adresse>
@@ -255246,10 +255245,10 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:24:52" valeur="1.679"/>
-    <prix nom="E85" id="3" maj="2025-07-29 06:24:51" valeur="0.699"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:24:52" valeur="1.699"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:24:51" valeur="1.879"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:08:15" valeur="1.699"/>
+    <prix nom="E85" id="3" maj="2025-07-29 22:08:15" valeur="0.719"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:08:15" valeur="1.719"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:08:15" valeur="1.899"/>
   </pdv>
   <pdv id="69100028" latitude="4577900" longitude="487100" cp="69100" pop="R">
     <adresse>110 BD DU 11 NOVEMBRE 1918</adresse>
@@ -255490,10 +255489,10 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:23:32" valeur="1.789"/>
-    <prix nom="GPLc" id="4" maj="2025-07-29 06:23:32" valeur="1.049"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:23:31" valeur="1.859"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:23:32" valeur="1.969"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:05:32" valeur="1.809"/>
+    <prix nom="GPLc" id="4" maj="2025-07-29 22:05:31" valeur="1.069"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:05:32" valeur="1.879"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:05:32" valeur="1.989"/>
   </pdv>
   <pdv id="35000015" latitude="4810600" longitude="-173400" cp="35000" pop="R">
     <adresse>228 Route de Lorient</adresse>
@@ -263469,56 +263468,6 @@
     <prix nom="SP95" id="2" maj="2025-07-28 07:18:07" valeur="1.734"/>
     <prix nom="SP98" id="6" maj="2025-07-28 07:18:07" valeur="1.764"/>
   </pdv>
-  <pdv id="84240001" latitude="4372100" longitude="554200" cp="84240" pop="R">
-    <adresse>428 Boulevard St Roch</adresse>
-    <ville>LA TOUR-D'AIGUES</ville>
-    <horaires automate-24-24="1">
-      <jour id="1" nom="Lundi" ferme="">
-        <horaire ouverture="06.00" fermeture="21.00"/>
-      </jour>
-      <jour id="2" nom="Mardi" ferme="">
-        <horaire ouverture="06.00" fermeture="21.00"/>
-      </jour>
-      <jour id="3" nom="Mercredi" ferme="">
-        <horaire ouverture="06.00" fermeture="21.00"/>
-      </jour>
-      <jour id="4" nom="Jeudi" ferme="">
-        <horaire ouverture="06.00" fermeture="21.00"/>
-      </jour>
-      <jour id="5" nom="Vendredi" ferme="">
-        <horaire ouverture="06.00" fermeture="21.00"/>
-      </jour>
-      <jour id="6" nom="Samedi" ferme="">
-        <horaire ouverture="07.00" fermeture="21.00"/>
-      </jour>
-      <jour id="7" nom="Dimanche" ferme="">
-        <horaire ouverture="08.00" fermeture="21.00"/>
-      </jour>
-    </horaires>
-    <services>
-      <service>Toilettes publiques</service>
-      <service>Relais colis</service>
-      <service>Boutique alimentaire</service>
-      <service>Boutique non alimentaire</service>
-      <service>Restauration à emporter</service>
-      <service>Vente de fioul domestique</service>
-      <service>Vente de pétrole lampant</service>
-      <service>Station de gonflage</service>
-      <service>Carburant additivé</service>
-      <service>Location de véhicule</service>
-      <service>Piste poids lourds</service>
-      <service>Lavage manuel</service>
-      <service>Espace bébé</service>
-      <service>Vente de gaz domestique (Butane, Propane)</service>
-      <service>Bornes électriques</service>
-      <service>Vente d'additifs carburants</service>
-      <service>Wifi</service>
-      <service>Automate CB 24/24</service>
-    </services>
-    <prix nom="Gazole" id="1" maj="2025-07-28 20:55:28" valeur="1.694"/>
-    <prix nom="E10" id="5" maj="2025-07-28 20:55:29" valeur="1.726"/>
-    <prix nom="SP98" id="6" maj="2025-07-28 20:55:29" valeur="1.839"/>
-  </pdv>
   <pdv id="85290006" latitude="4699400" longitude="-94900" cp="85290" pop="R">
     <adresse>Route de Cholet</adresse>
     <ville>MORTAGNE-SUR-SèVRE</ville>
@@ -263760,6 +263709,56 @@
     <prix nom="Gazole" id="1" maj="2025-07-22 10:31:56" valeur="1.561"/>
     <prix nom="SP95" id="2" maj="2025-07-04 15:21:02" valeur="1.725"/>
     <prix nom="E10" id="5" maj="2025-07-23 09:56:14" valeur="1.577"/>
+  </pdv>
+  <pdv id="84240001" latitude="4372100" longitude="554200" cp="84240" pop="R">
+    <adresse>428 Boulevard St Roch</adresse>
+    <ville>LA TOUR-D'AIGUES</ville>
+    <horaires automate-24-24="1">
+      <jour id="1" nom="Lundi" ferme="">
+        <horaire ouverture="06.00" fermeture="21.00"/>
+      </jour>
+      <jour id="2" nom="Mardi" ferme="">
+        <horaire ouverture="06.00" fermeture="21.00"/>
+      </jour>
+      <jour id="3" nom="Mercredi" ferme="">
+        <horaire ouverture="06.00" fermeture="21.00"/>
+      </jour>
+      <jour id="4" nom="Jeudi" ferme="">
+        <horaire ouverture="06.00" fermeture="21.00"/>
+      </jour>
+      <jour id="5" nom="Vendredi" ferme="">
+        <horaire ouverture="06.00" fermeture="21.00"/>
+      </jour>
+      <jour id="6" nom="Samedi" ferme="">
+        <horaire ouverture="07.00" fermeture="21.00"/>
+      </jour>
+      <jour id="7" nom="Dimanche" ferme="">
+        <horaire ouverture="08.00" fermeture="21.00"/>
+      </jour>
+    </horaires>
+    <services>
+      <service>Toilettes publiques</service>
+      <service>Relais colis</service>
+      <service>Boutique alimentaire</service>
+      <service>Boutique non alimentaire</service>
+      <service>Restauration à emporter</service>
+      <service>Vente de fioul domestique</service>
+      <service>Vente de pétrole lampant</service>
+      <service>Station de gonflage</service>
+      <service>Carburant additivé</service>
+      <service>Location de véhicule</service>
+      <service>Piste poids lourds</service>
+      <service>Lavage manuel</service>
+      <service>Espace bébé</service>
+      <service>Vente de gaz domestique (Butane, Propane)</service>
+      <service>Bornes électriques</service>
+      <service>Vente d'additifs carburants</service>
+      <service>Wifi</service>
+      <service>Automate CB 24/24</service>
+    </services>
+    <prix nom="Gazole" id="1" maj="2025-07-29 21:01:54" valeur="1.692"/>
+    <prix nom="E10" id="5" maj="2025-07-29 21:01:55" valeur="1.731"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 21:01:55" valeur="1.841"/>
   </pdv>
   <pdv id="54000013" latitude="4868939.2259323" longitude="616175.66153138" cp="54000" pop="R">
     <adresse>6 Avenue de Boufflers</adresse>
@@ -265034,6 +265033,47 @@
     <prix nom="Gazole" id="1" maj="2025-07-11 08:28:18" valeur="1.771"/>
     <prix nom="SP95" id="2" maj="2025-07-11 08:28:18" valeur="1.821"/>
   </pdv>
+  <pdv id="67112002" latitude="4858000" longitude="761100" cp="67112" pop="R">
+    <adresse>2 RUE PRINCIPALE</adresse>
+    <ville>BREUSCHWICKERSHEIM</ville>
+    <horaires automate-24-24="1">
+      <jour id="1" nom="Lundi" ferme="">
+        <horaire ouverture="07.00" fermeture="20.00"/>
+      </jour>
+      <jour id="2" nom="Mardi" ferme="">
+        <horaire ouverture="07.00" fermeture="20.00"/>
+      </jour>
+      <jour id="3" nom="Mercredi" ferme="">
+        <horaire ouverture="07.00" fermeture="20.00"/>
+      </jour>
+      <jour id="4" nom="Jeudi" ferme="">
+        <horaire ouverture="07.00" fermeture="20.00"/>
+      </jour>
+      <jour id="5" nom="Vendredi" ferme="">
+        <horaire ouverture="07.00" fermeture="20.00"/>
+      </jour>
+      <jour id="6" nom="Samedi" ferme="">
+        <horaire ouverture="08.00" fermeture="17.00"/>
+      </jour>
+      <jour id="7" nom="Dimanche" ferme="1"/>
+    </horaires>
+    <services>
+      <service>Toilettes publiques</service>
+      <service>Boutique alimentaire</service>
+      <service>Boutique non alimentaire</service>
+      <service>Station de gonflage</service>
+      <service>Carburant additivé</service>
+      <service>Piste poids lourds</service>
+      <service>Services réparation / entretien</service>
+      <service>Vente de gaz domestique (Butane, Propane)</service>
+      <service>Vente d'additifs carburants</service>
+      <service>Automate CB 24/24</service>
+    </services>
+    <prix nom="Gazole" id="1" maj="2025-07-29 20:51:10" valeur="1.719"/>
+    <prix nom="E85" id="3" maj="2025-07-29 20:51:10" valeur="0.731"/>
+    <prix nom="E10" id="5" maj="2025-07-29 20:51:10" valeur="1.749"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 20:51:11" valeur="1.859"/>
+  </pdv>
   <pdv id="2860001" latitude="4953200" longitude="365300" cp="02860" pop="R">
     <adresse>89 RUE PORTE DE LAON</adresse>
     <ville>Bruyères-et-Montbérault</ville>
@@ -265221,10 +265261,10 @@
       <service>Bornes électriques</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-28 22:22:00" valeur="1.703"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:05:00" valeur="1.704"/>
     <prix nom="E85" id="3" maj="2025-07-18 07:14:57" valeur="0.799"/>
-    <prix nom="E10" id="5" maj="2025-07-25 22:22:00" valeur="1.749"/>
-    <prix nom="SP98" id="6" maj="2025-07-25 22:23:00" valeur="1.859"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:05:00" valeur="1.751"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:05:00" valeur="1.861"/>
   </pdv>
   <pdv id="62130001" latitude="5038700" longitude="234900" cp="62130" pop="R">
     <adresse>184 Rue de Béthune</adresse>
@@ -265389,47 +265429,6 @@
     <prix nom="GPLc" id="4" maj="2025-07-22 08:23:24" valeur="1.047"/>
     <prix nom="E10" id="5" maj="2025-07-29 08:30:00" valeur="1.644"/>
     <prix nom="SP98" id="6" maj="2025-07-29 08:30:00" valeur="1.739"/>
-  </pdv>
-  <pdv id="67112002" latitude="4858000" longitude="761100" cp="67112" pop="R">
-    <adresse>2 RUE PRINCIPALE</adresse>
-    <ville>BREUSCHWICKERSHEIM</ville>
-    <horaires automate-24-24="1">
-      <jour id="1" nom="Lundi" ferme="">
-        <horaire ouverture="07.00" fermeture="20.00"/>
-      </jour>
-      <jour id="2" nom="Mardi" ferme="">
-        <horaire ouverture="07.00" fermeture="20.00"/>
-      </jour>
-      <jour id="3" nom="Mercredi" ferme="">
-        <horaire ouverture="07.00" fermeture="20.00"/>
-      </jour>
-      <jour id="4" nom="Jeudi" ferme="">
-        <horaire ouverture="07.00" fermeture="20.00"/>
-      </jour>
-      <jour id="5" nom="Vendredi" ferme="">
-        <horaire ouverture="07.00" fermeture="20.00"/>
-      </jour>
-      <jour id="6" nom="Samedi" ferme="">
-        <horaire ouverture="08.00" fermeture="17.00"/>
-      </jour>
-      <jour id="7" nom="Dimanche" ferme="1"/>
-    </horaires>
-    <services>
-      <service>Toilettes publiques</service>
-      <service>Boutique alimentaire</service>
-      <service>Boutique non alimentaire</service>
-      <service>Station de gonflage</service>
-      <service>Carburant additivé</service>
-      <service>Piste poids lourds</service>
-      <service>Services réparation / entretien</service>
-      <service>Vente de gaz domestique (Butane, Propane)</service>
-      <service>Vente d'additifs carburants</service>
-      <service>Automate CB 24/24</service>
-    </services>
-    <prix nom="Gazole" id="1" maj="2025-07-25 20:13:18" valeur="1.716"/>
-    <prix nom="E85" id="3" maj="2025-07-22 20:53:33" valeur="0.729"/>
-    <prix nom="E10" id="5" maj="2025-07-28 19:54:58" valeur="1.745"/>
-    <prix nom="SP98" id="6" maj="2025-07-28 19:54:59" valeur="1.855"/>
   </pdv>
   <pdv id="49330001" latitude="4768100" longitude="-49900" cp="49330" pop="R">
     <adresse>MA CAMPAGNE</adresse>
@@ -268404,7 +268403,7 @@
     <prix nom="Gazole" id="1" maj="2025-07-28 22:15:00" valeur="1.619"/>
     <prix nom="GPLc" id="4" maj="2025-07-25 22:15:00" valeur="0.976"/>
     <prix nom="E10" id="5" maj="2025-07-28 22:15:00" valeur="1.684"/>
-    <prix nom="SP98" id="6" maj="2025-07-28 22:15:00" valeur="1.777"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:15:00" valeur="1.779"/>
   </pdv>
   <pdv id="64450001" latitude="4344400" longitude="-32400" cp="64450" pop="R">
     <adresse>21 ROUTE DE BORDEAUX</adresse>
@@ -270537,7 +270536,7 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-28 22:20:00" valeur="1.736"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:20:00" valeur="1.733"/>
     <prix nom="E10" id="5" maj="2025-07-28 22:20:00" valeur="1.772"/>
     <prix nom="SP98" id="6" maj="2025-07-28 22:20:00" valeur="1.882"/>
   </pdv>
@@ -282132,8 +282131,8 @@
       <service>Automate CB 24/24</service>
     </services>
     <prix nom="Gazole" id="1" maj="2025-07-28 22:00:00" valeur="1.709"/>
-    <prix nom="E10" id="5" maj="2025-07-28 22:00:00" valeur="1.736"/>
-    <prix nom="SP98" id="6" maj="2025-07-28 22:00:00" valeur="1.846"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:01:00" valeur="1.739"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:02:00" valeur="1.789"/>
   </pdv>
   <pdv id="70600003" latitude="4762303.2306628" longitude="550845.4455185" cp="70600" pop="R">
     <adresse>1 Route De Langres</adresse>
@@ -284751,9 +284750,9 @@
       <service>Vente de gaz domestique (Butane, Propane)</service>
       <service>Automate CB 24/24</service>
     </services>
-    <prix nom="Gazole" id="1" maj="2025-07-29 06:21:54" valeur="1.739"/>
-    <prix nom="E10" id="5" maj="2025-07-29 06:21:54" valeur="1.769"/>
-    <prix nom="SP98" id="6" maj="2025-07-29 06:21:54" valeur="1.919"/>
+    <prix nom="Gazole" id="1" maj="2025-07-29 22:04:49" valeur="1.759"/>
+    <prix nom="E10" id="5" maj="2025-07-29 22:04:49" valeur="1.789"/>
+    <prix nom="SP98" id="6" maj="2025-07-29 22:04:49" valeur="1.939"/>
   </pdv>
   <pdv id="34000018" latitude="4358618.8" longitude="388915.6" cp="34000" pop="R">
     <adresse>AVENUE DU MAS D'ARGELLIERS</adresse>

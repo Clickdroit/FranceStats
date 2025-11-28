@@ -8,10 +8,11 @@ import org.slf4j.LoggerFactory;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class StationService {
+public class StationService implements IStationService {
 
     private static final Logger logger = LoggerFactory.getLogger(StationService.class);
 
+    @Override
     public List<Station> rechercherStationsProches(List<Station> stations, String carburant,
                                                    double rayon, int limite) {
         logger.debug("Recherche stations proches: carburant={}, rayon={}km, limite={}",
@@ -51,6 +52,7 @@ public class StationService {
         return result;
     }
 
+    @Override
     public List<Station> rechercherParDepartement(List<Station> stations, String departement,
                                                   String carburant) {
         logger.debug("Recherche par département: dept={}, carburant={}", departement, carburant);
@@ -82,6 +84,7 @@ public class StationService {
         return result;
     }
 
+    @Override
     public Set<String> getCarburantsDisponibles(List<Station> stations) {
         logger.debug("Récupération des carburants disponibles");
 
@@ -99,6 +102,7 @@ public class StationService {
         return carburants;
     }
 
+    @Override
     public StatistiquesNationales calculerStatistiques(List<Station> stations, String carburant) {
         logger.debug("Calcul des statistiques pour {}", carburant);
 
@@ -120,6 +124,7 @@ public class StationService {
         return stats;
     }
 
+    @Override
     public String genererGoogleMapsUrl(double fromLat, double fromLon, double toLat, double toLon) {
         logger.debug("Génération URL Google Maps: from({:.6f},{:.6f}) to({:.6f},{:.6f})",
                 fromLat, fromLon, toLat, toLon);
@@ -138,6 +143,7 @@ public class StationService {
         return url;
     }
 
+    @Override
     public double parseRayonAvecDefaut(String rayonStr, double defaut) {
         logger.debug("Parse rayon: '{}', défaut: {}", rayonStr, defaut);
 

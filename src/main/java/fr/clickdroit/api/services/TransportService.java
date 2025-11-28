@@ -12,10 +12,11 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.concurrent.*;
 
-public class TransportService {
+public class TransportService implements ITransportService {
     private static final int TIMEOUT_MS = 8000;
     private static final String USER_AGENT = "PrixEssenceApp/1.0";
 
+    @Override
     public void afficherPerturbationsTransports() {
         System.out.println("\n🚇 === INFOS TRANSPORTS === 🚆");
         System.out.println("⏱️ Récupération des informations en temps réel...\n");

@@ -1,6 +1,7 @@
 package fr.clickdroit.api.services;
 
 import fr.clickdroit.api.models.Station;
+import fr.clickdroit.api.repository.LocationConfigRepository;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -12,14 +13,31 @@ import java.util.Scanner;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.Map;
 
-public class LocationService {
-    private static final String CONFIG_FILE = "station_config.properties";
+public class LocationService implements ILocationService {
     private static final int HTTP_TIMEOUT_MS = 10000;
     private static boolean USE_ROUTING_API = true;
 
-    // Cache pour les distances calculées
+    private final LocationConfigRepository locationConfigRepository;
     private final Map<String, Double> distanceCache = new ConcurrentHashMap<>();
 
+    /**
+     * Constructor with dependency injection.
+     *
+     * @param locationConfigRepository Repository for location configuration
+     */
+    public LocationService(LocationConfigRepository locationConfigRepository) {
+        this.locationConfigRepository = locationConfigRepository;
+    }
+
+    /**
+     * Default constructor for backward compatibility.
+     * Creates default repository implementation.
+     */
+    public LocationService() {
+        this(new fr.clickdroit.api.repository.PropertiesLocationConfigRepository());
+    }
+
+    @Override
     public double[] getUserLocationWithConfig(Scanner scanner) {
         double[] savedLocation = loadSavedLocation();
         if (savedLocation != null) {
@@ -40,6 +58,7 @@ public class LocationService {
         return newLocation;
     }
 
+    @Override
     public double[] getUserLocation(Scanner scanner) {
         System.out.println("\n=== CHOIX DE LOCALISATION ===");
         System.out.println("1. Saisir manuellement les coordonnées GPS");
@@ -186,41 +205,17 @@ public class LocationService {
         return new double[]{48.8566, 2.3522};
     }
 
+    @Override
     public double[] loadSavedLocation() {
-        File configFile = new File(CONFIG_FILE);
-        if (!configFile.exists()) return null;
-
-        try (FileInputStream fis = new FileInputStream(configFile)) {
-            java.util.Properties props = new java.util.Properties();
-            props.load(fis);
-
-            String latStr = props.getProperty("latitude");
-            String lonStr = props.getProperty("longitude");
-
-            if (latStr != null && lonStr != null) {
-                double lat = Double.parseDouble(latStr);
-                double lon = Double.parseDouble(lonStr);
-                return new double[]{lat, lon};
-            }
-        } catch (Exception e) {
-            System.err.println("⚠️ Erreur lecture config : " + e.getMessage());
-        }
-        return null;
+        return locationConfigRepository.loadLocation();
     }
 
+    @Override
     public void saveLocation(double[] location) {
-        try (FileOutputStream fos = new FileOutputStream(CONFIG_FILE)) {
-            java.util.Properties props = new java.util.Properties();
-            props.setProperty("latitude", String.valueOf(location[0]));
-            props.setProperty("longitude", String.valueOf(location[1]));
-            props.setProperty("saved_date", new java.util.Date().toString());
-            props.store(fos, "Configuration Station Essence");
-            System.out.println("✅ Position sauvegardée !");
-        } catch (Exception e) {
-            System.err.println("❌ Erreur sauvegarde : " + e.getMessage());
-        }
+        locationConfigRepository.saveLocation(location);
     }
 
+    @Override
     public void calculerDistancesToutesStations(List<Station> stations, double[] userPosition) {
         if (userPosition == null) return;
 
@@ -237,6 +232,7 @@ public class LocationService {
         System.out.println("\n✅ Distances calculées !");
     }
 
+    @Override
     public double getSmartDistance(double lat1, double lon1, double lat2, double lon2) {
         // Utiliser le cache pour éviter les recalculs
         String key = String.format("%.4f,%.4f-%.4f,%.4f", lat1, lon1, lat2, lon2);

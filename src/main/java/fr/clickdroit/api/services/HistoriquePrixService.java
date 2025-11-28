@@ -1,57 +1,47 @@
 package fr.clickdroit.api.services;
 
 import fr.clickdroit.api.models.Station;
-import org.json.JSONArray;
-import org.json.JSONObject;
+import fr.clickdroit.api.repository.PriceHistoryRepository;
+import fr.clickdroit.api.repository.JsonPriceHistoryRepository;
 
-import java.io.FileWriter;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.*;
 import java.util.stream.Collectors;
-import java.io.File;
 
-public class HistoriquePrixService {
-    private static final String HISTORIQUE_FILE = "historique_prix.json";
+public class HistoriquePrixService implements IHistoriquePrixService {
 
-    public static class EntreeHistorique {
-        private String date;
-        private String carburant;
-        private String codePostalStation;
-        private String nomStation;
-        private double prix;
+    private final PriceHistoryRepository priceHistoryRepository;
 
-        public EntreeHistorique(String date, String carburant, String cp, String nom, double prix) {
-            this.date = date;
-            this.carburant = carburant;
-            this.codePostalStation = cp;
-            this.nomStation = nom;
-            this.prix = prix;
-        }
-
-        // Getters
-        public String getDate() { return date; }
-        public String getCarburant() { return carburant; }
-        public String getCodePostalStation() { return codePostalStation; }
-        public String getNomStation() { return nomStation; }
-        public double getPrix() { return prix; }
+    /**
+     * Constructor with dependency injection.
+     *
+     * @param priceHistoryRepository Repository for price history data
+     */
+    public HistoriquePrixService(PriceHistoryRepository priceHistoryRepository) {
+        this.priceHistoryRepository = priceHistoryRepository;
     }
 
-    public static void sauvegarderPrixDuJour(List<Station> stations) {
+    /**
+     * Default constructor for backward compatibility.
+     */
+    public HistoriquePrixService() {
+        this(new JsonPriceHistoryRepository());
+    }
+
+    @Override
+    public void sauvegarderPrixDuJour(List<Station> stations) {
         try {
-            List<EntreeHistorique> historique = chargerHistorique();
+            List<PriceHistoryRepository.HistoryEntry> historique = new ArrayList<>(priceHistoryRepository.findAll());
             String dateAujourdhui = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
 
             // Supprimer les entrées du jour (éviter les doublons)
-            historique.removeIf(e -> e.getDate().equals(dateAujourdhui));
+            historique.removeIf(e -> e.date().equals(dateAujourdhui));
 
             // Ajouter les nouveaux prix
             for (Station station : stations) {
                 for (Map.Entry<String, Double> entry : station.getPrix().entrySet()) {
-                    historique.add(new EntreeHistorique(
+                    historique.add(new PriceHistoryRepository.HistoryEntry(
                             dateAujourdhui,
                             entry.getKey(),
                             station.getCodePostal(),
@@ -65,29 +55,14 @@ public class HistoriquePrixService {
             LocalDate cutoffDate = LocalDate.now().minusDays(30);
             historique.removeIf(e -> {
                 try {
-                    LocalDate entryDate = LocalDate.parse(e.getDate());
+                    LocalDate entryDate = LocalDate.parse(e.date());
                     return entryDate.isBefore(cutoffDate);
                 } catch (Exception ex) {
-                    return true; // Supprimer les entrées avec dates invalides
+                    return true;
                 }
             });
 
-            // Sauvegarder en JSON
-            JSONArray jsonArray = new JSONArray();
-            for (EntreeHistorique entree : historique) {
-                JSONObject obj = new JSONObject();
-                obj.put("date", entree.getDate());
-                obj.put("carburant", entree.getCarburant());
-                obj.put("codePostal", entree.getCodePostalStation());
-                obj.put("nomStation", entree.getNomStation());
-                obj.put("prix", entree.getPrix());
-                jsonArray.put(obj);
-            }
-
-            try (FileWriter file = new FileWriter(HISTORIQUE_FILE, StandardCharsets.UTF_8)) {
-                file.write(jsonArray.toString(2));
-            }
-
+            priceHistoryRepository.saveAll(historique);
             System.out.println("✅ Historique sauvegardé (" + stations.size() + " stations)");
 
         } catch (Exception e) {
@@ -95,49 +70,12 @@ public class HistoriquePrixService {
         }
     }
 
-    private static List<EntreeHistorique> chargerHistorique() {
-        List<EntreeHistorique> historique = new ArrayList<>();
-        File file = new File(HISTORIQUE_FILE);
+    @Override
+    public void afficherEvolutionPrix(String carburant, int nbJours) {
+        List<PriceHistoryRepository.HistoryEntry> historique = priceHistoryRepository.findByCarburantAndDays(carburant, nbJours);
 
-        if (!file.exists()) return historique;
-
-        try {
-            String content = new String(Files.readAllBytes(Paths.get(HISTORIQUE_FILE)), StandardCharsets.UTF_8);
-            JSONArray jsonArray = new JSONArray(content);
-
-            for (int i = 0; i < jsonArray.length(); i++) {
-                JSONObject obj = jsonArray.getJSONObject(i);
-                historique.add(new EntreeHistorique(
-                        obj.getString("date"),
-                        obj.getString("carburant"),
-                        obj.getString("codePostal"),
-                        obj.getString("nomStation"),
-                        obj.getDouble("prix")
-                ));
-            }
-        } catch (Exception e) {
-            System.err.println("⚠️ Erreur lecture historique : " + e.getMessage());
-        }
-
-        return historique;
-    }
-
-    public static void afficherEvolutionPrix(String carburant, int nbJours) {
-        List<EntreeHistorique> historique = chargerHistorique();
-
-        LocalDate dateDebut = LocalDate.now().minusDays(nbJours);
-
-        Map<String, List<EntreeHistorique>> prixParJour = historique.stream()
-                .filter(e -> e.getCarburant().equals(carburant))
-                .filter(e -> {
-                    try {
-                        LocalDate dateEntree = LocalDate.parse(e.getDate());
-                        return !dateEntree.isBefore(dateDebut);
-                    } catch (Exception ex) {
-                        return false;
-                    }
-                })
-                .collect(Collectors.groupingBy(EntreeHistorique::getDate));
+        Map<String, List<PriceHistoryRepository.HistoryEntry>> prixParJour = historique.stream()
+                .collect(Collectors.groupingBy(PriceHistoryRepository.HistoryEntry::date));
 
         if (prixParJour.isEmpty()) {
             System.out.println("❌ Aucune donnée historique trouvée pour " + carburant);
@@ -150,25 +88,34 @@ public class HistoriquePrixService {
                 .sorted(Map.Entry.comparingByKey())
                 .forEach(entry -> {
                     String date = entry.getKey();
-                    List<EntreeHistorique> prixJour = entry.getValue();
+                    List<PriceHistoryRepository.HistoryEntry> prixJour = entry.getValue();
 
                     double moyenne = prixJour.stream()
-                            .mapToDouble(EntreeHistorique::getPrix)
+                            .mapToDouble(PriceHistoryRepository.HistoryEntry::prix)
                             .average()
                             .orElse(0);
 
                     double min = prixJour.stream()
-                            .mapToDouble(EntreeHistorique::getPrix)
+                            .mapToDouble(PriceHistoryRepository.HistoryEntry::prix)
                             .min()
                             .orElse(0);
 
                     double max = prixJour.stream()
-                            .mapToDouble(EntreeHistorique::getPrix)
+                            .mapToDouble(PriceHistoryRepository.HistoryEntry::prix)
                             .max()
                             .orElse(0);
 
                     System.out.printf("%s : Moy %.3f €/L | Min %.3f €/L | Max %.3f €/L (%d stations)%n",
                             date, moyenne, min, max, prixJour.size());
                 });
+    }
+
+    // Static methods for backward compatibility
+    public static void sauvegarderPrixDuJour_static(List<Station> stations) {
+        new HistoriquePrixService().sauvegarderPrixDuJour(stations);
+    }
+
+    public static void afficherEvolutionPrix_static(String carburant, int nbJours) {
+        new HistoriquePrixService().afficherEvolutionPrix(carburant, nbJours);
     }
 }

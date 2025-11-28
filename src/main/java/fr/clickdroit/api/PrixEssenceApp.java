@@ -2,6 +2,7 @@ package fr.clickdroit.api;
 
 import fr.clickdroit.api.config.ApplicationContext;
 import fr.clickdroit.api.models.Station;
+import fr.clickdroit.api.models.StatistiquesNationales;
 import fr.clickdroit.api.repository.StationRepository;
 import fr.clickdroit.api.services.*;
 import fr.clickdroit.api.ui.UserInterface;
@@ -188,7 +189,7 @@ public class PrixEssenceApp {
         String carburant = ui.choisirCarburant(allStations);
         if (carburant == null) return;
 
-        StationService.StatistiquesNationales stats =
+        StatistiquesNationales stats =
                 stationService.calculerStatistiques(allStations, carburant);
 
         ui.afficherStatistiques(stats, allStations);
@@ -214,7 +215,7 @@ public class PrixEssenceApp {
             return;
         }
 
-        StationService.StatistiquesNationales statsDept =
+        StatistiquesNationales statsDept =
                 stationService.calculerStatistiques(stationsDept, carburant);
 
         List<Station> top5Dept = stationsDept.stream()
@@ -241,11 +242,11 @@ public class PrixEssenceApp {
 
     private void gererHistoriquePrix() {
         // Sauvegarder les prix du jour
-        historiquePrixService.sauvegarderPrixDuJour(allStations);
+        historiquePrixService.saveTodayPrices(allStations);
 
         String carburant = ui.choisirCarburant(allStations);
         if (carburant != null) {
-            historiquePrixService.afficherEvolutionPrix(carburant, 7);
+            historiquePrixService.displayPriceEvolution(carburant, 7);
         }
     }
 

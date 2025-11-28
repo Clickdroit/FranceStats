@@ -14,7 +14,7 @@ public interface IHistoriquePrixService {
      *
      * @param stations List of stations with current prices
      */
-    void sauvegarderPrixDuJour(List<Station> stations);
+    void saveTodayPrices(List<Station> stations);
 
     /**
      * Displays price evolution for a fuel type.
@@ -22,5 +22,5 @@ public interface IHistoriquePrixService {
      * @param carburant Fuel type
      * @param nbJours Number of days to display
      */
-    void afficherEvolutionPrix(String carburant, int nbJours);
+    void displayPriceEvolution(String carburant, int nbJours);
 }

@@ -10,9 +10,10 @@ import java.util.List;
  * Legacy DataLoader class that delegates to StationRepository.
  * Maintained for backward compatibility.
  * 
- * @deprecated Use {@link StationRepository} directly with dependency injection.
+ * @deprecated since 1.1, for removal in 2.0. Use {@link StationRepository} directly 
+ *             with dependency injection via {@link fr.clickdroit.api.config.ApplicationContext}.
  */
-@Deprecated
+@Deprecated(since = "1.1", forRemoval = true)
 public class DataLoader {
 
     private final StationRepository stationRepository;

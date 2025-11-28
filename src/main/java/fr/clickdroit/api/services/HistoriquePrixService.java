@@ -30,7 +30,7 @@ public class HistoriquePrixService implements IHistoriquePrixService {
     }
 
     @Override
-    public void sauvegarderPrixDuJour(List<Station> stations) {
+    public void saveTodayPrices(List<Station> stations) {
         try {
             List<PriceHistoryRepository.HistoryEntry> historique = new ArrayList<>(priceHistoryRepository.findAll());
             String dateAujourdhui = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
@@ -71,7 +71,7 @@ public class HistoriquePrixService implements IHistoriquePrixService {
     }
 
     @Override
-    public void afficherEvolutionPrix(String carburant, int nbJours) {
+    public void displayPriceEvolution(String carburant, int nbJours) {
         List<PriceHistoryRepository.HistoryEntry> historique = priceHistoryRepository.findByCarburantAndDays(carburant, nbJours);
 
         Map<String, List<PriceHistoryRepository.HistoryEntry>> prixParJour = historique.stream()
@@ -110,12 +110,24 @@ public class HistoriquePrixService implements IHistoriquePrixService {
                 });
     }
 
-    // Static methods for backward compatibility
-    public static void sauvegarderPrixDuJour_static(List<Station> stations) {
-        new HistoriquePrixService().sauvegarderPrixDuJour(stations);
+    /**
+     * Static method for backward compatibility.
+     * @param stations List of stations
+     * @deprecated since 1.1, for removal in 2.0. Use {@link #saveTodayPrices(List)} instead.
+     */
+    @Deprecated(since = "1.1", forRemoval = true)
+    public static void sauvegarderPrixDuJour(List<Station> stations) {
+        new HistoriquePrixService().saveTodayPrices(stations);
     }
 
-    public static void afficherEvolutionPrix_static(String carburant, int nbJours) {
-        new HistoriquePrixService().afficherEvolutionPrix(carburant, nbJours);
+    /**
+     * Static method for backward compatibility.
+     * @param carburant Fuel type
+     * @param nbJours Number of days
+     * @deprecated since 1.1, for removal in 2.0. Use {@link #displayPriceEvolution(String, int)} instead.
+     */
+    @Deprecated(since = "1.1", forRemoval = true)
+    public static void afficherEvolutionPrix(String carburant, int nbJours) {
+        new HistoriquePrixService().displayPriceEvolution(carburant, nbJours);
     }
 }

@@ -1,6 +1,7 @@
 package fr.clickdroit.api.services;
 
 import fr.clickdroit.api.models.Station;
+import fr.clickdroit.api.models.StatistiquesNationales;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
@@ -130,7 +131,7 @@ class StationServiceTest {
     @Test
     @DisplayName("Should calculate statistics correctly")
     void calculerStatistiques_shouldCalculateCorrectly() {
-        StationService.StatistiquesNationales stats = 
+        StatistiquesNationales stats = 
             stationService.calculerStatistiques(testStations, "SP95");
 
         assertNotNull(stats);

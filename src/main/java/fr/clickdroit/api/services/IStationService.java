@@ -1,6 +1,7 @@
 package fr.clickdroit.api.services;
 
 import fr.clickdroit.api.models.Station;
+import fr.clickdroit.api.models.StatistiquesNationales;
 
 import java.util.List;
 import java.util.Set;
@@ -46,7 +47,7 @@ public interface IStationService {
      * @param carburant Fuel type
      * @return Statistics object
      */
-    StationService.StatistiquesNationales calculerStatistiques(List<Station> stations, String carburant);
+    StatistiquesNationales calculerStatistiques(List<Station> stations, String carburant);
 
     /**
      * Generates a Google Maps URL for directions.

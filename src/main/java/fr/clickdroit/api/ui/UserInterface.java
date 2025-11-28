@@ -1,7 +1,7 @@
 package fr.clickdroit.api.ui;
 
 import fr.clickdroit.api.models.Station;
-import fr.clickdroit.api.services.StationService;
+import fr.clickdroit.api.models.StatistiquesNationales;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -131,7 +131,7 @@ public class UserInterface {
         }
     }
 
-    public void afficherStatistiques(StationService.StatistiquesNationales stats, List<Station> stations) {
+    public void afficherStatistiques(StatistiquesNationales stats, List<Station> stations) {
         System.out.println("\n" + stats);
 
         List<Station> stationsPasCher = stations.stream()
@@ -149,7 +149,7 @@ public class UserInterface {
     }
 
     public void afficherStatistiquesDepartement(String departement, String carburant,
-                                                StationService.StatistiquesNationales stats,
+                                                StatistiquesNationales stats,
                                                 List<Station> top5) {
         System.out.printf("\n📊 DÉPARTEMENT %s - %s 📊%n", departement, carburant);
         System.out.printf("  Moyenne : %.3f €/L%n", stats.getMoyenne());

@@ -8,9 +8,10 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
 
-public class WeatherService {
+public class WeatherService implements IWeatherService {
     private static final int HTTP_TIMEOUT_MS = 10000;
 
+    @Override
     public void afficherMeteo(String ville) {
         try {
             // Utilisation d'Open-Meteo (gratuit, pas de clé API requise)

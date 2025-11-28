@@ -1,6 +1,9 @@
 package fr.clickdroit.api;
 
+import fr.clickdroit.api.config.ApplicationContext;
 import fr.clickdroit.api.models.Station;
+import fr.clickdroit.api.models.StatistiquesNationales;
+import fr.clickdroit.api.repository.StationRepository;
 import fr.clickdroit.api.services.*;
 import fr.clickdroit.api.ui.UserInterface;
 
@@ -9,25 +12,63 @@ import java.util.Scanner;
 import java.util.Comparator;
 import java.util.stream.Collectors;
 
+/**
+ * Main application class for the fuel price analyzer.
+ * Uses dependency injection for all services and repositories.
+ */
 public class PrixEssenceApp {
 
-    private final DataLoader dataLoader;
-    private final LocationService locationService;
-    private final StationService stationService;
+    private final StationRepository stationRepository;
+    private final ILocationService locationService;
+    private final IStationService stationService;
     private final UserInterface ui;
-    private final WeatherService weatherService;
-    private final TransportService transportService;
+    private final IWeatherService weatherService;
+    private final ITransportService transportService;
+    private final IHistoriquePrixService historiquePrixService;
 
     private List<Station> allStations;
     private double[] userPosition;
 
+    /**
+     * Constructor with dependency injection.
+     *
+     * @param stationRepository Repository for station data
+     * @param locationService Service for location operations
+     * @param stationService Service for station operations
+     * @param ui User interface
+     * @param weatherService Service for weather operations
+     * @param transportService Service for transport operations
+     * @param historiquePrixService Service for price history operations
+     */
+    public PrixEssenceApp(
+            StationRepository stationRepository,
+            ILocationService locationService,
+            IStationService stationService,
+            UserInterface ui,
+            IWeatherService weatherService,
+            ITransportService transportService,
+            IHistoriquePrixService historiquePrixService) {
+        this.stationRepository = stationRepository;
+        this.locationService = locationService;
+        this.stationService = stationService;
+        this.ui = ui;
+        this.weatherService = weatherService;
+        this.transportService = transportService;
+        this.historiquePrixService = historiquePrixService;
+    }
+
+    /**
+     * Default constructor using ApplicationContext for dependency injection.
+     */
     public PrixEssenceApp() {
-        this.dataLoader = new DataLoader();
-        this.locationService = new LocationService();
-        this.stationService = new StationService();
-        this.ui = new UserInterface();
-        this.weatherService = new WeatherService();
-        this.transportService = new TransportService();
+        ApplicationContext context = new ApplicationContext();
+        this.stationRepository = context.getStationRepository();
+        this.locationService = context.getLocationService();
+        this.stationService = context.getStationService();
+        this.ui = context.getUserInterface();
+        this.weatherService = context.getWeatherService();
+        this.transportService = context.getTransportService();
+        this.historiquePrixService = context.getHistoriquePrixService();
     }
 
     public static void main(String[] args) {
@@ -72,7 +113,7 @@ public class PrixEssenceApp {
 
     private boolean chargerDonnees() {
         try {
-            allStations = dataLoader.chargerDonnees();
+            allStations = stationRepository.findAll();
 
             // Charger la position sauvegardée si elle existe
             double[] savedPosition = locationService.loadSavedLocation();
@@ -82,7 +123,7 @@ public class PrixEssenceApp {
             }
 
             return true;
-        } catch (DataLoader.DataLoadException e) {
+        } catch (StationRepository.DataAccessException e) {
             ui.afficherErreur("Erreur lors du chargement : " + e.getMessage());
             return false;
         }
@@ -148,7 +189,7 @@ public class PrixEssenceApp {
         String carburant = ui.choisirCarburant(allStations);
         if (carburant == null) return;
 
-        StationService.StatistiquesNationales stats =
+        StatistiquesNationales stats =
                 stationService.calculerStatistiques(allStations, carburant);
 
         ui.afficherStatistiques(stats, allStations);
@@ -174,7 +215,7 @@ public class PrixEssenceApp {
             return;
         }
 
-        StationService.StatistiquesNationales statsDept =
+        StatistiquesNationales statsDept =
                 stationService.calculerStatistiques(stationsDept, carburant);
 
         List<Station> top5Dept = stationsDept.stream()
@@ -201,11 +242,11 @@ public class PrixEssenceApp {
 
     private void gererHistoriquePrix() {
         // Sauvegarder les prix du jour
-        HistoriquePrixService.sauvegarderPrixDuJour(allStations);
+        historiquePrixService.saveTodayPrices(allStations);
 
         String carburant = ui.choisirCarburant(allStations);
         if (carburant != null) {
-            HistoriquePrixService.afficherEvolutionPrix(carburant, 7);
+            historiquePrixService.displayPriceEvolution(carburant, 7);
         }
     }
 
@@ -229,7 +270,7 @@ public class PrixEssenceApp {
 
     private void actualiserDonnees() {
         ui.afficherMessage("🔄 Actualisation des données...");
-        dataLoader.forceRefreshData();
+        stationRepository.refreshData();
         if (chargerDonnees()) {
             ui.afficherSucces("Données actualisées !");
         } else {

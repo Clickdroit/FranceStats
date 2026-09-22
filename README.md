@@ -1,6 +1,8 @@
+# FranceStats
 
+Application Java 17 d'analyse et de suivi statistique des prix des carburants en France (Open Data).
 
-# FranceStats — développement local
+## Développement local
 
 Le projet Maven cible Java 17 (`pom.xml`). Depuis la racine :
 

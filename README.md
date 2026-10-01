@@ -1,91 +1,94 @@
-# 📊 FranceStats — Fuel Open Data Analytics & Telemetry (Java 17)
+# 📊 FranceStats — Fuel Open Data Analytics
 
-Application Java 17 d'ingestion, d'analyse statistique et de suivi en temps réel des prix des carburants sur l'ensemble du territoire français, exploitant les flux officiels **Open Data** du gouvernement français (`data.gouv.fr`).
+> Java 17 application that ingests French government Open Data fuel-price feeds, caches the data locally and exposes reusable services for analysis.
 
----
+## Why this project?
 
-## 📋 Présentation du projet
+FranceStats is a practical data-engineering project built around a real public dataset. The interesting part is not only the statistics: the application has to ingest a large XML feed, normalise it, persist useful history and keep the domain logic independent from the data source.
 
-**FranceStats** agrège les données publiques de plus de 10 000 stations-service en France afin d'offrir une vision analytique des tendances de prix, des variations régionales et des opportunités d'approvisionnement économique.
+## Architecture
 
-```
-+------------------------------------+
-|  Flux Open Data Gouvernemental     |  (Flux XML instantané des stations)
-+-----------------+------------------+
-                  |
-                  v
-+-----------------+------------------+
-|      XmlStationRepository          |  (Parsing & normalisation XML)
-+-----------------+------------------+
-                  |
-         +--------+--------+
-         |                 |
-         v                 v
-+--------+-------+  +------+---------+
-| Cache XML Local|  | Historique JSON|  (prix_carburants_cache.xml & historique_prix.json)
-+----------------+  +----------------+
-                           |
-                           v
-+--------------------------+---------+
-|       StationService & Analytics   |  (Moyennes nationales, top stations, écarts)
-+--------------------------+---------+
-                           |
-                           v
-+--------------------------+---------+
-|  UserInterface / Console Analytics |
-+------------------------------------+
+```text
+Government Open Data
+        │
+        ▼
+XmlStationRepository
+        │
+        ├──────────► Local XML cache
+        │
+        └──────────► Price history (JSON)
+                         │
+                         ▼
+                StationService
+                         │
+                         ▼
+                   Analytics
+                         │
+                         ▼
+                 Console UI
 ```
 
----
+The code separates repositories, services and application wiring through `ApplicationContext`.
 
-## ✨ Fonctionnalités clés
+## Features
 
-- **⚡ Ingestion & Parsing XML haute performance :**
-  - Parsing streaming du catalogue complet des stations de France (`prix_carburants_cache.xml`).
-  - Extraction des coordonnées géographiques, des types de carburants (Gazole, SP95, SP98, E10, E85, GPLc) et des dates de mise à jour.
+- XML streaming/parsing of station data
+- Fuel price extraction and normalisation
+- Local disk caching
+- Price history persistence
+- National and department-level statistics
+- Search for competitive stations around a location
+- JUnit 5 test suite
+- Repository/service separation
 
-- **💾 Caching & Historisation :**
-  - Système de cache intelligent sur disque pour limiter les appels réseau redondants.
-  - Sauvegarde structurée de l'historique des prix au format JSON (`historique_prix.json`).
+## Technical stack
 
-- **📈 Moteur Statistique National :**
-  - Calcul des métriques nationales et départementales (`StatistiquesNationales`).
-  - Détection instantanée des stations les plus compétitives autour d'une localisation géographique.
+| Component | Technology |
+|---|---|
+| Language | Java 17 |
+| Build | Maven |
+| Data | XML + JSON |
+| Tests | JUnit 5 |
+| Source | French government Open Data |
 
-- **🧩 Architecture Modulaire (Clean Code) :**
-  - **Conteneur d'injection / IoC :** `ApplicationContext` gérant le cycle de vie des singletons.
-  - **Pattern Repository :** Interfaces découplées (`StationRepository`, `PriceHistoryRepository`, `LocationConfigRepository`).
-  - **Services contextuels :** Intégration de `LocationService`, `WeatherService` et `TransportService`.
-  - **Qualité & Tests :** Suite de tests unitaires JUnit (`ApplicationContextTest`, `StationServiceTest`, etc.).
+## Run locally
 
----
+### Prerequisites
 
-## 🛠️ Stack Technique
+- JDK 17+
+- Maven
 
-- **Langage :** Java 17 (LTS)
-- **Gestionnaire de dépendances :** Apache Maven (`pom.xml`)
-- **Formats de données :** XML (flux gouvernemental), JSON (stockage historique), Properties (configurations locales)
-- **Tests :** JUnit 5
+### Test
 
----
-
-## 🚀 Installation & Exécution
-
-### Prérequis
-- Java JDK 17 ou supérieur (`java -version`).
-- Apache Maven (`mvn -version`).
-
-### Compilation & Tests
 ```bash
-# Lancer les tests unitaires
 mvn test
+```
 
-# Compiler le projet et packager le JAR
+### Package
+
+```bash
 mvn clean package
 ```
 
-### Configuration & Lancement
-Les paramètres locaux et les préférences de localisation sont configurables dans `station_config.properties`.
+### Run
+
 ```bash
 java -jar target/FranceStats-1.0-SNAPSHOT.jar
 ```
+
+Local behaviour and location preferences can be configured through `station_config.properties`.
+
+## Engineering notes
+
+The project deliberately keeps data access behind interfaces such as `StationRepository` and `PriceHistoryRepository`. This makes the application easier to test and leaves room for alternative data sources without rewriting the service layer.
+
+## Limitations / next steps
+
+- Improve automated coverage around edge cases in external data.
+- Add richer visual reporting.
+- Make ingestion scheduling configurable.
+- Add a reproducible CI build.
+
+## License
+
+See the repository for the current project licensing information.

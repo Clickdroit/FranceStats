@@ -1,94 +1,109 @@
-# 📊 FranceStats — Fuel Open Data Analytics
+# FranceStats
 
-> Java 17 application that ingests French government Open Data fuel-price feeds, caches the data locally and exposes reusable services for analysis.
+FranceStats est une application Java en ligne de commande qui aide à comparer
+les prix des carburants à partir d'un flux public de stations-service. Elle
+charge les stations, conserve un cache local et permet de consulter des prix
+par carburant, par département ou autour d'une position.
 
-## Why this project?
+## Ce que fait l'application
 
-FranceStats is a practical data-engineering project built around a real public dataset. The interesting part is not only the statistics: the application has to ingest a large XML feed, normalise it, persist useful history and keep the domain logic independent from the data source.
+Au démarrage, l'application cherche le fichier `prix_carburants_cache.xml`.
+S'il est absent, trop ancien (plus de six heures) ou invalide, elle télécharge
+l'archive XML depuis `https://donnees.roulez-eco.fr/opendata/instantane`, extrait
+le XML et le conserve localement. Les stations sans coordonnées valides ou sans
+prix sont ignorées.
 
-## Architecture
+Le menu console permet ensuite de :
 
-```text
-Government Open Data
-        │
-        ▼
-XmlStationRepository
-        │
-        ├──────────► Local XML cache
-        │
-        └──────────► Price history (JSON)
-                         │
-                         ▼
-                StationService
-                         │
-                         ▼
-                   Analytics
-                         │
-                         ▼
-                 Console UI
+- rechercher les stations les moins chères dans un rayon donné ;
+- calculer une moyenne, un minimum et un maximum pour un carburant ;
+- filtrer les stations par département ;
+- sauvegarder une position et recalculer les distances ;
+- enregistrer les prix du jour et afficher l'historique disponible ;
+- consulter la météo et des informations de transport via des services externes ;
+- supprimer le cache pour forcer une actualisation.
+
+Les prix sont ceux présents dans le flux au moment du téléchargement. Il ne
+s'agit pas d'un suivi continu en temps réel.
+
+## Organisation du code
+
+`XmlStationRepository` s'occupe du téléchargement, du cache et du parsing XML.
+`JsonPriceHistoryRepository` lit et écrit `historique_prix.json`, tandis que
+`PropertiesLocationConfigRepository` conserve la position dans
+`station_config.properties`.
+
+Les services portent les opérations métier : `StationService` filtre et trie
+les stations, `LocationService` calcule les distances et
+`HistoriquePrixService` gère l'historique. `ApplicationContext` assemble ces
+composants avant de les transmettre à `PrixEssenceApp` et à l'interface
+console `UserInterface`.
+
+## Installation et lancement
+
+Le projet utilise Java 17 et Maven. Vérifier les prérequis avec :
+
+```bash
+java -version
+mvn -version
 ```
 
-The code separates repositories, services and application wiring through `ApplicationContext`.
-
-## Features
-
-- XML streaming/parsing of station data
-- Fuel price extraction and normalisation
-- Local disk caching
-- Price history persistence
-- National and department-level statistics
-- Search for competitive stations around a location
-- JUnit 5 test suite
-- Repository/service separation
-
-## Technical stack
-
-| Component | Technology |
-|---|---|
-| Language | Java 17 |
-| Build | Maven |
-| Data | XML + JSON |
-| Tests | JUnit 5 |
-| Source | French government Open Data |
-
-## Run locally
-
-### Prerequisites
-
-- JDK 17+
-- Maven
-
-### Test
+Lancer les tests :
 
 ```bash
 mvn test
 ```
 
-### Package
+Compiler le projet et créer le JAR exécutable configuré dans `pom.xml` :
 
 ```bash
 mvn clean package
 ```
 
-### Run
+Le nom d'artefact Maven est `Stat` et sa version actuelle est `1.0-SNAPSHOT`.
+Après le package, lancer l'application avec :
 
 ```bash
-java -jar target/FranceStats-1.0-SNAPSHOT.jar
+java -jar target/Stat-1.0-SNAPSHOT.jar
 ```
 
-Local behaviour and location preferences can be configured through `station_config.properties`.
+Le premier lancement nécessite une connexion internet si aucun cache XML valide
+n'est déjà présent. Le programme écrit ses fichiers de données dans le
+répertoire courant depuis lequel il est lancé.
 
-## Engineering notes
+## Exemple avec les données présentes
 
-The project deliberately keeps data access behind interfaces such as `StationRepository` and `PriceHistoryRepository`. This makes the application easier to test and leaves room for alternative data sources without rewriting the service layer.
+Le cache actuellement suivi dans ce dépôt contient 9 946 stations XML et les
+carburants E10, E85, Gazole, GPLc, SP95 et SP98. Pour le Gazole, il contient
+9 646 relevés ; la moyenne calculée à partir de ces relevés est de 1,689 €/L,
+avec un minimum de 1,502 €/L à Pont-Audemer (27500).
 
-## Limitations / next steps
+L'historique JSON contient 33 733 entrées, mais elles correspondent actuellement
+à une seule date, le 29 juillet 2025. Ces chiffres décrivent les fichiers
+présents dans le dépôt et peuvent changer après un téléchargement ou une
+sauvegarde.
 
-- Improve automated coverage around edge cases in external data.
-- Add richer visual reporting.
-- Make ingestion scheduling configurable.
-- Add a reproducible CI build.
+## Limites connues et suites possibles
 
-## License
+- Le parsing XML utilise un document DOM complet, ce qui peut consommer beaucoup
+        de mémoire avec un gros flux.
+- Les distances sont une approximation basée sur la distance à vol d'oiseau
+        multipliée par 1,3. Le réglage nommé « par la route » ne contacte pas encore
+        de service de routage.
+- La météo utilise toujours les coordonnées de Paris ; le nom de ville saisi
+        est seulement affiché.
+- Les services de transport dépendent d'API externes et peuvent afficher des
+        données de secours ou simulées.
+- Les tests couvrent surtout `ApplicationContext`, `StationService` et
+        `LocationService`. Il n'y a pas de test d'intégration du téléchargement, du
+        parsing réel ou de l'interface console.
+- Une prochaine étape réaliste serait de rendre le téléchargement et le
+        routage plus configurables, puis d'ajouter des tests sur les données externes.
 
-See the repository for the current project licensing information.
+## Fichiers locaux et Git
+
+`prix_carburants_cache.xml` et `historique_prix.json` sont des fichiers générés
+localement et volumineux. `station_config.properties` contient une position
+sauvegardée par l'utilisateur. Ils sont conservés ici pour permettre un
+exemple reproductible, mais un usage quotidien gagnerait à les exclure de Git
+et à documenter une procédure de génération du cache.
